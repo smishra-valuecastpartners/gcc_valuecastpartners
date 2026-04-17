@@ -1,0 +1,293 @@
+/* ── FOOTER GAP FIX: CRITICAL RESET ─────────────────────────── */
+
+/* 1. Remove space from the section just above the footer */
+.vc-why {
+  margin-bottom: 0 !important;
+  padding-bottom: 80px !important;
+  display: block;
+}
+
+/* 2. Nuke parent theme and Elementor margins/paddings on footer */
+.vc-page footer,
+.vc-page .footer-wrapper,
+.vc-page .footer-layout1,
+.vc-page .footer-layout2,
+.vc-page .footer-layout3,
+.vc-page .footer-layout4,
+.vc-page .site-footer,
+.vc-page [data-elementor-type="footer"],
+.vc-page .elementor-location-footer,
+.vc-page .copyright-wrap,
+.vc-page .footer-top,
+.vc-page .widget-area {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border: none !important;
+}
+
+/* 3. Force Elementor containers inside footer to be flush */
+.vc-page .elementor-location-footer .elementor-section,
+.vc-page .elementor-location-footer .e-con,
+.vc-page .elementor-location-footer .e-parent,
+.vc-page .elementor-location-footer>*,
+.vc-page .elementor-location-footer .elementor-element,
+.vc-page .elementor-location-footer .elementor-widget-wrap,
+.vc-page .elementor-location-footer .elementor-widget,
+.vc-page .elementor-location-footer .elementor-section-wrap,
+.vc-page .elementor-location-footer>.elementor,
+.vc-page .elementor-location-footer>.elementor>.elementor-element {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: visible !important;
+}
+
+/* 4. Background match (prevents white line at sub-pixel gaps) */
+.vc-page footer {
+  background-color: #00051A; !important;
+}
+
+/* 5. Override parent theme --section-space (120px) */
+.vc-page .footer-top,
+.vc-page .space,
+.vc-page .space-top,
+.vc-page .space-bottom {
+  --section-space: 0px !important;
+  --section-space-mobile: 0px !important;
+  padding: 0 !important;
+}
+
+/* Body overflow protection */
+.vc-page {
+  overflow-x: hidden !important;
+}
+
+/* ── VALUECAST FOOTER ──────────────────────────────────────────── */
+.vc-page .site-footer {
+  background-color: #00051A;
+  color: #ffffff;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.vc-page .site-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vc-page .footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 55px 50px 30px;
+}
+
+/* Main Layout: Logo Left | Everything Else Right */
+.vc-page .footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.vc-page .footer-logo svg {
+  height: 42px;
+  width: auto;
+}
+
+.vc-page .footer-logo img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 30px;
+  max-width: min(210px, 100%);
+  object-fit: contain;
+  opacity: 0.95;
+  transition: opacity 0.25s ease;
+}
+
+.vc-page .footer-logo:hover img {
+  opacity: 1;
+}
+
+/* Right Column: Nav + Contact/Social stacked */
+.vc-page .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Nav Row */
+.vc-page .footer-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.vc-page .footer-nav ul li a {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff !important;
+  transition: opacity 0.3s;
+  text-decoration: none !important;
+}
+
+.vc-page .footer-nav ul li a:hover {
+  opacity: 0.65;
+}
+
+/* Contact + Social Row */
+.vc-page .footer-info {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 120px;
+}
+
+.vc-page .footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vc-page .footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.vc-page .footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left: 60px;
+  padding-top: 5px;
+}
+
+.vc-page .contact-item,
+.vc-page .social-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: #ffffff !important;
+  transition: opacity 0.3s;
+  text-decoration: none !important;
+}
+
+.vc-page .contact-item:hover,
+.vc-page .social-item:hover {
+  opacity: 0.65;
+}
+
+.vc-page .contact-item svg,
+.vc-page .social-item svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.vc-page .social-item img {
+  flex-shrink: 0;
+}
+
+.vc-page .social-linkedin {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  justify-content: center;
+  gap: 0;
+}
+
+.vc-page .social-linkedin svg {
+  width: 19px;
+  height: 19px;
+}
+
+.vc-page .social-linkedin img {
+  width: 30px;
+  height: 24px;
+  display: block;
+}
+
+/* Divider */
+.vc-page .footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 25px;
+}
+
+/* Bottom Row */
+.vc-page .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.vc-page .copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.vc-page .footer-legal {
+  display: flex;
+  gap: 55px;
+}
+
+.vc-page .footer-legal a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5) !important;
+  transition: color 0.3s;
+  text-decoration: none !important;
+}
+
+.vc-page .footer-legal a:hover {
+  color: #ffffff !important;
+}
+
+/* Override parent _widget-footer.scss output (.footer-social a background-color: #15284C) */
+.site-footer .footer-social a,
+.site-footer .footer-social a:hover,
+.site-footer .footer-social a:focus {
+  background-color: transparent !important;
+  background: none !important;
+}
+
+/* ── Hide ALL parent theme elements on vc-page ─────────────────── */
+.vc-page:not(.vc-contact-page) .vs-header,
+.vc-page:not(.vc-contact-page) .header-layout1,
+.vc-page:not(.vc-contact-page) .header-default,
+.vc-page:not(.vc-contact-page) .vs-menu-wrapper,
+.vc-page:not(.vc-contact-page) .breadcumb-wrapper,
+.vc-page:not(.vc-contact-page) .header-notice,
+.vc-page:not(.vc-contact-page) .sticky-active,
+.vc-page:not(.vc-contact-page) .vs-header-wrapper,
+.vc-page:not(.vc-contact-page) .preloader,
+.vc-page:not(.vc-contact-page) .scroll-btn,
+.vc-page:not(.vc-contact-page) .header,
+.vc-page:not(.vc-contact-page) .header-layout2,
+.vc-page:not(.vc-contact-page) .header-layout3,
+.vc-page:not(.vc-contact-page) .vs-sidemenu-wrapper,
+.vc-page:not(.vc-contact-page) .footer-copyright,
+.vc-page:not(.vc-contact-page) .vs-footer,
+.vc-page:not(.vc-contact-page) .footer-layout1,
+.vc-page:not(.vc-contact-page) .searchform-popup,
+.vc-page:not(.vc-contact-page) #mega-menu-wrap-primary,
+.vc-page:not(.vc-contact-page) #mega-menu-wrap-mobile-menu,
+.vc-page:not(.vc-contact-page) .mega-menu-wrap,
+.vc-page:not(.vc-contact-page) .elementor-location-header,
+.vc-page:not(.vc-contact-page) [data-elementor-type="header"],
+.vc-page:not(.vc-contact-page) .vs-canvas-overlay,
+.vc-page:not(.vc-contact-page) .back-to-top,
+.vc-page:not(.vc-contact-page) .scrollToTop {
+  display: none !important;
+}

@@ -1,0 +1,1563 @@
+/* =============================================================
+   OUR PORTFOLIO PAGE — portfolio.css
+   Scoped under .element-our-portfolio to avoid conflicts
+   with valuecast.css / techbiz parent styles.
+   ============================================================= */
+
+/* ── Google Fonts loaded via wp_enqueue_style in functions.php ── */
+
+/* ── CSS Custom Properties (matches styleguide.css from Anima) ── */
+.element-our-portfolio,
+.cs-modal {
+  --electric-blue: rgba(4, 70, 242, 1);
+  --navy: rgba(0, 5, 26, 1);
+  --ice-white: rgba(255, 255, 255, 1);
+  --black: rgba(55, 55, 55, 1);
+  --blue: rgba(4, 149, 240, 1);
+  --sky-blue: rgba(130, 204, 249, 1);
+  --cloud: rgba(245, 246, 252, 1);
+  --steel: rgba(188, 191, 204, 1);
+}
+
+/* =============================================
+   BASE LAYOUT
+   ============================================= */
+.element-our-portfolio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  align-items: flex-start;
+  position: relative;
+  background-color: var(--ice-white);
+  overflow: hidden;
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.element-our-portfolio .hero {
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  height: auto;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.element-our-portfolio .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.element-our-portfolio .image {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(7px);
+  position: absolute;
+  object-fit: cover;
+}
+
+.element-our-portfolio .frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  height: auto;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 110px 40px 80px;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin: 0 auto;
+}
+
+.element-our-portfolio .div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-our-portfolio .frame-2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-our-portfolio .rectangle {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background-color: var(--electric-blue);
+  flex-shrink: 0;
+}
+
+.element-our-portfolio .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16.8px;
+  white-space: nowrap;
+}
+
+.element-our-portfolio .p {
+  position: relative;
+  max-width: 1032px;
+  width: 100%;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(36px, 5vw, 72px);
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.element-our-portfolio .vector {
+  position: absolute;
+  right: 1px;
+  bottom: -32px;
+  width: min(653px, 50vw);
+  height: auto;
+}
+
+/* =============================================
+   MARQUEE
+   ============================================= */
+.element-our-portfolio .line {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  overflow: hidden;
+  padding: 12px 0;
+  background-color: var(--ice-white);
+  z-index: 2;
+  position: relative;
+}
+
+.element-our-portfolio .our-work {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: vc-marquee-slow 28s linear infinite;
+}
+
+/* All portfolio marquee words — outlined Outfit, same as blog & approach */
+.element-our-portfolio .WHO-WE-ARE,
+.element-our-portfolio .WHO-WE-ARE-3,
+.element-our-portfolio .WHO-WE-ARE-6,
+.element-our-portfolio .WHO-WE-ARE-8 {
+  position: relative;
+  width: fit-content;
+  flex-shrink: 0;
+  font-family: "Outfit", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 76px);
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0.9;
+  color: var(--steel);
+}
+
+.element-our-portfolio .WHO-WE-ARE-2,
+.element-our-portfolio .WHO-WE-ARE-4,
+.element-our-portfolio .WHO-WE-ARE-5,
+.element-our-portfolio .WHO-WE-ARE-7 {
+  position: relative;
+  width: fit-content;
+  flex-shrink: 0;
+  font-family: "Outfit", Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: clamp(40px, 5vw, 76px);
+  letter-spacing: 0;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--electric-blue);
+}
+
+/* =============================================
+   MIDDLE
+   ============================================= */
+.element-our-portfolio .middle {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 0;
+  padding: 10px 0px 1px;
+  position: relative;
+  background-color: var(--ice-white);
+}
+
+.element-our-portfolio .frame-3 {
+  display: flex;
+  width: 100%;
+  height: auto;
+  min-height: auto;
+  align-items: flex-start;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* ── Industries Sidebar ── */
+.element-our-portfolio .group-wrapper {
+  position: relative;
+  width: 435px;
+  min-width: 260px;
+  flex-shrink: 0;
+  min-height: 698px;
+  background-color: #F7F7F7;
+  overflow: hidden;
+}
+
+.element-our-portfolio .group {
+  position: relative;
+  top: 62px;
+  left: 60px;
+  width: calc(100% - 80px);
+  max-width: 383px;
+  height: auto;
+  min-height: 300px;
+  padding-bottom: 30px;
+}
+
+.element-our-portfolio .rectangle-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(318px, 100%);
+  background-color: #e6eeff;
+  border-radius: 20px;
+  border: 1px solid #d9d9d9;
+}
+
+.element-our-portfolio .rectangle-3 {
+  position: absolute;
+  top: 111px;
+  left: 0;
+  width: 5px;
+  height: 90px;
+  background-color: #0446f2;
+  transition: top 0.3s ease;
+}
+
+/* Update this in style.css */
+.element-our-portfolio .rectangle-4 {
+  position: absolute;
+  top: 111px;
+  left: 5px;
+  /* Match the sidebar width minus the 5px left offset */
+  width: calc(318px - 5px); 
+  max-width: calc(100% - 5px);
+  height: 90px;
+  background-color: #ffffff;
+  transition: top 0.3s ease;
+  /* Add this to keep the rounded look if it hits the edges */
+  border-radius: 0 20px 20px 0; 
+}
+
+.element-our-portfolio .text-wrapper-2 {
+  position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+  padding: 38px 0 0 38px;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  color: #0446f2;
+  font-size: 22px;
+  letter-spacing: -0.22px;
+  line-height: 24.2px;
+  white-space: nowrap;
+}
+
+.element-our-portfolio .div-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-top: 24px;
+}
+
+.element-our-portfolio .frame-4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: flex-start;
+  gap: 0;
+  padding-top: 30px;;
+}
+
+.element-our-portfolio .text-wrapper-3 {
+  position: relative;
+  align-self: stretch;
+  padding: 28px 38px;
+  font-family: "Inter", Helvetica, sans-serif !important;
+  font-weight: 600;
+  color: #0446f2;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.element-our-portfolio .text-wrapper-4 {
+  position: relative;
+  align-self: stretch;
+  padding: 28px 38px;
+  font-family: "Inter", Helvetica, sans-serif !important;
+  font-weight: 500;
+  color: #37373780;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: color 0.2s;
+}
+
+.element-our-portfolio .text-wrapper-4:hover { color: #373737; }
+.element-our-portfolio .rectangle-5 { display: none; }
+
+/* ── Portfolio Cards Panel ── */
+.element-our-portfolio .frame-5 {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+
+.element-our-portfolio .frame-6 {
+  padding: 48px 48px 24px;
+}
+
+.element-our-portfolio .frame-7 {
+  max-width: 640px;
+}
+
+.element-our-portfolio .text-wrapper-5 {
+  font-family: "Hanken Grotesk", "Inter", Helvetica;
+  font-weight: 500;
+  color: #37373799;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.element-our-portfolio .frame-8 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 24px;
+  padding: 0 48px 24px;
+  overflow-x: auto;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.element-our-portfolio .frame-8::-webkit-scrollbar { display: none; }
+.element-our-portfolio .frame-8:active { cursor: grabbing; }
+
+/* ── Card Base ── */
+.element-our-portfolio .frame-9,
+.element-our-portfolio .frame-13,
+.element-our-portfolio .frame-15 {
+  flex-shrink: 0;
+  width: 340px;
+  min-height: 560px;
+  background-color: #f5f6fc;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  transition: transform 0.3s ease;
+}
+
+.element-our-portfolio .frame-9:hover,
+.element-our-portfolio .frame-13:hover,
+.element-our-portfolio .frame-15:hover { transform: translateY(-4px); }
+
+.element-our-portfolio .mask-group {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.element-our-portfolio .rectangle-wrapper {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.element-our-portfolio .rectangle-6 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.element-our-portfolio .frame-10,
+.element-our-portfolio .frame-14 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.element-our-portfolio .frame-11 { display: flex; align-items: center; }
+
+.element-our-portfolio .text-wrapper-6 {
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  color: #00051a;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.element-our-portfolio .frame-12,
+.element-our-portfolio .high-impact-creative-wrapper { flex: 1; }
+
+.element-our-portfolio .text-wrapper-7 {
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #373737;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.element-our-portfolio .button-white {
+  display: inline-flex;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 8px 4px 32px;
+  position: relative;
+  background-color: var(--ice-white);
+  border-radius: 120px;
+}
+
+.element-our-portfolio .button-white:hover,
+.element-our-portfolio .button-white-2:hover {
+  background: #0446f2;
+  border-color: #0446f2;
+}
+
+.element-our-portfolio .button-white:hover .view-case-study,
+.element-our-portfolio .button-white-2:hover .view-case-study { color: #ffffff; }
+
+.element-our-portfolio .view-case-study {
+  font-family: "Outfit", Helvetica, sans-serif !important;
+  font-weight: 500;
+  color: #00051a;
+  font-size: 14px;
+  letter-spacing: 0.6px;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.element-our-portfolio .img {
+  width: 16px;
+  height: 16px;
+  transition: filter 0.2s ease;
+}
+
+.element-our-portfolio .button-white:hover .img,
+.element-our-portfolio .button-white-2:hover .img {
+  filter: brightness(0) invert(1);
+}
+
+/* =============================================
+   CASE STUDIES SECTION
+   ============================================= */
+.element-our-portfolio .frame-16 {
+  width: 100%;
+  padding: 20px 60px 30px;
+  margin-top: 0;
+}
+
+.element-our-portfolio .frame-17 {
+  background-color: #f5f5f5;
+  border-radius: 24px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.element-our-portfolio .frame-18 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+}
+
+.element-our-portfolio .text-wrapper-8 {
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.element-our-portfolio .label {
+  width: 1092px;
+  height: auto;
+}
+
+.element-our-portfolio .label .text-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 38px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-style: normal;
+}
+
+.element-our-portfolio .text-wrapper-9 {
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.element-our-portfolio .frame-19 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 920px;
+  align-items: center;
+  text-align: center;
+}
+
+.element-our-portfolio .cs-intro-text {
+  font-family: "Hanken Grotesk", "Inter", Helvetica;
+  font-weight: 500;
+  color:#6C6C6C;
+  font-size: clamp(16px, 1.6vw, 20px);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.element-our-portfolio .frame-20 {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.element-our-portfolio .frame-21 {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.element-our-portfolio .frame-22,
+.element-our-portfolio .frame-38 {
+  height: 280px;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-our-portfolio .frame-41 {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.element-our-portfolio .frame-22 .cs-thumb-image,
+.element-our-portfolio .frame-38 .cs-thumb-image,
+.element-our-portfolio .frame-40 > .cs-thumb-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 16px;
+  display: block;
+}
+
+.element-our-portfolio .frame-40 > .cs-thumb-image {
+  height: 280px;
+}
+
+.element-our-portfolio .cs-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px;
+}
+
+.element-our-portfolio .group-2,
+.element-our-portfolio .group-3,
+.element-our-portfolio .group-4,
+.element-our-portfolio .group-5 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-our-portfolio .frame-23 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-our-portfolio .vector-2,
+.element-our-portfolio .vector-3,
+.element-our-portfolio .vector-4,
+.element-our-portfolio .vector-5 {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.element-our-portfolio .frame-24,
+.element-our-portfolio .frame-25,
+.element-our-portfolio .frame-26,
+.element-our-portfolio .frame-28,
+.element-our-portfolio .frame-29,
+.element-our-portfolio .frame-30 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.element-our-portfolio .text-wrapper-10 {
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 11px;
+}
+
+.element-our-portfolio .img-wrapper {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-our-portfolio .laptop,
+.element-our-portfolio .img-2,
+.element-our-portfolio .gear-six,
+.element-our-portfolio .shopping-cart-simple { width: 24px; height: 24px; }
+
+.element-our-portfolio .frame-27 { width: 28px; height: 28px; }
+
+.element-our-portfolio .frame-31 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.element-our-portfolio .frame-32,
+.element-our-portfolio .frame-34 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+.element-our-portfolio .text-wrapper-11,
+.element-our-portfolio .text-wrapper-12 {
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.element-our-portfolio .frame-33,
+.element-our-portfolio .frame-35 { width: 20px; height: 20px; }
+
+.element-our-portfolio .warning-circle-wrapper {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
+.element-our-portfolio .warning-circle { width: 32px; height: 32px; }
+
+.element-our-portfolio .frame-39 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.element-our-portfolio .briefcase-metal-wrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.element-our-portfolio .portfolio-company {
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.element-our-portfolio .frame-36 { display: flex; flex-direction: column; }
+
+.element-our-portfolio .frame-37 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.element-our-portfolio .cs-step-title {
+  font-family: "Outfit", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: clamp(20px, 2.5vw, 32px);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.element-our-portfolio .cs-step-text {
+  font-family: "Inter", Helvetica;
+  font-weight: 400;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.element-our-portfolio .frame-40 {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.element-our-portfolio .frame-42 { display: flex; flex-direction: column; }
+.element-our-portfolio .frame-43 { display: flex; flex-direction: column; gap: 8px; }
+
+/* Explore roadblocks CTA button */
+.element-our-portfolio .frame-17 .button-white-3 {
+  display: inline-flex;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 8px 4px 32px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 120px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.element-our-portfolio .frame-17 .button-white-3:hover {
+  background: #eef3ff;
+  border-color: #eef3ff;
+  transform: translateY(-1px);
+}
+
+.element-our-portfolio .frame-17 .explore-more {
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #0446f2;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.element-our-portfolio .arrow-right-wrapper {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.element-our-portfolio .arrow-right { width: 16px; height: 16px; }
+
+/* =============================================
+   CTA SECTION
+   ============================================= */
+.vc-pf-cta {
+  position: relative;
+  width: 100%;
+  min-height: 588px;
+  background-color: #0446f2;
+  padding: clamp(60px, 8.3vw, 120px) clamp(48px, 15vw, 216px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vc-pf-cta .frame-44 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1240px;
+  text-align: center;
+}
+
+.vc-pf-cta .frame-44 > .div {
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.vc-pf-cta .rectangle-7 {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(130, 204, 249, 1);
+  flex-shrink: 0;
+}
+
+.vc-pf-cta .contact-us {
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 16.8px;
+  white-space: nowrap;
+}
+
+.vc-pf-cta .text-wrapper-13 {
+  align-self: stretch;
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 110%;
+  text-align: center;
+}
+
+.vc-pf-cta .cta-btn {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 120px;
+  height: 54px;
+  padding: 4px 8px 4px 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.vc-pf-cta .cta-btn:hover {
+  background: #eef3ff;
+  border-color: #eef3ff;
+  transform: translateY(-1px);
+}
+
+.vc-pf-cta .explore-more {
+  font-family: "Outfit", Helvetica;
+  font-weight: 400;
+  color: #0446f2;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.vc-pf-cta .arrow-right-wrapper {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 72px;
+  border: 1.5px solid #0446f2;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.element-our-portfolio .frame-17 .arrow-right,
+.vc-pf-cta .arrow-right {
+  width: 24px;
+  height: 24px;
+}
+
+.vc-pf-cta .vector-6,
+.vc-pf-cta .vector-7 {
+  position: absolute;
+  pointer-events: none;
+  opacity: 1;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.vc-pf-cta .vector-6 {
+  bottom: 0;
+  left: 0;
+  height: 96px;
+  object-position: left bottom;
+}
+
+.vc-pf-cta .vector-7 {
+  top: 0;
+  right: 0;
+  height: 125px;
+  object-position: right top;
+}
+
+/* =============================================
+   INDUSTRY ACTIVE STATE
+   ============================================= */
+.element-our-portfolio .industry-item--active {
+  color: #0446f2 !important;
+  font-weight: 600 !important;
+}
+
+/* =============================================
+   CASE STUDY MODAL
+   ============================================= */
+.cs-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.cs-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cs-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 5, 26, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.cs-modal__box {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 0;
+  max-width: 560px;
+  width: 90vw;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(0, 5, 26, 0.2);
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+
+.cs-modal.is-open .cs-modal__box { transform: scale(1); }
+
+.cs-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ffffff;
+  backdrop-filter: blur(4px);
+  border: 1px solid #e6eeff;
+  font-size: 28px;
+  color: #00051a;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.cs-modal__close:hover { color: #000; }
+
+.cs-modal__title {
+  font-family: "Outfit", Helvetica;
+  font-weight: 600;
+  font-size: 32px;
+  color: #00051a;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.cs-modal__body {
+  font-family: "Hanken Grotesk", "Inter", Helvetica;
+  font-size: 17px;
+  color: #6c6c6c;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.cs-modal__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  padding: 0 32px;
+  background-color: #0446f2;
+  color: #ffffff;
+  font-family: "Outfit", Helvetica;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 120px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.cs-modal__cta:hover { background-color: #0338c8; color: #ffffff; }
+
+/* =============================================
+   RESPONSIVE — TABLET (≤ 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
+  .element-our-portfolio .frame-3 { flex-direction: column; min-height: auto; }
+
+  .element-our-portfolio .group-wrapper {
+    width: 100%;
+    min-height: auto;
+    padding-bottom: 40px;
+  }
+
+  .element-our-portfolio .group {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .element-our-portfolio .rectangle-2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+  }
+
+  .element-our-portfolio .rectangle-3,
+  .element-our-portfolio .rectangle-4 { display: none; }
+
+  .element-our-portfolio .div-wrapper {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .element-our-portfolio .frame-4 {
+    height: auto;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .element-our-portfolio .text-wrapper-2 {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    padding: 24px 0 8px 0;
+  }
+
+  .element-our-portfolio .frame-5 { width: 100%; min-height: auto; }
+  .element-our-portfolio .frame-6 { padding: 32px 24px 16px; }
+  .element-our-portfolio .frame-8 { padding: 0 24px 40px; }
+
+  .element-our-portfolio .frame-16 { padding: 0 24px 80px; }
+  .element-our-portfolio .frame-17 { padding: 40px; }
+  .element-our-portfolio .frame-20 { flex-direction: column; }
+
+  .vc-pf-cta { padding: 80px 40px; }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (≤ 640px)
+   ============================================= */
+@media (max-width: 640px) {
+  .element-our-portfolio .hero { min-height: 360px; }
+  .element-our-portfolio .frame-wrapper { padding: 80px 20px 60px; gap: 24px; }
+  .element-our-portfolio .p { font-size: 32px; }
+  .element-our-portfolio .line { height: 100px; }
+  .element-our-portfolio .middle { padding-top: 40px; gap: 20px; }
+
+  .element-our-portfolio .frame-6 { padding: 24px 16px 12px; }
+  .element-our-portfolio .frame-8 { padding: 0 16px 32px; gap: 16px; }
+
+  .element-our-portfolio .frame-9,
+  .element-our-portfolio .frame-13,
+  .element-our-portfolio .frame-15 { width: 280px; min-height: 480px; }
+
+  .element-our-portfolio .frame-16 { padding: 0 16px 60px; }
+  .element-our-portfolio .frame-17 { padding: 28px 20px; border-radius: 16px; }
+  .element-our-portfolio .text-wrapper-9 { font-size: 22px; }
+  .element-our-portfolio .cs-intro-text { font-size: 15px; }
+  .element-our-portfolio .frame-22,
+  .element-our-portfolio .frame-38 { height: 220px; }
+  .element-our-portfolio .frame-41,
+  .element-our-portfolio .frame-40 > .cs-thumb-image { height: 220px; }
+  .element-our-portfolio .cs-step-title { font-size: 20px; }
+  .element-our-portfolio .cs-step-text { font-size: 15px; }
+
+  .vc-pf-cta { padding: 80px 20px; }
+  .vc-pf-cta .text-wrapper-13 { font-size: 28px; }
+  .vc-pf-cta .cta-btn { padding: 12px 20px; }
+  .vc-pf-cta .explore-more { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .element-our-portfolio .hero { min-height: 320px; }
+  .element-our-portfolio .frame-wrapper { padding: 72px 16px 48px; }
+  .element-our-portfolio .p { font-size: clamp(26px, 7vw, 32px); }
+  .element-our-portfolio .text-wrapper { font-size: 12px; }
+  .element-our-portfolio .group-wrapper {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+  }
+  .element-our-portfolio .group {
+    padding: 28px 16px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .element-our-portfolio .rectangle-2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+  }
+  .element-our-portfolio .line { height: 80px; }
+  .element-our-portfolio .frame-9,
+  .element-our-portfolio .frame-13,
+  .element-our-portfolio .frame-15 { width: 100%; min-width: 240px; }
+  .element-our-portfolio .frame-17 { padding: 20px 14px; border-radius: 12px; }
+  .element-our-portfolio .text-wrapper-9 { font-size: 18px; }
+  .vc-pf-cta { padding: 60px 16px; }
+  .vc-pf-cta .text-wrapper-13 { font-size: 22px; }
+}
+
+/* =============================================
+   DYNAMIC CARD STYLES (CPT output)
+   ============================================= */
+.element-our-portfolio .portfolio-card-item {
+  flex-shrink: 0;
+  width: 340px;
+  min-height: 560px;
+  height: 560px;
+  /* background-color: #f5f6fc; */
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+.element-our-portfolio .portfolio-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(4,70,242,0.10);
+}
+.element-our-portfolio .pc-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+.element-our-portfolio .pc-image--placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #e6eeff 0%, #bccbff 100%);
+  border-radius: 12px;
+  object-fit: contain;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.element-our-portfolio .pc-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  min-height: 44px;
+}
+.element-our-portfolio .pc-title {
+  font-family: "Outfit", Helvetica, sans-serif !important;
+  font-weight: 600;
+  color: #6E7180;
+  font-size: 15px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.element-our-portfolio .pc-sep { color: #bcbfcc; font-size: 15px; }
+.element-our-portfolio .pc-location {
+  display: block;
+  width: 100%;
+  font-family: "Inter", Helvetica, sans-serif !important;
+  font-weight: 400;
+  color: #6c6c6c;
+  font-size: 15px;
+  margin-top: 2px;
+}
+.element-our-portfolio .pc-industry-description {
+  font-family: "Outfit", Helvetica, sans-serif !important;
+  font-weight: 500;
+  color: #6E7180;
+  font-size: 13px;
+  line-height: 44px;
+  margin: 8px 0 0;
+  min-height: 56px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.element-our-portfolio .pc-subtitle {
+  font-family: "Outfit", Helvetica, sans-serif !important;
+  font-weight: 400;
+  color: #6E7180;
+  font-size: 20px;
+  line-height: 1.4;
+  min-height: 84px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
+
+.element-our-portfolio .pc-case-study-btn {
+  margin-top: 8px;
+  height: 38px;
+  gap: 12px;
+  padding: 4px 8px 4px 24px;
+  width: 187px;
+}
+
+.element-our-portfolio .pc-case-study-btn .view-case-study {
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  color: #0446f2;
+  font-family: "Outfit", Helvetica, sans-serif !important;
+}
+
+.element-our-portfolio .pc-case-study-btn .img {
+  width: 14px;
+  height: 14px;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(2842%) hue-rotate(223deg) brightness(96%) contrast(101%);
+}
+
+.element-our-portfolio .pc-empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: #6c6c6c;
+  font-family: "Inter", Helvetica;
+  font-size: 16px;
+  width: 100%;
+}
+.element-our-portfolio .pc-empty a {
+  color: #0446f2;
+  text-decoration: underline;
+}
+
+.element-our-portfolio .pc-empty.pc-empty--case-study {
+  max-width: none;
+  width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 14px auto;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0446f2 0%, #0a57ff 100%);
+  border-radius: 999px;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(4, 70, 242, 0.22);
+}
+
+.element-our-portfolio .pc-empty.pc-empty--case-study p {
+  margin: 0;
+  font-family: Outfit !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.element-our-portfolio .pc-empty.pc-empty--case-study p br,
+.element-our-portfolio .pc-empty.pc-empty--case-study span {
+  display: none;
+}
+
+.cs-empty-state {
+  background: linear-gradient(135deg, #0446f2 0%, #0a57ff 100%);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  box-shadow: 0 16px 38px rgba(4, 70, 242, 0.25);
+}
+
+.cs-empty-state__title {
+  margin: 0;
+  font-family: "Outfit", Helvetica, sans-serif !important;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.cs-empty-state__text {
+  margin: 10px 0 0;
+  font-family: "Inter", Helvetica, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ── Loading spinner (cards area) ── */
+.pf-spinner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  width: 100%;
+}
+.pf-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e6eeff;
+  border-top-color: #0446f2;
+  border-radius: 50%;
+  animation: pf-spin 0.7s linear infinite;
+}
+@keyframes pf-spin { to { transform: rotate(360deg); } }
+
+/* =============================================
+   MODAL STATS BADGES
+   ============================================= */
+.cs-modal__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.cs-stat-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e6eeff;
+  color: #0446f2;
+  font-family: "Inter", Helvetica;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ── Modal header layout ── */
+.cs-modal__thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  object-position: center center;
+  background: #f5f6fc;
+  display: block;
+}
+.cs-modal__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 72px 48px 40px;
+}
+.cs-modal__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.cs-modal__dot {
+  width: 8px; height: 8px;
+  background: #0446f2;
+  flex-shrink: 0;
+}
+.cs-modal__eyebrow span {
+  font-family: "Inter", Helvetica;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #00051a;
+}
+.cs-modal__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.cs-modal__header-text { flex: 1; }
+.cs-modal__location {
+  font-family: "Inter", Helvetica;
+  font-size: 14px;
+  color: #6c6c6c;
+  margin-top: 4px;
+}
+.cs-modal__industry-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0446f2;
+  background: #e6eeff;
+  padding: 3px 10px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Modal loading spinner ── */
+.cs-modal__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 0;
+  flex: 1;
+  overflow-y: auto;
+  color: #6c6c6c;
+  font-family: "Inter", Helvetica;
+  font-size: 15px;
+}
+.cs-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #e6eeff;
+  border-top-color: #0446f2;
+  border-radius: 50%;
+  animation: pf-spin 0.7s linear infinite;
+}
+
+/* ── MARQUEE ANIMATIONS ──────────────────────────────────────── */
+@keyframes vc-marquee-slow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

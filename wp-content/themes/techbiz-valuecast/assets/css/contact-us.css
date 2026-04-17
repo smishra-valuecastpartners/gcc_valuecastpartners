@@ -1,0 +1,960 @@
+/* ================================================================
+   VALUECAST – CONTACT US PAGE
+   File: assets/css/contact-us.css
+
+   IMPORTANT: valuecast.css is NOT re-imported here. It is already
+   loaded by functions.php (valuecast_contact_enqueue_assets).
+   The footer (.site-footer), CTA (.vc-cta), header (.vc-navbar)
+   and all their children are already styled in valuecast.css
+   under .vc-page — which is added to <body> by the filter below
+   in functions.php (see Section 4b).
+
+   This file only contains styles UNIQUE to the contact page.
+   ================================================================ */
+
+/* ── HERO ─────────────────────────────────────────────────────── */
+.vcc-hero {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  background-color: #00051a;
+  background-image: url('http://vcp.local/wp-content/uploads/2026/04/Contact-Us_Hero.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 120px 48px 90px;
+}
+
+/* Decorative circle rings — pure CSS */
+.vcc-hero-circles {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 460px;
+  height: 460px;
+  pointer-events: none;
+}
+
+.vcc-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid #0446f2;
+  opacity: 0.25;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vcc-circle-1 {
+  width: 420px;
+  height: 420px;
+  top: 210px;
+  left: 210px;
+}
+
+.vcc-circle-2 {
+  width: 300px;
+  height: 300px;
+  top: 210px;
+  left: 210px;
+}
+
+.vcc-circle-3 {
+  width: 180px;
+  height: 180px;
+  top: 210px;
+  left: 210px;
+}
+
+.vcc-node {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid #0446f2;
+  background: #00051a;
+  opacity: 0.65;
+}
+
+.vcc-nd-1 {
+  left: 160px;
+  top: 310px;
+}
+
+.vcc-nd-2 {
+  left: 163px;
+  top: 108px;
+}
+
+.vcc-nd-3 {
+  left: 308px;
+  top: 238px;
+}
+
+.vcc-nd-4 {
+  left: 38px;
+  top: 234px;
+}
+
+.vcc-nd-5 {
+  left: 320px;
+  top: 92px;
+}
+
+.vcc-nd-6 {
+  left: 158px;
+  top: 420px;
+}
+
+.vcc-nd-7 {
+  left: 398px;
+  top: 302px;
+}
+
+.vcc-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.vcc-hero-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(38px, 5vw, 68px);
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0;
+}
+
+.vcc-hero-sub {
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.5;
+  color: #ffffff;
+  opacity: 0.8;
+  max-width: 800px;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Bottom-right diagonal wave */
+.vcc-hero-wave {
+  display: none;
+}
+
+/* ── SHARED BADGE ─────────────────────────────────────────────── */
+.vcc-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vcc-badge-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #0446f2;
+  flex-shrink: 0;
+}
+
+.vcc-badge-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: #00051a;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+/* ── TICKER ───────────────────────────────────────────────────── */
+.vcc-ticker-wrap {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  padding: 24px 0 8px;
+  border-bottom: 1px solid rgba(188, 191, 204, 0.25);
+}
+
+.vcc-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  white-space: nowrap;
+  width: max-content;
+  animation: vcc-ticker 75s linear infinite;
+  padding-bottom: 16px;
+}
+
+@keyframes vcc-ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.vcc-t-gray {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 72px);
+  color: #bcbfcc;
+  line-height: 1;
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.vcc-t-blue {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  font-size: clamp(36px, 5vw, 72px);
+  color: #0446f2;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── INSIGHTS ─────────────────────────────────────────────────── */
+.vcc-insights {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 60px 48px 50px;
+  text-align: center;
+}
+
+.vcc-insights-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 48px);
+  line-height: 1.15;
+  color: #00051a;
+  max-width: 680px;
+  margin: 0;
+}
+
+.vcc-insights-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(14px, 1.3vw, 18px);
+  line-height: 1.55;
+  color: #00051a;
+  opacity: 0.75;
+  max-width: 1080px;
+  margin: 0;
+}
+
+/* ── FORM SECTION ─────────────────────────────────────────────── */
+.vcc-form-section {
+  width: 100%;
+  background: #f6f7fb;
+  padding: 0 48px 0px;
+}
+
+.vcc-form-inner {
+  max-width: 1254px;
+  margin: 0 auto;
+}
+
+/* ── TABS ─────────────────────────────────────────────────────── */
+.vcc-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding-top: 32px;
+  border: none;
+  background: transparent;
+  padding-left: 72px;
+}
+
+.vcc-tab {
+  padding: 14px 24px;
+  border: none;
+  background: #0446f2;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: clamp(12px, 1.1vw, 15px);
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  line-height: 1.2;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+/* Active Tab — attached white card */
+.vcc-tab.vcc-tab--active {
+  background: #ffffff !important;
+  color: #0446f2 !important;
+  border-radius: 20px 20px 0 0;
+  padding: 24px 32px 18px;
+  margin-bottom: 0;
+}
+
+.vcc-tab:not(.vcc-tab--active):hover {
+  background: #0338cc;
+}
+
+.vcc-tab:focus-visible {
+  outline: 2px solid #82ccf9;
+  outline-offset: 2px;
+}
+
+/* ── FORM CARD ────────────────────────────────────────────────── */
+.vcc-form-card {
+  background: #ffffff;
+  border-radius: 0 30px 30px 30px;
+  padding: 44px 80px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vcc-form-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: clamp(20px, 2.3vw, 34px);
+  line-height: 1.4;
+  color: #6e7180;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+/* ── FORM LAYOUT ──────────────────────────────────────────────── */
+.vcc-form-body {
+  display: flex;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+.vcc-form-left {
+  flex: 0 0 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vcc-form-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-end;
+}
+
+/* ── INPUTS ───────────────────────────────────────────────────── */
+.vcc-input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #bcbfcc;
+  border-radius: 10px;
+  padding: 0 16px 0 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #6e7180;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.vcc-input:focus {
+  border-color: #0446f2;
+  box-shadow: 0 0 0 3px rgba(4, 70, 242, 0.1);
+}
+
+.vcc-input::placeholder {
+  color: #6e7180;
+}
+
+/* ── SELECT ───────────────────────────────────────────────────── */
+.vcc-select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.vcc-select {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #bcbfcc;
+  border-radius: 10px;
+  padding: 0 38px 0 18px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #6e7180;
+  background: #edeff7;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.vcc-select:focus {
+  border-color: #0446f2;
+  box-shadow: 0 0 0 3px rgba(4, 70, 242, 0.1);
+}
+
+.vcc-select-chevron {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+/* ── TEXTAREA ─────────────────────────────────────────────────── */
+.vcc-textarea {
+  width: 100%;
+  height: 260px;
+  border: 1px solid #bcbfcc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #6e7180;
+  background: #ffffff;
+  outline: none;
+  resize: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.vcc-textarea:focus {
+  border-color: #0446f2;
+  box-shadow: 0 0 0 3px rgba(4, 70, 242, 0.1);
+}
+
+.vcc-textarea::placeholder {
+  color: rgba(110, 113, 128, 0.5);
+}
+
+/* ── SUBMIT ───────────────────────────────────────────────────── */
+.vcc-submit-btn {
+  height: 52px;
+  min-width: 124px;
+  background: #0446f2;
+  border: none;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.vcc-submit-btn:hover {
+  background: #0338cc;
+  transform: translateY(-1px);
+}
+
+.vcc-submit-btn:active {
+  transform: translateY(0);
+}
+
+.vcc-submit-btn span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* ── MESSAGES ─────────────────────────────────────────────────── */
+.vcc-success-msg,
+.vcc-error-msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.vcc-success-msg {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.vcc-error-msg {
+  background: #fce4ec;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   CTA SECTION — uses existing valuecast.css classes:
+   .vc-cta, .vc-cta-inner, .vc-lbl, .buttonwhite, .explore-more,
+   .arrowright-wrapper, .arrowright, .vector-icon.top-right,
+   .vector-icon.bottom-left
+   These are already in valuecast.css so NO re-definition needed.
+   Only one override: remove the .vc-page scope so it works here.
+═════════════════════════════════════════════════════════════════ */
+
+/* The CTA section CSS in valuecast.css is NOT scoped under .vc-page
+   so it already works on this page. No overrides needed. ✅ */
+
+/* Match Contact CTA sizing to the broader portfolio CTA treatment */
+.vc-contact-page .vc-cta {
+  min-height: 588px;
+  padding: clamp(60px, 8.3vw, 120px) clamp(48px, 15vw, 216px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vc-contact-page .vc-cta-inner {
+  width: 100%;
+  max-width: 1240px;
+  gap: 44px;
+}
+
+.vc-contact-page .vc-cta h2 {
+  margin: 0;
+  font-family: "Outfit", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 110%;
+}
+
+.vc-contact-page .vc-cta .buttonwhite {
+  height: 54px;
+  padding: 4px 8px 4px 32px;
+  gap: 16px;
+}
+
+.vc-contact-page .vc-cta .explore-more {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@media (max-width: 1024px) {
+  .vc-contact-page .vc-cta {
+    min-height: auto;
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vc-contact-page .vc-cta {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .vc-contact-page .vc-cta h2 {
+    font-size: 28px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   FOOTER — The footer CSS in valuecast.css IS scoped under .vc-page
+   We unsrap it below so it works on the contact page too.
+   The body gets .vc-contact-page class (added in functions.php
+   Section 4b). We mirror all .vc-page footer rules here.
+═════════════════════════════════════════════════════════════════ */
+
+/* Mirror all .vc-page footer rules for .vc-contact-page */
+.vc-contact-page .site-footer {
+  background-color: #0b0f1a;
+  color: #ffffff;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.vc-contact-page .site-footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.vc-contact-page .footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 55px 50px 30px;
+}
+
+.vc-contact-page .footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.vc-contact-page .footer-logo svg {
+  height: 42px;
+  width: auto;
+}
+
+.vc-contact-page .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.vc-contact-page .footer-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+  margin: 0;
+  padding: 0;
+}
+
+.vc-contact-page .footer-nav ul li a {
+  font-size: 15px;
+  font-weight: 400;
+  color: #ffffff !important;
+  transition: opacity 0.3s;
+  text-decoration: none !important;
+}
+
+.vc-contact-page .footer-nav ul li a:hover {
+  opacity: 0.65;
+}
+
+.vc-contact-page .footer-info {
+  display: flex;
+  gap: 120px;
+}
+
+.vc-contact-page .footer-contact,
+.vc-contact-page .footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vc-contact-page .contact-item,
+.vc-contact-page .social-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 15px;
+  color: #ffffff !important;
+  transition: opacity 0.3s;
+  text-decoration: none !important;
+}
+
+.vc-contact-page .contact-item:hover,
+.vc-contact-page .social-item:hover {
+  opacity: 0.65;
+}
+
+.vc-contact-page .contact-item svg,
+.vc-contact-page .social-item svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+.vc-contact-page .footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 25px;
+}
+
+.vc-contact-page .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.vc-contact-page .copyright {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.vc-contact-page .footer-legal {
+  display: flex;
+  gap: 55px;
+}
+
+.vc-contact-page .footer-legal a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5) !important;
+  transition: color 0.3s;
+  text-decoration: none !important;
+}
+
+.vc-contact-page .footer-legal a:hover {
+  color: #ffffff !important;
+}
+
+/* Also suppress the Techbiz parent theme footer, breadcrumbs, and header info blocks on contact page */
+.vc-contact-page .vs-footer,
+.vc-contact-page .footer-layout1,
+.vc-contact-page .footer-copyright,
+.vc-contact-page [data-elementor-type="footer"]:not(.site-footer),
+.vc-contact-page .breadcumb-wrapper,
+.vc-contact-page .header-info-area {
+  display: none !important;
+}
+
+/* Legacy contact header block removed.
+   Header parity is controlled by the unified "HOME HEADER PARITY — CONTACT PAGE" block below. */
+
+/* ── RESPONSIVE ───────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .vcc-hero-circles {
+    display: none;
+  }
+
+  .vcc-form-section {
+    padding: 0 24px 36px;
+  }
+
+  .vcc-form-card {
+    padding: 36px 28px 40px;
+    border-radius: 20px !important;
+  }
+
+  .vcc-form-body {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .vcc-form-left {
+    flex: none;
+    width: 100%;
+  }
+
+  .vcc-form-right {
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .vcc-tabs {
+    flex-wrap: wrap;
+    padding-top: 20px;
+    gap: 8px;
+    padding-left: 0;
+  }
+
+  .vcc-tab {
+    border-radius: 10px !important;
+    padding: 12px 18px !important;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .vc-contact-page .footer-main {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .vc-contact-page .footer-nav ul {
+    flex-wrap: wrap;
+    gap: 22px;
+  }
+
+  .vc-contact-page .footer-info {
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vcc-hero {
+    padding: 100px 24px 70px;
+  }
+
+  .vcc-insights {
+    padding: 40px 24px 36px;
+  }
+
+  .vcc-t-gray,
+  .vcc-t-blue {
+    font-size: 34px;
+  }
+
+  .vcc-ticker-track {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vcc-hero-wave {
+    display: none;
+  }
+
+  .vcc-form-card {
+    padding: 24px 18px 32px;
+  }
+
+  .vc-contact-page .footer-container {
+    padding: 40px 24px 24px;
+  }
+
+  .vc-contact-page .footer-info {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .vc-contact-page .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .vc-contact-page .footer-legal {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vcc-hero {
+    padding: 90px 16px 60px;
+    min-height: 360px;
+  }
+
+  .vcc-hero-title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .vcc-hero-sub {
+    font-size: 14px;
+  }
+
+  .vcc-insights {
+    padding: 32px 16px 28px;
+  }
+
+  .vcc-form-section {
+    padding: 0 12px 28px;
+  }
+
+  .vcc-tabs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding-left: 0;
+  }
+
+  .vcc-tab {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px !important;
+    padding: 12px 16px !important;
+    margin-bottom: 0;
+  }
+
+  .vcc-tab.vcc-tab--active {
+    border-radius: 10px !important;
+    padding: 14px 16px !important;
+  }
+
+  .vcc-form-card {
+    border-radius: 16px !important;
+    padding: 20px 14px 28px;
+  }
+
+  .vcc-form-right {
+    align-items: stretch;
+  }
+}
+
+/* ================================================================
+   HOME HEADER PARITY — CONTACT PAGE
+   ================================================================ */
+.vc-contact-page #vc-nav-menu .mega-menu-wrap,
+.vc-contact-page #vc-nav-menu > div:not(.vc-menu-list) {
+  display: contents !important;
+}
+
+.vc-contact-page #vc-nav-menu .mega-menu-wrap > ul {
+  display: flex !important;
+}
+
+.vc-contact-page #vc-navbar .vc-nav-menu {
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  box-shadow: none !important;
+}
+
+.vc-contact-page #vc-navbar .vc-menu-list,
+.vc-contact-page #vc-nav-menu ul.vc-menu-list {
+  background: transparent !important;
+  border-radius: 0 !important;
+  gap: 4px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.vc-contact-page #vc-navbar .vc-menu-list > li > a,
+.vc-contact-page #vc-nav-menu ul.vc-menu-list > li > a,
+.vc-contact-page #vc-nav-menu .mega-menu-wrap > ul > li > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  -webkit-border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  background-color: rgba(110, 106, 106, 0.1) !important;
+  color: #ffffff !important;
+}
+
+.vc-contact-page #vc-navbar .vc-menu-list > li.current-menu-item > a,
+.vc-contact-page #vc-navbar .vc-menu-list > li.current_page_item > a,
+.vc-contact-page #vc-navbar .vc-menu-list > li.current_page_parent > a,
+.vc-contact-page #vc-navbar .vc-menu-list > li > a[href*='/contact-us'] {
+  background-color: #0446f2 !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+}
+
+.vc-contact-page #vc-navbar .vc-nav-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  /* background: #1A38F0 !important; */
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  padding: 10px 22px !important;
+  height: auto !important;
+}
+
+.vc-contact-page #vc-navbar .vc-btn-label {
+  background: transparent !important;
+  color: #ffffff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 0 !important;
+  height: auto !important;
+  border-radius: 0 !important;
+}
+
+.vc-contact-page #vc-navbar .vc-phone-ico {
+  margin: 0 !important;
+  width: 16px !important;
+  height: 16px !important;
+}

@@ -1,0 +1,36 @@
+# WordPress core
+/wp-admin/
+/wp-includes/
+wp-*.php
+license.txt
+readme.html
+*.sql
+
+# WordPress config
+wp-config.php
+.htaccess
+
+# Plugins (keeping only custom ones)
+/wp-content/plugins/*
+!/wp-content/plugins/custom-*
+
+# Themes (excluding default WP themes but keeping custom)
+/wp-content/themes/twenty*
+/wp-content/themes/hello*
+
+# Dependencies
+/wp-content/uploads/
+node_modules/
+vendor/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+.env
+*.log

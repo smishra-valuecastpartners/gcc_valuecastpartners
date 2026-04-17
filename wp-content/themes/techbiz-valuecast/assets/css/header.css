@@ -1,0 +1,755 @@
+/* ══════════════════════════════════════════════════════════════
+   VALUECAST HEADER — header.css (complete)
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Base ────────────────────────────────────────────────────── */
+.vc-navbar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 10001;
+  background: transparent;
+  border: none;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vc-navbar.scrolled {
+  position: fixed;
+  background: rgba(10, 14, 26, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.vc-navbar.vc-menu-is-open {
+  position: fixed !important;
+  background: rgba(10, 14, 26, 0.97) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3) !important;
+  z-index: 10002 !important;
+}
+
+/* ── Inner ───────────────────────────────────────────────────── */
+.vc-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 100px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Logo ────────────────────────────────────────────────────── */
+.vc-nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.vc-nav-logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   GLASSMORPHISM NAV (desktop only)
+   ══════════════════════════════════════════════════════════════ */
+.vc-nav-glass {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
+  backdrop-filter: blur(34px);
+  -webkit-backdrop-filter: blur(34px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50px;
+  padding: 5px 6px;
+}
+
+.vc-navbar.scrolled .vc-nav-glass {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.08);
+}
+
+/* ── Desktop Menu List ───────────────────────────────────────── */
+.vc-menu-list,
+#vc-menu-list-inner {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
+}
+
+.vc-menu-list li,
+#vc-menu-list-inner li {
+  position: relative;
+}
+
+.vc-menu-list li a,
+#vc-menu-list-inner li a {
+  display: flex;
+  align-items: center;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(255,255,255,0.85);
+  background: transparent;
+  text-decoration: none;
+  transition: color 0.25s, background 0.25s;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+.vc-menu-list li a:hover,
+#vc-menu-list-inner li a:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,0.15) !important;
+}
+
+.vc-menu-list li.current-menu-item > a,
+.vc-menu-list li.current_page_item > a,
+#vc-menu-list-inner li.current-menu-item > a,
+#vc-menu-list-inner li.current_page_item > a {
+  background: #0446F2;
+  color: #fff;
+  font-weight: 600;
+}
+
+.vc-menu-list li.current-menu-item > a:hover,
+.vc-menu-list li.current_page_item > a:hover {
+  background: rgba(255,255,255,0.15) !important;
+}
+
+/* PREVENT parent/ancestor false highlights */
+.vc-menu-list li.current_page_parent > a,
+.vc-menu-list li.current-menu-parent > a,
+.vc-menu-list li.current_page_ancestor > a,
+.vc-menu-list li.current-menu-ancestor > a,
+#vc-menu-list-inner li.current_page_parent > a,
+#vc-menu-list-inner li.current-menu-parent > a,
+#vc-menu-list-inner li.current_page_ancestor > a,
+#vc-menu-list-inner li.current-menu-ancestor > a {
+  background: transparent !important;
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500 !important;
+}
+
+/* Blog highlight ONLY on blog/single-post — NOT homepage */
+body.blog:not(.home):not(.front-page) .vc-menu-list li a[href*="/blog"],
+body.single-post .vc-menu-list li a[href*="/blog"],
+body.blog:not(.home):not(.front-page) #vc-menu-list-inner li a[href*="/blog"],
+body.single-post #vc-menu-list-inner li a[href*="/blog"] {
+  background: #0446F2 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* ── Desktop Dropdown ────────────────────────────────────────── */
+.vc-menu-list li .sub-menu,
+.vc-menu-list li ul,
+#vc-menu-list-inner li .sub-menu,
+#vc-menu-list-inner li ul {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: rgba(10,14,26,0.96);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 8px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  list-style: none;
+  z-index: 100;
+}
+
+.vc-menu-list li:hover > .sub-menu,
+.vc-menu-list li:hover > ul,
+#vc-menu-list-inner li:hover > .sub-menu,
+#vc-menu-list-inner li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.vc-menu-list li .sub-menu a,
+.vc-menu-list li ul a,
+#vc-menu-list-inner li .sub-menu a,
+#vc-menu-list-inner li ul a {
+  padding: 10px 20px;
+  border-radius: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── Actions ─────────────────────────────────────────────────── */
+.vc-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CTA — Split pill
+   ══════════════════════════════════════════════════���═══════════ */
+.vc-nav-cta {
+  display: inline-flex;
+  align-items: stretch;
+  width: 168px;
+  height: 51px;
+  border-radius: 60px;
+  overflow: hidden;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.vc-nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(4, 70, 242, 0.4);
+}
+
+.vc-cta-blue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background: #0446F2;
+  border-radius: 60px 0 0 60px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  padding: 0 20px;
+  height: 51px;
+}
+
+.vc-cta-white {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;   /* same as figma */
+    height: 51px;
+    background: #fff;
+    border-radius: 0 60px 60px 0;
+    overflow: hidden;
+}
+
+.vc-cta-white img {
+    width: 20px;   /* control icon size */
+    height: auto;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
+
+.vc-cta-white svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  transform: scaleX(-1);
+}
+
+/* ═════════════��════════════════════════════════════════════════
+   HAMBURGER
+   ══════════════════════════════════════════════════════════════ */
+.vc-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  margin-left: 16px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.vc-hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: #fff;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.vc-navbar .vc-hamburger span,
+.vc-navbar.scrolled .vc-hamburger span,
+.vc-navbar.vc-menu-is-open .vc-hamburger span {
+  background: #fff !important;
+}
+
+.vc-hamburger.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.vc-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.vc-hamburger.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE OVERLAY — now OUTSIDE <header>, so position:fixed
+   works relative to viewport (not clipped by backdrop-filter)
+   ══════════════════════════════════════════════════════════════ */
+.vc-mobile-overlay {
+  display: none;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   INNER PAGE CONSISTENCY
+   ══════════════════════════════════════════════════════════════ */
+.vcc-about-page .vc-navbar,
+.vc-approach-page .vc-navbar,
+.vc-portfolio-page .vc-navbar,
+.vc-blog-page .vc-navbar,
+.vc-blog-detail .vc-navbar {
+  position: absolute;
+  background: transparent;
+}
+
+.vcc-about-page .vc-navbar.scrolled,
+.vc-approach-page .vc-navbar.scrolled,
+.vc-portfolio-page .vc-navbar.scrolled,
+.vc-blog-page .vc-navbar.scrolled,
+.vc-blog-detail .vc-navbar.scrolled {
+  position: fixed;
+  background: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   DESKTOP RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 1280px) {
+  .vc-nav-inner { padding: 10px 40px; }
+}
+
+@media (max-width: 1024px) {
+  .vc-nav-inner { padding: 10px 32px; }
+  .vc-menu-list li a,
+  #vc-menu-list-inner li a { padding: 7px 14px; font-size: 13px; }
+  .vc-nav-cta { width: 152px; height: 46px; }
+  .vc-cta-blue { padding: 0 18px; font-size: 13px; height: 46px; }
+  .vc-cta-white { width: 40px; min-width: 40px; }
+  .vc-cta-white svg { width: 18px; height: 18px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE ≤991px — ALL PAGES
+   ══════════════════════════════════════════════════════════════ */
+@media (max-width: 991px) {
+
+  .vc-nav-inner {
+    padding: 10px 24px;
+  }
+
+  .vc-nav-glass,
+  .home .vc-nav-glass,
+  .front-page .vc-nav-glass,
+  .blog .vc-nav-glass,
+  .vc-page .vc-nav-glass {
+    display: none !important;
+  }
+
+  .vc-hamburger,
+  .home .vc-hamburger,
+  .front-page .vc-hamburger,
+  .blog .vc-hamburger,
+  .vc-page .vc-hamburger {
+    display: flex !important;
+  }
+
+  .vc-nav-cta { width: 140px; height: 44px; }
+  .vc-cta-blue { padding: 0 14px; font-size: 13px; height: 44px; }
+  .vc-cta-white { width: 38px; min-width: 38px; }
+  .vc-cta-white svg { width: 16px; height: 16px; }
+
+  body.vc-menu-open {
+    overflow: hidden !important;
+  }
+
+  /* ── OVERLAY (lives outside <header>, z-index is global) ─── */
+ /* ── OVERLAY (lives outside <header>, z-index is global) ─── */
+  .vc-mobile-overlay,
+  .home .vc-mobile-overlay,
+  .front-page .vc-mobile-overlay,
+  .blog .vc-mobile-overlay,
+  .single-post .vc-mobile-overlay,
+  .vc-page .vc-mobile-overlay {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 60% !important;
+    z-index: 10000 !important;
+    background: rgba(10, 14, 26, 0.97) !important;
+    backdrop-filter: blur(28px) !important;
+    -webkit-backdrop-filter: blur(28px) !important;
+    overflow: hidden !important;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  }
+
+  .vc-mobile-overlay.open,
+  .home .vc-mobile-overlay.open,
+  .front-page .vc-mobile-overlay.open,
+  .blog .vc-mobile-overlay.open,
+  .single-post .vc-mobile-overlay.open,
+  .vc-page .vc-mobile-overlay.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s !important;
+  }
+
+  /* ── Inner container ───────────────────────────────────────── */
+  .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .home .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .front-page .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .blog .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .vc-page .vc-mobile-overlay .vc-mobile-overlay-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    padding: 100px 28px 40px !important;
+    box-sizing: border-box !important;
+  }
+
+  .vc-mobile-overlay .vc-mobile-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── MENU LIST ─────────────────────────────────────────────── */
+  #vc-mobile-overlay .vc-mobile-nav ul,
+  #vc-mobile-overlay .vc-mobile-nav .vc-mobile-menu-list,
+  #vc-mobile-overlay ul.vc-mobile-menu-list,
+  .vc-mobile-overlay .vc-mobile-menu-list,
+  .home #vc-mobile-overlay .vc-mobile-nav ul,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul,
+  .single-post #vc-mobile-overlay .vc-mobile-nav ul,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    overflow-x: hidden !important;
+  }
+
+  #vc-mobile-overlay .vc-mobile-nav ul li,
+  .vc-mobile-overlay .vc-mobile-menu-list li,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li,
+  .single-post #vc-mobile-overlay .vc-mobile-nav ul li,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    border: none !important;
+    background: none !important;
+  }
+
+  #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .single-post #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li > a {
+    display: block !important;
+    width: 100% !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: rgba(255,255,255,0.78) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    white-space: normal !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.01em !important;
+    text-transform: none !important;
+    box-sizing: border-box !important;
+    float: none !important;
+    text-align: left !important;
+    transition: color 0.2s ease, background 0.2s ease !important;
+  }
+
+  #vc-mobile-overlay .vc-mobile-nav ul li:last-child > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li:last-child > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li:last-child > a,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li:last-child > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li:last-child > a {
+    border-bottom: none !important;
+  }
+
+  #vc-mobile-overlay .vc-mobile-nav ul li > a:hover,
+  .vc-mobile-overlay .vc-mobile-menu-list li > a:hover,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li > a:hover,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li > a:hover,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li > a:hover {
+    color: #fff !important;
+    background: rgba(255,255,255,0.05) !important;
+  }
+
+  /* Active — blue pill */
+  #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-item > a,
+  #vc-mobile-overlay .vc-mobile-nav ul li.current_page_item > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li.current-menu-item > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li.current_page_item > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-item > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li.current_page_item > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-item > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li.current_page_item > a,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-item > a,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li.current_page_item > a,
+  .single-post #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-item > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-item > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li.current_page_item > a {
+    background: #0446F2 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+    border-bottom: none !important;
+    padding: 14px 20px !important;
+    margin: 4px 0 !important;
+  }
+
+  /* PREVENT parent/ancestor false highlight */
+  #vc-mobile-overlay .vc-mobile-nav ul li.current_page_parent > a,
+  #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-parent > a,
+  #vc-mobile-overlay .vc-mobile-nav ul li.current_page_ancestor > a,
+  #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-ancestor > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li.current_page_parent > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li.current-menu-parent > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li.current_page_ancestor > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li.current-menu-ancestor > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li.current_page_parent > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-parent > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li.current_page_ancestor > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-ancestor > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li.current_page_parent > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-parent > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li.current_page_ancestor > a,
+  .front-page #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-ancestor > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li.current_page_parent > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-parent > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li.current_page_ancestor > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li.current-menu-ancestor > a {
+    background: transparent !important;
+    color: rgba(255,255,255,0.78) !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+    padding: 16px 20px !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  }
+
+  /* Blog highlight ONLY on blog/single-post — NOT homepage */
+  body.blog:not(.home):not(.front-page) #vc-mobile-overlay .vc-mobile-nav ul li a[href*="/blog"],
+  body.single-post #vc-mobile-overlay .vc-mobile-nav ul li a[href*="/blog"],
+  body.blog:not(.home):not(.front-page) .vc-mobile-overlay .vc-mobile-menu-list li a[href*="/blog"],
+  body.single-post .vc-mobile-overlay .vc-mobile-menu-list li a[href*="/blog"] {
+    background: #0446F2 !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important;
+    border-bottom: none !important;
+    padding: 14px 20px !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Sub-menu */
+  #vc-mobile-overlay .vc-mobile-nav ul li .sub-menu,
+  #vc-mobile-overlay .vc-mobile-nav ul li ul,
+  .vc-mobile-overlay .vc-mobile-menu-list li .sub-menu {
+    position: static !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 0 0 20px !important;
+    margin: 0 !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #vc-mobile-overlay .vc-mobile-nav ul li .sub-menu a,
+  #vc-mobile-overlay .vc-mobile-nav ul li ul a {
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+    color: rgba(255,255,255,0.55) !important;
+  }
+
+  /* ── Mobile CTA ────────────────────────────────────────────── */
+  #vc-mobile-overlay .vc-mobile-cta,
+  .vc-mobile-overlay .vc-mobile-cta,
+  .home #vc-mobile-overlay .vc-mobile-cta,
+  .blog #vc-mobile-overlay .vc-mobile-cta,
+  .vc-page #vc-mobile-overlay .vc-mobile-cta {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    margin-top: auto !important;
+    padding-top: 32px !important;
+    width: 100% !important;
+    text-decoration: none !important;
+    gap: 0 !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .vc-mobile-cta-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0446F2;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 24px;
+    border-radius: 60px 0 0 60px;
+    height: 52px;
+    white-space: nowrap;
+  }
+  
+  .vc-cta-white { width: 45px; height:43px;}
+  .vc-mobile-cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    background: #ffffff;
+    border-radius: 0 60px 60px 0;
+  }
+
+  .vc-mobile-cta-icon svg {
+    width: 20px;
+    height: 20px;
+    stroke: #0446F2;
+    transform: scaleX(-1);
+  }
+
+  .vc-mobile-cta:hover .vc-mobile-cta-text {
+    background: #0339cc;
+  }
+}
+
+/* ── 480px ───────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .vc-nav-inner { padding: 10px 16px; }
+  .vc-nav-logo img { height: 32px; }
+  .vc-nav-cta { width: 130px; height: 40px; }
+  .vc-cta-blue { padding: 0 12px; font-size: 12px; height: 40px; }
+  .vc-cta-white { width: 34px; min-width: 34px; }
+  .vc-cta-white svg { width: 14px; height: 14px; }
+
+  .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .home .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .blog .vc-mobile-overlay .vc-mobile-overlay-inner,
+  .vc-page .vc-mobile-overlay .vc-mobile-overlay-inner {
+    padding: 90px 20px 30px !important;
+  }
+
+  #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li > a,
+  .home #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .blog #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .vc-page #vc-mobile-overlay .vc-mobile-nav ul li > a {
+    padding: 14px 16px !important;
+    font-size: 15px !important;
+  }
+   .vc-cta-white { width: 45px; height:40px;}
+  .vc-mobile-cta-text { font-size: 14px; height: 48px; }
+  .vc-mobile-cta-icon { width: 48px; min-width: 48px; height: 48px; }
+}
+
+/* ── 375px ───────────────────────────────────────────────────── */
+@media (max-width: 375px) {
+  .vc-nav-inner { padding: 10px 14px; }
+  .vc-nav-logo img { height: 28px; }
+  .vc-nav-cta { width: 120px; height: 38px; }
+  .vc-cta-blue { font-size: 11px; height: 38px; }
+  
+  #vc-mobile-overlay .vc-mobile-nav ul li > a,
+  .vc-mobile-overlay .vc-mobile-menu-list li > a {
+    padding: 13px 14px !important;
+    font-size: 14px !important;
+  }
+}
+.vc-blog-page #vc-navbar.scrolled .vc-hamburger span {
+    background: #ffffff !important;
+}
+
+
+/* Active menu states */
+.vc-blog-detail #vc-navbar .vc-menu-list > li.current-menu-item > a,
+.vc-blog-detail #vc-navbar .vc-menu-list > li.current_page_item > a,
+.vc-blog-page #vc-navbar .vc-menu-list > li.current_page_parent > a,
+.vc-blog-detail #vc-navbar .vc-menu-list > li.current_page_parent > a {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Hover effect for ALL menu items */
+#vc-navbar .vc-menu-list > li > a:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+
