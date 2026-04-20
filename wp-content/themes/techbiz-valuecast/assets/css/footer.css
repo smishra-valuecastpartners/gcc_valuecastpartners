@@ -49,7 +49,7 @@
 
 /* 4. Background match (prevents white line at sub-pixel gaps) */
 .vc-page footer {
-  background-color: #00051A; !important;
+  background-color: #00051A !important;
 }
 
 /* 5. Override parent theme --section-space (120px) */
@@ -203,7 +203,7 @@
   border-radius: 999px;
   border: none;
   justify-content: center;
-  gap: 0;
+  gap: 14;
 }
 
 .vc-page .social-linkedin svg {
@@ -290,4 +290,129 @@
 .vc-page:not(.vc-contact-page) .back-to-top,
 .vc-page:not(.vc-contact-page) .scrollToTop {
   display: none !important;
+}
+
+/* =========================================
+   FINAL MOBILE FOOTER (PRO UI SYSTEM)
+========================================= */
+
+@media (max-width: 768px) {
+
+  /* CONTAINER */
+  .vc-page .footer-container {
+    padding: 40px 20px 30px;
+  }
+
+  /* STACK LAYOUT */
+  .vc-page .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  /* LOGO */
+  .vc-page .footer-logo img {
+    max-width: 150px;
+  }
+
+  /* RIGHT BLOCK */
+  .vc-page .footer-right {
+    width: 100%;
+    gap: 24px;
+  }
+
+  /* ======================
+     NAV (TIGHT + CLEAN)
+  ====================== */
+  .vc-page .footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .vc-page .footer-nav ul li a {
+    font-size: 15px;
+    opacity: 0.9;
+  }
+
+  /* ======================
+     CONTACT + SOCIAL (UNIFIED SYSTEM)
+  ====================== */
+
+  .vc-page .footer-info {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .vc-page .footer-contact {
+    gap: 14px;
+  }
+
+  /* 🔥 SINGLE ALIGNMENT SYSTEM */
+  .vc-page .contact-item,
+  .vc-page .social-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* ICON CONSISTENCY */
+  .vc-page .contact-item svg,
+  .vc-page .social-item svg,
+  .vc-page .social-item img {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  /* REMOVE BAD DESKTOP OFFSET */
+  .vc-page .footer-social {
+    padding-left: 0 !important;
+    padding-top: 0;
+    margin-top: 4px;
+    gap: 14px;
+  }
+
+  /* 🔥 FIX LINKEDIN (NO FLOATING BOX) */
+  .vc-page .social-linkedin {
+    width: auto;
+    height: auto;
+    background: none !important;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  /* ======================
+     DIVIDER
+  ====================== */
+  .vc-page .footer-divider {
+    margin: 24px 0;
+  }
+
+  /* ======================
+     BOTTOM SECTION
+  ====================== */
+  .vc-page .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .vc-page .footer-legal {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .vc-page .footer-legal a {
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  .vc-page .copyright {
+    font-size: 13px;
+    opacity: 0.6;
+  }
 }

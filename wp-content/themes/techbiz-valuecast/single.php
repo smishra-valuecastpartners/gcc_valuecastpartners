@@ -35,7 +35,7 @@ $next_post = get_next_post();
 // Share URLs
 $post_url   = urlencode(get_permalink());
 $post_title = urlencode($title);
-$twitter_url  = 'https://twitter.com/intent/tweet?url=' . $post_url . '&text=' . $post_title;
+// $twitter_url  = 'https://twitter.com/intent/tweet?url=' . $post_url . '&text=' . $post_title;
 $linkedin_url = 'https://www.linkedin.com/sharing/share-offsite/?url=' . $post_url;
 
 // Related posts (same category)
@@ -76,6 +76,8 @@ if (!empty($cats)) {
     ?>
   </article>
 
+  <div class="vc-single-content-clear" aria-hidden="true"></div>
+
   <div class="vc-single-meta">
         <span><?php echo esc_html($date); ?></span>
         <span class="vc-meta-sep">·</span>
@@ -88,33 +90,31 @@ if (!empty($cats)) {
   <nav class="group-7" aria-label="Blog post navigation">
     <div class="line-wrapper" aria-hidden="true"><hr class="vc-nav-line" /></div>
 
+    <div class="vc-share-above-nav">
+      <!-- <a class="twitter" href="<?php echo esc_url($twitter_url); ?>" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
+        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/twitter.svg'); ?>" alt="Twitter" loading="lazy" />
+      </a> -->
+      <a class="linked-in" href="<?php echo esc_url($linkedin_url); ?>" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
+        <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/linkedin.svg'); ?>" alt="LinkedIn" loading="lazy" />
+      </a>
+    </div>
+
     <div class="vc-post-nav-row">
       <!-- Previous -->
       <?php if ($prev_post) : ?>
       <a class="frame-27 vc-nav-prev" href="<?php echo esc_url(get_permalink($prev_post->ID)); ?>">
-        <span class="vc-nav-arrow">←</span>
         <div>
           <span class="text-wrapper-27">PREVIOUS</span>
+          <span class="vc-nav-arrow">←</span>
           <p class="blockchain-and"><?php echo esc_html($prev_post->post_title); ?></p>
         </div>
       </a>
       <?php else : ?>
       <div class="frame-27 vc-nav-prev vc-nav-disabled">
-        <span class="vc-nav-arrow">←</span>
         <span class="text-wrapper-27">PREVIOUS</span>
+        <span class="vc-nav-arrow">←</span>
       </div>
       <?php endif; ?>
-
-      <!-- Social share -->
-      <div class="frame-29 vc-share-wrap">
-        <span class="vc-share-label">Share:</span>
-        <a href="<?php echo esc_url($twitter_url); ?>" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter">
-          <svg class="twitter" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="<?php echo esc_url($linkedin_url); ?>" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
-          <svg class="linked-in" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-      </div>
 
       <!-- Next -->
       <?php if ($next_post) : ?>
@@ -133,11 +133,13 @@ if (!empty($cats)) {
       <?php endif; ?>
     </div>
 
+
+
     <div class="line-wrapper" aria-hidden="true"><hr class="vc-nav-line" /></div>
   </nav>
 
   <!-- ══ RELATED POSTS ══ -->
-  <?php if (!empty($related)) : ?>
+  <!-- <?php if (!empty($related)) : ?>
   <section class="vc-related-posts">
     <h3 class="vc-related-title">Related Articles</h3>
     <div class="vc-related-grid">
@@ -155,7 +157,7 @@ if (!empty($cats)) {
       <?php endforeach; ?>
     </div>
   </section>
-  <?php endif; ?>
+  <?php endif; ?> -->
 
   <!-- ══ COMMENTS ══ -->
   <?php if (comments_open() || get_comments_number()) : ?>
@@ -209,10 +211,7 @@ if (!empty($cats)) {
           'email'  => '<label class="text-wrapper-14" for="email">EMAIL</label>
             <input id="email" name="email" class="text-wrapper-17 reply-input reply-input--email" type="email" placeholder="@email.com" required />
           </div>',
-          'cookies' => '<label class="i-agree-with-terms" for="wp-comment-cookies-consent">
-            <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
-            I agree with terms &amp; conditions
-          </label>',
+          'cookies' => '',
         ),
         'submit_button'       => '<div class="group-wrapper"><button class="group-5" type="%3$s" id="%2$s" name="%1$s"><span class="text-wrapper-23">%4$s</span></button></div>',
         'submit_field'        => '%1$s %2$s',
@@ -230,12 +229,20 @@ if (!empty($cats)) {
 
 
 <style>
-  .vc-nav-inner {
+  body.single-post {
+    padding-top: 72px;
+  }
+
+  body.single-post.admin-bar {
+    padding-top: 104px;
+  }
+
+  body.single-post .vc-nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 72px;
-    /* position: absolute; */
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -244,15 +251,24 @@ if (!empty($cats)) {
     border: none;
 }
  /* Main Header Container */
-#vc-navbar {
+body.single-post #vc-navbar {
     background-color: #00030b !important; /* Deep Navy/Black */
-    position: relative;
+  position: fixed;
+    top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+    z-index: 1001;
     overflow: hidden;
     
 }
 
+body.single-post.admin-bar #vc-navbar {
+  top: 32px;
+}
+
 /* Subtle Blue Glow on the right */
-#vc-navbar::after {
+body.single-post #vc-navbar::after {
     content: '';
     position: absolute;
     right: 0;
@@ -265,31 +281,29 @@ if (!empty($cats)) {
 }
 
 /* Standard Menu Links */
-.vc-nav-inner a {
+body.single-post .vc-nav-inner a {
     color: #ffffff !important;
     font-size: 14px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 10px 17px !important;
     transition: all 0.3s ease;
 }
 
 /* The "Blog" Highlighted Button */
 /* Replace '.menu-item-xxxx' with your actual Blog menu ID or a custom class */
-.vc-nav-inner ul li.menu-item-12822 a { 
+body.single-post .vc-nav-inner ul li.menu-item-12822 a { 
     background-color: #0056ff;
     border-radius: 50px;
     padding: 8px 25px !important;
 }
 
-.vc-nav-inner ul li.menu-item-12822 a:hover {
+body.single-post .vc-nav-inner ul li.menu-item-12822 a:hover {
     background-color: #0044cc;
     box-shadow: 0 0 15px rgba(0, 86, 255, 0.4);
 }
 
 /* Main Call Now Button */
-.vc-nav-inner .elementor-button {
+body.single-post .vc-nav-inner .elementor-button {
     background-color: #1a4fff !important;
     border-radius: 50px !important;
     padding: 14px 30px !important;
@@ -301,7 +315,7 @@ if (!empty($cats)) {
     box-shadow: 0 4px 15px rgba(26, 79, 255, 0.3);
 }
 
-.vc-nav-inner .elementor-button:hover {
+body.single-post .vc-nav-inner .elementor-button:hover {
     background-color: #003cc2 !important;
     transform: translateY(-1px);
 }

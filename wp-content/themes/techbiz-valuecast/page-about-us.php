@@ -299,6 +299,21 @@ get_header('valuecast');
                         Add team members via <strong>Our Team &rsaquo; Add Team Member</strong> in the WordPress admin.
                     </p>
                     <?php endif; ?>
+
+                     <a href="<?php echo esc_url($about_contact_url); ?>" class="interested-being-a">Interested being a part of ValueCast Partners?</a>
+                <!-- <a href="<?php echo esc_url($about_contact_url); ?>" class="buttonwhite-about">
+                    <div class="write-to-our">WRITE TO OUR TALENT EXPERT</div>
+                </a> -->
+                 <center>
+                    <a href="<?php echo esc_url($about_contact_url); ?>" class="buttonwhite-about">
+                        <div class="write-to-our">WRITE TO OUR TALENT EXPERT</div>
+                        <div class="arrow-right-wrapper">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </div>
+                    </a>
+                </center>
                 </div>
 
                 <script>
@@ -322,10 +337,7 @@ get_header('valuecast');
                 </script>
 
 
-                <a href="<?php echo esc_url($about_contact_url); ?>" class="interested-being-a">Interested being a part of ValueCast Partners?</a>
-                <a href="<?php echo esc_url($about_contact_url); ?>" class="buttonwhite-about">
-                    <div class="write-to-our">WRITE TO OUR TALENT EXPERT</div>
-                </a>
+               
             </div>
         </div>
 

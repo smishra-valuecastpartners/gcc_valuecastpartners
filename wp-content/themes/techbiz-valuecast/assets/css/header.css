@@ -388,7 +388,6 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   }
 
   /* ── OVERLAY (lives outside <header>, z-index is global) ─── */
- /* ── OVERLAY (lives outside <header>, z-index is global) ─── */
   .vc-mobile-overlay,
   .home .vc-mobile-overlay,
   .front-page .vc-mobile-overlay,
@@ -403,7 +402,7 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
     bottom: auto !important;
     width: 100% !important;
     height: auto !important;
-    max-height: 60% !important;
+    /* max-height: 50vh !important; */
     z-index: 10000 !important;
     background: rgba(10, 14, 26, 0.97) !important;
     backdrop-filter: blur(28px) !important;
@@ -437,7 +436,7 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
     display: flex !important;
     flex-direction: column !important;
     min-height: 100vh !important;
-    min-height: 100dvh !important;
+    min-height: 100% !important;
     padding: 100px 28px 40px !important;
     box-sizing: border-box !important;
   }
@@ -753,3 +752,94 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
 }
 
 
+/* ══════════════════════════════════════════════════════════════
+   LOGO VARIANTS — light default, dark for contact only
+   ══════════════════════════════════════════════════════════════ */
+.vc-nav-logo .vc-logo-light {
+  display: block !important;
+  height: 40px;
+  width: auto;
+}
+.vc-nav-logo .vc-logo-dark {
+  display: none !important;
+  height: 40px;
+  width: auto;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CONTACT PAGE — Light header (top only, before scroll)
+   Scrolled state = normal dark header, no changes needed
+   ══════════════════════════════════════════════════════════════ */
+
+/* Swap logos — ONLY contact + not scrolled + menu not open */
+.vc-contact-page .vc-navbar:not(.scrolled):not(.vc-menu-is-open) .vc-logo-light {
+  display: none !important;
+}
+.vc-contact-page .vc-navbar:not(.scrolled):not(.vc-menu-is-open) .vc-logo-dark {
+  display: block !important;
+}
+
+/* Glass pill — Figma: white 50%, special radius */
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-nav-glass {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(0, 5, 26, 0.06) !important;
+  /* border-radius: 25.5px 60px 60px 25.5px !important; */
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* Menu links — dark text */
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li a {
+  color: #00051A !important;
+  background: transparent !important;
+  font-weight: 500 !important;
+}
+
+/* Menu hover */
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li a:hover,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li a:hover {
+  color: #00051A !important;
+  background: rgba(0, 5, 26, 0.06) !important;
+}
+
+/* Active item — blue pill */
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li.current-menu-item > a,
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li.current_page_item > a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li.current-menu-item > a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li.current_page_item > a {
+  background: #0446F2 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+/* Prevent parent/ancestor false highlight */
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li.current_page_parent > a,
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li.current-menu-parent > a,
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li.current_page_ancestor > a,
+.vc-contact-page .vc-navbar:not(.scrolled) .vc-menu-list li.current-menu-ancestor > a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li.current_page_parent > a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li.current-menu-parent > a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li.current_page_ancestor > a,
+.vc-contact-page .vc-navbar:not(.scrolled) #vc-menu-list-inner li.current-menu-ancestor > a {
+  background: transparent !important;
+  color: #00051A !important;
+  font-weight: 500 !important;
+}
+
+/* Mobile: dark hamburger on contact top */
+@media (max-width: 991px) {
+  .vc-contact-page .vc-navbar:not(.scrolled):not(.vc-menu-is-open) .vc-hamburger span {
+    background: #00051A !important;
+  }
+  .vc-contact-page .vc-navbar.scrolled .vc-hamburger span,
+  .vc-contact-page .vc-navbar.vc-menu-is-open .vc-hamburger span {
+    background: #fff !important;
+  }
+  .vc-contact-page .vc-nav-logo .vc-logo-dark { height: 32px; }
+}
+
+@media (max-width: 480px) {
+  .vc-contact-page .vc-nav-logo .vc-logo-light,
+  .vc-contact-page .vc-nav-logo .vc-logo-dark { height: 28px; }
+}
