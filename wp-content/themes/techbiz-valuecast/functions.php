@@ -1649,3 +1649,12 @@ add_filter('body_class', function($classes) {
     $classes[] = 'vc-page';
     return $classes;
 });
+
+
+// Add vc-contact-page body class to Contact Us page
+add_filter( 'body_class', function( $classes ) {
+    if ( is_page( 'contact-us' ) || is_page( 'contact' ) ) {
+        $classes[] = 'vc-contact-page';
+    }
+    return $classes;
+} );

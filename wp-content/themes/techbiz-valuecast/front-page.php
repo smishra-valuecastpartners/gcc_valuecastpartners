@@ -144,39 +144,61 @@ get_header('valuecast');
           <h3>Digital Marketing</h3>
           <p>We design and execute data-driven digital marketing strategies across channels — search, social, performance media, content, and automation — to attract the right audiences, increase engagement, and consistently convert demand into measurable growth.</p>
           <div class="vc-fvis">
-            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_digital', home_url( '/wp-content/uploads/2026/03/Frame-2147227821.png' ) ) ); ?>" alt="Digital Marketing" loading="lazy">
+            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_digital', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/digital-marketing.png' ) ) ); ?>" alt="Digital Marketing" loading="lazy">
           </div>
         </div>
 
         <div class="vc-pane" id="vc-tab-ecommerce">
-          <h3>Amazon &amp; E-Commerce Growth</h3>
-          <p>We accelerate revenue across Amazon, DTC, and marketplace channels using data-led strategies, catalog optimization, ad management, and conversion-focused content.</p>
+          <h3>Amazon & E-commerce Growth</h3>
+          <p>We scale Amazon and e-commerce businesses end to end — from marketplace strategy and storefront optimization to performance advertising, conversion rate improvement, and lifecycle retention — driving sustainable revenue growth across platforms.</p>
           <div class="vc-fvis">
-            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_ecommerce', home_url( '/wp-content/uploads/2026/03/Frame-2147227821.png' ) ) ); ?>" alt="Amazon &amp; E-Commerce Growth" loading="lazy">
+            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_ecommerce', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/amazon-ecommerce-growth.png' ) ) ); ?>" alt="Amazon &amp; E-Commerce Growth" loading="lazy">
           </div>
         </div>
 
         <div class="vc-pane" id="vc-tab-influencer">
-          <h3>Influencer &amp; Creator Management</h3>
-          <p>We connect brands with the right creators — managing full-funnel influencer programs that drive awareness, engagement, and sales at scale.</p>
+          <h3>Integrate Into the Valuecast Ecosystem</h3>
+          <ul class="vc-inf-list" data-model-id="439:3641">
+            <li class="vc-inf-item">
+              <img class="vc-inf-icon" src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/megaphone.svg' ) ) ); ?>" alt="Megaphone icon" />
+              <span class="vc-inf-text">Digital marketing specialists</span>
+            </li>
+            <li class="vc-inf-item">
+              <img class="vc-inf-icon" src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/pennib.svg' ) ) ); ?>" alt="Pen nib icon" />
+              <span class="vc-inf-text">Creative teams</span>
+            </li>
+            <li class="vc-inf-item">
+              <img class="vc-inf-icon" src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/shoppingbag.svg' ) ) ); ?>" alt="Shopping bag icon" />
+              <span class="vc-inf-text">Web and e-commerce experts</span>
+            </li>
+            <li class="vc-inf-item">
+              <img class="vc-inf-icon" src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/usersthree.svg' ) ) ); ?>" alt="Three users icon" />
+              <span class="vc-inf-text">India GCC talent resources</span>
+            </li>
+            <li class="vc-inf-item">
+              <img class="vc-inf-icon" src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/headcircuit.svg' ) ) ); ?>" alt="Head circuit icon" />
+              <span class="vc-inf-text">AI analysts</span>
+            </li>
+          </ul>
           <div class="vc-fvis">
-            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/uploads/2026/03/Frame-2147227821.png' ) ) ); ?>" alt="Influencer &amp; Creator Management" loading="lazy">
+            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_influencer', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/integrate-into-valuecast.png' ) ) ); ?>" alt="Influencer &amp; Creator Management" loading="lazy">
           </div>
         </div>
 
         <div class="vc-pane" id="vc-tab-ai">
           <h3>AI-Powered Business Intelligence</h3>
-          <p>Proprietary AI dashboards and automation tools give portfolio companies real-time insight into performance, competitive landscape, and growth opportunities.</p>
+          <p>We craft distinctive brand and creative systems — spanning identity, storytelling, design, and production — that translate strategy into memorable experiences and consistently elevate how brands show up everywhere.</p>
+
           <div class="vc-fvis">
-            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_ai', home_url( '/wp-content/uploads/2026/03/Frame-2147227821.png' ) ) ); ?>" alt="AI-Powered Business Intelligence" loading="lazy">
+            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_ai', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/drive-ai-power.png' ) ) ); ?>" alt="AI-Powered Business Intelligence" loading="lazy">
           </div>
         </div>
 
         <div class="vc-pane" id="vc-tab-creative">
-          <h3>Creative &amp; Brand Studios</h3>
-          <p>In-house creative teams produce campaign-ready content — from brand identity and video to paid ad creative and editorial — built for performance from the start.</p>
+          <h3>Creative & Brand Studios</h3>
+          <p>We turn data into decision-making advantage using AI-powered intelligence — unifying analytics, predictive insights, and real-time dashboards — to reveal opportunities, reduce risk, and accelerate smarter business outcomes.</p>
           <div class="vc-fvis">
-            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_creative', home_url( '/wp-content/uploads/2026/03/Frame-2147227821.png' ) ) ); ?>" alt="Creative &amp; Brand Studios" loading="lazy">
+            <img src="<?php echo esc_url( get_theme_mod( 'vc_focus_image_creative', home_url( '/wp-content/themes/techbiz-valuecast/assets/images/compound-long.png' ) ) ); ?>" alt="Creative &amp; Brand Studios" loading="lazy">
           </div>
         </div>
 

@@ -52,7 +52,12 @@
               </a>
               <div class="footer-social">
                 <a href="https://www.linkedin.com/company/valuecast-partners/" target="_blank" rel="noopener noreferrer" class="social-item social-linkedin" aria-label="Valuecast Partners on LinkedIn">
-                  <img src="<?php echo esc_url( home_url('/wp-content/uploads/2026/04/linkdin.svg') ); ?>" alt="LinkedIn" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <rect width="24" height="24" rx="12" fill="white"/>
+  <path d="M15.5144 17H17.999L18 12.6029C18 10.4443 17.5357 8.78498 15.0175 8.78498C14.0548 8.74919 13.1505 9.24672 12.6641 10.0797H12.6307V8.98436H10.2455V16.9997H12.7301V13.0346C12.7301 11.989 12.9281 10.9763 14.2221 10.9763C15.4978 10.9763 15.5144 12.1728 15.5144 13.1022V17Z" fill="black"/>
+  <path d="M6 6.44461C6.00014 7.24231 6.64579 7.88885 7.44209 7.88871C7.82449 7.88864 8.1912 7.7364 8.46154 7.46549C8.73189 7.19457 8.88373 6.82716 8.88366 6.4441C8.88352 5.6464 8.23788 4.99986 7.44157 5C6.64527 5.00014 5.99986 5.64692 6 6.44461Z" fill="black"/>
+  <path d="M6.19721 17H8.68438V8.98436H6.19721V17Z" fill="black"/>
+</svg>
                   <span>Linkedin</span>
                 </a>
                 <!-- <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-item">
@@ -74,7 +79,6 @@
 
       </div>
     </div>
-
     <!-- Divider -->
     <hr class="footer-divider" />
 

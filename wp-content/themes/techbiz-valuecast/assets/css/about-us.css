@@ -320,7 +320,7 @@ body.page-template-page-about-us #vc-navbar .vc-hamburger span {
   background-color: #0b0f1a;
   display: flex;
   justify-content: center;
-  padding: 30px 48px;
+  padding: 56px 100px;
   box-sizing: border-box;
 }
 
@@ -621,7 +621,7 @@ body.page-template-page-about-us #vc-navbar .vc-hamburger span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0 0;
+  padding: 70px 90px 70px 90px;
   box-sizing: border-box;
   font-size: 12px;
   color: #00051a;
@@ -701,9 +701,6 @@ body.page-template-page-about-us #vc-navbar .vc-hamburger span {
 }
 
 /* Founder name */
-
-
-/* Founder name */
 .vcc-about-page .mr-founder-name {
   /* width: 100%;
   font-size: 20px;
@@ -718,7 +715,7 @@ font-style: normal;
 font-weight: 600;
 line-height: 120%; /* 24px */
 }
- 
+
 /* Designation */
 .vcc-about-page .designation {
   /* width: 100%;
@@ -735,25 +732,6 @@ font-style: normal;
 font-weight: 600;
 line-height: 120%; /* 14.4px */
 }
-/* .vcc-about-page .mr-founder-name {
-  width: 100%;
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: #00051a;
-  margin-top: 4px;
-} */
-
-/* Designation */
-/* .vcc-about-page .designation {
-  width: 100%;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 600;
-  color: #00051a;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-} */
 
 /* Bio */
 .vcc-about-page .founder-business {
@@ -775,8 +753,8 @@ line-height: 120%; /* 14.4px */
   position: relative;      /* needed for absolute nav arrows */
   width: 100%;
   max-width: 100%;
-  background-color: #f5f5f5;
-  padding: 60px 0 52px;
+  background-color: #F8F8F8;
+  padding: 70px 63.527px 70px 63.527px;
   box-sizing: border-box;
   margin-top: 60px;
   overflow: visible;        /* let arrow buttons sit outside the swiper */
@@ -817,10 +795,15 @@ line-height: 120%; /* 14.4px */
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  border: solid 1px #ececec;
+  /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07); */
   height: 100%;
 }
 
+/* Each card */
+.vcc-team-card:hover {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+}
 /* Card image wrap: portrait 3/4 ratio, no crop */
 .vcc-team-card__img-wrap {
   width: 100%;
@@ -954,7 +937,6 @@ line-height: 120%; /* 14.4px */
 .vcc-about-page .interested-being-a {
   position: static;
   display: block;
-  font-size: clamp(20px, 2.5vw, 30px);
   line-height: 1.2;
   font-weight: 600;
   text-align: center;
@@ -963,34 +945,53 @@ line-height: 120%; /* 14.4px */
   max-width: 540px;
   padding: 0 24px;
   text-decoration: none !important;
+font-family: Inter;
+font-size: 36px;
+font-style: normal;
+line-height: 120%; /* 43.2px */
 }
 
 .vcc-about-page .buttonwhite-about {
-  position: static;
-  border-radius: 120px;
-  background-color: #0446f2;
-  height: 54px;
   display: inline-flex;
-  align-items: center;
+  height: 54px;
+  padding: 4px 20px 4px 20px;
   justify-content: center;
-  padding: 0 32px;
-  box-sizing: border-box;
+  align-items: center;
   gap: 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-  font-family: 'Outfit', sans-serif;
-  white-space: nowrap;
-  text-decoration: none !important;
-  letter-spacing: 0.05em;
+  color: var(--Ice-White, #FFF);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
   text-transform: uppercase;
-  margin-bottom: 80px;
-  transition: background 0.2s;
+  border-radius: 120px;
+  background: var(--Electric-Blue, #0446F2);
+  margin-top: 20px;;
 }
 
-.vcc-about-page .buttonwhite-about:hover {
-  background: #0335c4;
-  color: #fff;
+.vcc-about-page .buttonwhite-about:hover { background: var(--vc-blue); color: #fff; }
+
+.buttonwhite-about {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.buttonwhite-about .arrow-right-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.buttonwhite-about .arrow-right-wrapper svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
@@ -1000,7 +1001,7 @@ line-height: 120%; /* 14.4px */
     padding: 60px 0 0;
   }
   .vcc-about-page .hero-inner {
-    padding: 80px 40px 60px;
+    padding: 100px 40px 60px;
   }
   .vcc-about-page .cards {
     padding: 60px 32px;
@@ -1276,4 +1277,68 @@ body.page-template-page-about-us .vc-cta .vc-cta-btn .vector-icon-btn {
     line-height: 1.65;
     max-width: 95%;
   }
+}
+
+/* Team bottom CTA Button */
+
+.vc-btn-o:hover { background: var(--vc-blue); color: #fff; }
+
+.vc-btn-o {
+  display: inline-flex;
+  height: 54px;
+  padding: 4px 8px 4px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: var(--Ice-White, #FFF);
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  border-radius: 120px;
+  background: var(--Electric-Blue, #0446F2);
+}
+
+.vc-btn-o:hover { background: var(--vc-blue); color: #fff; }
+
+.vc-btn-w {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--vc-blue);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.vc-btn-w:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); color: var(--vc-blue); }
+
+.vc-ico {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.vc-ico-b {
+  display: flex;
+  width: 38px;
+  height: 38px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  aspect-ratio: 1/1;
+  border-radius: 72px;
+  border: 1.5px solid var(--Ice-White, #FFF);
 }

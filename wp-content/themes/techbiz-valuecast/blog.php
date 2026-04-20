@@ -32,7 +32,22 @@ if ($active_cat) {
 $blog_query = new WP_Query($args);
 
 /* ── Categories ── */
-$categories = get_categories(array('hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC'));
+$uncategorized = get_category_by_slug('uncategorized');
+$exclude_cat_ids = $uncategorized ? array($uncategorized->term_id) : array();
+$categories = get_categories(array('hide_empty' => true, 'orderby' => 'name', 'order' => 'ASC', 'exclude' => $exclude_cat_ids));
+
+$performance_marketing = get_category_by_slug('performance-marketing');
+if (!$performance_marketing) {
+  $performance_marketing = get_term_by('name', 'Performance Marketing', 'category');
+}
+
+if ($performance_marketing && !in_array((int) $performance_marketing->term_id, array_map('intval', wp_list_pluck($categories, 'term_id')), true)) {
+  $categories[] = $performance_marketing;
+
+  usort($categories, function ($a, $b) {
+    return strcasecmp($a->name, $b->name);
+  });
+}
 
 /* ── Active category details (left panel on filter) ── */
 $active_category = null;
@@ -114,11 +129,16 @@ if ($active_cat) {
       }
     }
   } else {
+    // Term not found — fall back to "All" panel so layout stays consistent
     $active_category = null;
+    $show_all_panel  = true;
   }
 }
 
 if ($show_all_panel) {
+  $active_cat_image = get_stylesheet_directory_uri() . '/assets/images/All-ai-resolution.png';
+} elseif ($active_category && !$active_cat_image) {
+  // Category found but no image — use the default banner so the aside panel renders correctly
   $active_cat_image = get_stylesheet_directory_uri() . '/assets/images/All-ai-resolution.png';
 }
 
@@ -189,16 +209,16 @@ $blog_hero_image = get_option('blog_hero_image') ?: site_url('/wp-content/upload
       <nav class="categories" aria-label="Blog categories">
         <!-- All -->
         <div class="<?php echo !$active_cat ? 'heading-eco-wrapper' : 'div-wrapper'; ?>">
-          <a href="<?php echo esc_url(get_permalink()); ?>"
+          <a href="<?php echo esc_url(get_permalink() . '#blog-content-wrap'); ?>"
              class="<?php echo !$active_cat ? 'heading-eco' : 'heading-eco-2'; ?>">
             ALL
           </a>
         </div>
         <?php foreach ($categories as $cat) : ?>
           <div class="<?php echo ($active_cat === $cat->term_id) ? 'heading-eco-wrapper' : 'div-wrapper'; ?>">
-            <a href="<?php echo esc_url(add_query_arg('cat', $cat->term_id, get_permalink())); ?>"
+            <a href="<?php echo esc_url(add_query_arg('cat', $cat->term_id, get_permalink()) . '#blog-content-wrap'); ?>"
                class="<?php echo ($active_cat === $cat->term_id) ? 'heading-eco' : 'heading-eco-2'; ?>">
-              <?php echo esc_html(strtoupper($cat->name)); ?>
+              <?php echo esc_html(wp_specialchars_decode($cat->name, ENT_QUOTES)); ?>
             </a>
           </div>
         <?php endforeach; ?>
@@ -371,6 +391,11 @@ $blog_hero_image = get_option('blog_hero_image') ?: site_url('/wp-content/upload
         <p class="text-wrapper-13">Stay Ahead of the Curve</p>
       </div>
 
+      <!-- Browse All Articles Heading -->
+      <div class="vc-browse-all-section">
+        <h2 class="vc-browse-all-title">Browse All Articles</h2>
+      </div>
+
       <!-- Recent posts grid -->
       <div class="frame-19">
         <div class="frame-20">
@@ -452,15 +477,17 @@ $blog_hero_image = get_option('blog_hero_image') ?: site_url('/wp-content/upload
         </div>
         <h2 class="text-wrapper-17"><?php echo esc_html(get_theme_mod('vc_cta_headline', 'Explore Your Options')); ?></h2>
       </div>
-      <a class="button-white" href="<?php echo esc_url(get_theme_mod('vc_cta_btn_url', home_url('/contact-us'))); ?>" role="button">
+      <a class="button-white" href="<?php echo esc_url(get_theme_mod('vc_cta_btn_url', home_url('/contact-us'))); ?>">
         <p class="explore-more"><?php echo esc_html(get_theme_mod('vc_cta_btn_text', 'SCHEDULE A FREE DEMO CALL')); ?></p>
         <div class="arrow-right-wrapper" aria-hidden="true">
-          <img class="arrow-right" src="<?php echo esc_url(home_url('/wp-content/uploads/2026/04/blog-arrowright.png')); ?>" alt="" />
+          <svg class="arrow-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#0446F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
       </a>
     </div>
-    <img class="vector-5" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/images/blog-vector2.svg" alt="" aria-hidden="true" />
-    <img class="vector-6" src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/assets/images/blog-vector3.svg" alt="" aria-hidden="true" />
+    <img class="vector-5" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/vector-2.svg'); ?>" alt="" aria-hidden="true" />
+    <img class="vector-6" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/vector-1.svg'); ?>" alt="" aria-hidden="true" />
   </section>
 
 </div><!-- /.vc-blog-page -->

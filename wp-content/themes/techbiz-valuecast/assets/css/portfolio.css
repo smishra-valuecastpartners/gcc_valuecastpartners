@@ -867,12 +867,7 @@
 .vc-pf-cta {
   position: relative;
   width: 100%;
-  min-height: 588px;
   background-color: #0446f2;
-  padding: clamp(60px, 8.3vw, 120px) clamp(48px, 15vw, 216px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -981,6 +976,29 @@
   max-width: 100%;
   object-fit: contain;
   z-index: 0;
+}
+
+/* Shared home-style CTA used in portfolio page */
+.element-our-portfolio .vc-cta {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: clamp(16px, 6vw, 120px);
+  padding-right: clamp(16px, 6vw, 120px);
+}
+
+.element-our-portfolio .vc-cta .vc-cta-inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.element-our-portfolio .vc-cta .buttonwhite {
+  max-width: 100%;
+}
+
+.element-our-portfolio .vc-cta .explore-more {
+  white-space: normal;
+  text-align: center;
 }
 
 .vc-pf-cta .vector-6 {

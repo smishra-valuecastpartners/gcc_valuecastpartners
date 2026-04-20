@@ -347,7 +347,7 @@ get_header('valuecast');
             <div class="text-wrapper-14">Explore Your Options</div>
           </div>
           <button class="button-white" id="cta-btn" onclick="handleCTAClick()" aria-label="Schedule a free demo call">
-            <p class="explore-more" id="cta-btn-text">SCHEDULE A FREE DEMO CALL</p>
+            <p class="explore-more" id="cta-btn-text" style="margin: 0 0 0 0;">SCHEDULE A FREE DEMO CALL</p>
             <div class="arrow-right-wrapper">
               <img class="arrow-right" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/arrowright.svg" alt="" aria-hidden="true" />
             </div>

@@ -18,7 +18,7 @@
   width: 100%;
   min-height: 480px;
   background-color: #00051a;
-  background-image: url('http://vcp.local/wp-content/uploads/2026/04/Contact-Us_Hero.png');
+  background-image: url('/wp-content/uploads/2026/04/Contact-Us_Hero.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -518,13 +518,13 @@
    so it already works on this page. No overrides needed. ✅ */
 
 /* Match Contact CTA sizing to the broader portfolio CTA treatment */
-.vc-contact-page .vc-cta {
+/* .vc-contact-page .vc-cta {
   min-height: 588px;
   padding: clamp(60px, 8.3vw, 120px) clamp(48px, 15vw, 216px);
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .vc-contact-page .vc-cta-inner {
   width: 100%;
@@ -938,7 +938,7 @@
   /* background: #1A38F0 !important; */
   color: #ffffff !important;
   border-radius: 50px !important;
-  padding: 10px 22px !important;
+  /* padding: 10px 22px !important; */
   height: auto !important;
 }
 

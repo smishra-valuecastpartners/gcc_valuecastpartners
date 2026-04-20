@@ -211,20 +211,27 @@ get_header('valuecast');
   </div><!-- /.middle -->
 
   <!-- CTA -->
-  <div class="vc-pf-cta" id="contact">
-    <div class="frame-44">
-      <div class="div">
-        <div class="frame-2"><div class="rectangle-7"></div><div class="contact-us">CONTACT US</div></div>
-        <div class="text-wrapper-13"><?php echo esc_html(get_theme_mod('vc_cta_headline', 'Explore Your Options')); ?></div>
-      </div>
-      <a href="<?php echo esc_url(get_theme_mod('vc_cta_btn_url', home_url('/contact-us'))); ?>" class="button-white-3 cta-btn">
-        <div class="explore-more">EXPLORE PARTNERSHIP OPPORTUNITIES</div>
-        <div class="arrow-right-wrapper"><img class="arrow-right" src="https://c.animaapp.com/mneev3h6UBBWIw/img/arrowright.svg" alt="" /></div>
+  <section class="vc-cta" id="contact">
+    <img class="vector-icon top-right" alt=""
+      src="<?php echo esc_url(home_url('/wp-content/uploads/2026/03/white-corner.png')); ?>">
+    <img class="vector-icon bottom-left" alt=""
+      src="<?php echo esc_url(home_url('/wp-content/uploads/2026/03/black-corner.png')); ?>">
+    <div class="vc-cta-inner">
+      <span class="vc-lbl" style="color:rgba(255,255,255,0.5); font-weight: 600;">Contact Us</span>
+      <h2><?php echo esc_html(get_theme_mod('vc_cta_headline', 'Explore Your Options')); ?></h2>
+      <a href="<?php echo esc_url(get_theme_mod('vc_cta_btn_url', home_url('/contact-us'))); ?>" class="buttonwhite">
+        <span class="explore-more"><?php echo esc_html(get_theme_mod('vc_cta_btn_text', 'Schedule a Free Demo Call')); ?></span>
+        <div class="arrowright-wrapper">
+          <div class="arrowright">
+            <svg class="vector-icon-btn" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
       </a>
     </div>
-    <img class="vector-6" src="<?php echo esc_url(home_url('/wp-content/uploads/2026/03/black-corner.png')); ?>" alt="" />
-    <img class="vector-7" src="<?php echo esc_url(home_url('/wp-content/uploads/2026/03/white-corner.png')); ?>" alt="" />
-  </div>
+  </section>
 
 </div><!-- /.element-our-portfolio -->
 

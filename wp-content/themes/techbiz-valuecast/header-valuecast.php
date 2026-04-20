@@ -19,9 +19,15 @@
 <header class="vc-navbar" id="vc-navbar">
   <div class="vc-nav-inner">
 
-    <a href="<?php echo esc_url( home_url('/') ); ?>" class="vc-nav-logo">
-      <img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php bloginfo('name'); ?>">
-    </a>
+<a href="<?php echo esc_url( home_url('/') ); ?>" class="vc-nav-logo">
+  <img class="vc-logo-light" 
+       src="<?php echo esc_url( home_url('/wp-content/uploads/2026/02/logo-light.svg') ); ?>" 
+       alt="<?php bloginfo('name'); ?>">
+
+  <img class="vc-logo-dark" 
+       src="<?php echo esc_url( home_url('/wp-content/uploads/2026/02/logo-dark.svg') ); ?>" 
+       alt="<?php bloginfo('name'); ?>">
+</a>
 
     <div class="vc-nav-glass" id="vc-nav-glass">
       <ul class="vc-menu-list" id="vc-menu-list-inner">
