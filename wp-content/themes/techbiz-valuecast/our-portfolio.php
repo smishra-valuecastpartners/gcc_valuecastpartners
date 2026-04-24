@@ -29,7 +29,7 @@ get_header('valuecast');
   <!-- HERO -->
   <div class="hero" id="portfolio">
     <div class="frame"></div>
-    <img class="image" src="<?php echo esc_url(get_theme_mod('vc_portfolio_hero_bg', 'https://c.animaapp.com/mneev3h6UBBWIw/img/image-5.png')); ?>" alt="Hero background" />
+    <img class="image" src="<?php echo esc_url(get_theme_mod('vc_portfolio_hero_bg', get_stylesheet_directory_uri() . '/assets/images/our-portfolio/image-5.png')); ?>" alt="Hero background" />
     <div class="frame-wrapper">
       <div class="div">
         <div class="frame-2">
@@ -39,7 +39,7 @@ get_header('valuecast');
         <p class="p"><?php echo esc_html(get_theme_mod('vc_portfolio_hero_headline', 'A Growing Ecosystem of Ambitious Companies')); ?></p>
       </div>
     </div>
-    <img class="vector" src="https://c.animaapp.com/mneev3h6UBBWIw/img/vector.svg" alt="" />
+    <img class="vector" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-portfolio/vector.svg'); ?>" alt="" />
   </div>
 
   <!-- MARQUEE -->
@@ -141,7 +141,7 @@ get_header('valuecast');
               <?php if ($subtitle) : ?><p class="pc-subtitle"><?php echo esc_html($subtitle); ?></p><?php endif; ?>
               <button class="button-white pc-case-study-btn" data-id="<?php echo esc_attr($pid); ?>">
                 <span class="view-case-study">VIEW CASE STUDY</span>
-                <img class="img" src="https://c.animaapp.com/mneev3h6UBBWIw/img/frame-2147227740.svg" alt="" />
+                <img class="img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-portfolio/frame-2147227740.svg'); ?>" alt="" />
               </button>
             </div>
             <?php endwhile; wp_reset_postdata(); ?>
@@ -203,7 +203,7 @@ get_header('valuecast');
         </div>
         <button class="button-white-3" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
           <p class="explore-more">LET'S FIND OUT YOUR ROADBLOCKS</p>
-          <div class="arrow-right-wrapper"><img class="arrow-right" src="https://c.animaapp.com/mneev3h6UBBWIw/img/arrowright.svg" alt="" /></div>
+          <div class="arrow-right-wrapper"><img class="arrow-right" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-portfolio/arrowright.svg'); ?>" alt="" /></div>
         </button>
       </div>
     </div>

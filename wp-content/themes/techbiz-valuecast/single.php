@@ -307,6 +307,7 @@ body.single-post .vc-nav-inner .elementor-button {
     background-color: #1a4fff !important;
     border-radius: 50px !important;
     padding: 14px 30px !important;
+    height: 41px !important;
     font-weight: 700 !important;
     text-transform: uppercase;
     display: flex;
@@ -318,6 +319,21 @@ body.single-post .vc-nav-inner .elementor-button {
 body.single-post .vc-nav-inner .elementor-button:hover {
     background-color: #003cc2 !important;
     transform: translateY(-1px);
+}
+
+/* Responsive heights matching menu button */
+@media (max-width: 1024px) {
+    body.single-post .vc-nav-inner .elementor-button {
+        height: 37px !important;
+        padding: 12px 24px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    body.single-post .vc-nav-inner .elementor-button {
+        height: 35px !important;
+        padding: 11px 22px !important;
+    }
 }
 
 </style>

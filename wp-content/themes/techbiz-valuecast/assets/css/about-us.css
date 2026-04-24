@@ -15,7 +15,7 @@
 
 .vcc-about-page .hero {
   width: 100%;
-  min-height: 420px;
+  min-height: 552px;
   height: auto;
   position: relative;
   background-color: #000;
@@ -239,7 +239,7 @@ body.page-template-page-about-us #vc-navbar .vc-hamburger span {
 
 .vcc-about-page .cards {
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -493,7 +493,8 @@ body.page-template-page-about-us #vc-navbar .vc-hamburger span {
 }
 
 .vcc-about-page .get-to-know-us {
-  width: 1440px;
+  /* width: 1440px; */
+  width: 100%;
   height: 630px;
   position: relative;
   background-color: #cfe1ff;
@@ -621,7 +622,8 @@ body.page-template-page-about-us #vc-navbar .vc-hamburger span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 90px 70px 90px;
+  /* padding: 70px 90px 70px 90px; */
+   padding: 70px 90px 0px 90px;
   box-sizing: border-box;
   font-size: 12px;
   color: #00051a;
@@ -994,6 +996,35 @@ line-height: 120%; /* 43.2px */
   height: 24px;
 }
 
+/* ── HIDE FOUNDERS AND TEAM MEMBERS (TEMPORARY) ────────────── */
+/* Hide the entire team section heading and subtitle */
+.vcc-about-page .our-team .our-team2,
+.vcc-about-page .our-team .success-stories-fuel-our-innov-wrapper {
+  display: none !important;
+}
+
+/* Hide the founders row */
+.vcc-about-page .vcc-founders-row {
+  display: none !important;
+}
+
+/* Hide the fallback founder card */
+.vcc-about-page .our-team .rectangle-parent4 {
+  display: none !important;
+}
+
+/* Hide the team members swiper section */
+.vcc-about-page .our-team-inner,
+.vcc-about-page .vcc-team-swiper,
+.vcc-about-page .vcc-swiper-nav {
+  display: none !important;
+}
+
+/* Hide the fallback team members message */
+.vcc-about-page .our-team > p {
+  display: none !important;
+}
+
 /* ── RESPONSIVE ─────────────────────────────────────────────── */
 
 @media (max-width: 1100px) {
@@ -1226,7 +1257,8 @@ body.page-template-page-about-us .vc-cta .vc-cta-btn .vector-icon-btn {
   }
 
   .vcc-about-page .our-team {
-    padding-top: 40px;
+    /* padding-top: 40px; */
+    padding-top: 0px;
   }
 
   .vcc-about-page .success-stories-fuel-our-innov-wrapper {
@@ -1299,6 +1331,34 @@ body.page-template-page-about-us .vc-cta .vc-cta-btn .vector-icon-btn {
   text-transform: uppercase;
   border-radius: 120px;
   background: var(--Electric-Blue, #0446F2);
+}
+
+/* Get-to-know-us centered on 1920x1080 desktop */
+@media (min-width: 1900px) and (max-width: 2200px) and (min-height: 1000px) {
+  .vcc-about-page .mask-group-icon {
+    left: calc(50% - 515px);
+  }
+
+  .vcc-about-page .rectangle-parent3 {
+    left: calc(50% + 14px);
+  }
+
+  .vcc-about-page .driving-innovation-and {
+    left: calc(50% + 11px);
+  }
+
+  .vcc-about-page .get-to-know-us-child {
+    left: calc(50% + 11px);
+  }
+
+  .vcc-about-page .vision,
+  .vcc-about-page .to-build-the {
+    left: calc(50% + 31px);
+  }
+
+  .vcc-about-page .group-div {
+    left: calc(50% + 279px);
+  }
 }
 
 .vc-btn-o:hover { background: var(--vc-blue); color: #fff; }

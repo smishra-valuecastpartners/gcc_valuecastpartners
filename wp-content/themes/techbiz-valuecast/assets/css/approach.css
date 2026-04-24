@@ -1770,6 +1770,42 @@ button:focus-visible {
   .element-our-approach .points-wrapper { grid-column: 1; grid-row: 2; }
 }
 
+/* =============================================
+   RESPONSIVE - Desktop 1920x1080
+============================================= */
+@media (min-width: 1900px) and (max-width: 2200px) and (min-height: 1000px) {
+  .element-our-approach {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .element-our-approach .hero {
+    padding: 140px 120px 72px;
+  }
+
+  .element-our-approach .frame,
+  .element-our-approach .frame-37,
+  .element-our-approach .frame-39,
+  .element-our-approach .frame-41,
+  .element-our-approach .component,
+  .element-our-approach .component-2,
+  .element-our-approach .component-3,
+  .element-our-approach .component-4,
+  .element-our-approach .component-5 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .element-our-approach .middle {
+    padding: 72px 0 40px;
+  }
+
+  .element-our-approach .footer {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
 /* .p
  {
     margin: 0 0 0px 0;
