@@ -110,6 +110,10 @@ get_header('valuecast');
         if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['vcc_nonce'] ?? '')), 'vcc_contact')) {
           $error = 'Security check failed. Please refresh and try again.';
         } else {
+          $vcc_strlen = static function ($value) {
+            return function_exists('mb_strlen') ? mb_strlen($value) : strlen($value);
+          };
+
           $f_name = sanitize_text_field(wp_unslash($_POST['vcc_name'] ?? ''));
           $f_mail = sanitize_email(wp_unslash($_POST['vcc_email'] ?? ''));
           $f_phone = sanitize_text_field(wp_unslash($_POST['vcc_phone'] ?? ''));
@@ -117,10 +121,36 @@ get_header('valuecast');
           $f_looking = sanitize_text_field(wp_unslash($_POST['vcc_looking'] ?? ''));
           $f_tab = sanitize_text_field(wp_unslash($_POST['vcc_tab'] ?? ''));
           $f_msg = sanitize_textarea_field(wp_unslash($_POST['vcc_message'] ?? ''));
+          $allowed_tabs = array('partnerships', 'talent', 'general');
 
-          if (!$f_mail) {
+          if (
+            $vcc_strlen($f_name) > 255 ||
+            $vcc_strlen($f_mail) > 255 ||
+            $vcc_strlen($f_company) > 255 ||
+            $vcc_strlen($f_looking) > 255 ||
+            $vcc_strlen($f_msg) > 255
+          ) {
+            $error = 'Please keep each field within 255 characters.';
+          }
+
+          if (!$error && !in_array($f_tab, $allowed_tabs, true)) {
+            $error = 'Please select a valid enquiry type.';
+          }
+
+          if (!$error && in_array($f_tab, array('talent', 'general'), true)) {
+            $digits_only = preg_replace('/\D+/', '', $f_phone);
+            $is_phone_format_valid = (bool) preg_match('/^\+?[0-9\s().-]{7,20}$/', $f_phone);
+
+            if ($f_phone === '' || !$is_phone_format_valid || strlen($digits_only) < 7 || strlen($digits_only) > 15) {
+              $error = 'Please enter a valid phone number.';
+            }
+          }
+
+          if (!$error && !$f_mail) {
             $error = 'Please enter a valid email address.';
-          } else {
+          }
+
+          if (!$error) {
             // Handle file upload if present
             $resume_url = '';
             if (isset($_FILES['vcc_resume']) && $_FILES['vcc_resume']['error'] !== UPLOAD_ERR_NO_FILE) {
@@ -203,13 +233,16 @@ get_header('valuecast');
             <!-- Left -->
             <div class="vcc-form-left">
               <input class="vcc-input" type="text" name="vcc_name" placeholder="Full Name"
+                maxlength="255"
                 value="<?php echo isset($_POST['vcc_name']) ? esc_attr(sanitize_text_field(wp_unslash($_POST['vcc_name']))) : ''; ?>" />
 
               <input class="vcc-input" type="email" name="vcc_email" id="vcc_email_field" placeholder="Email*" required
+                maxlength="255"
                 value="<?php echo isset($_POST['vcc_email']) ? esc_attr(sanitize_email(wp_unslash($_POST['vcc_email']))) : ''; ?>" />
 
               <div id="vcc_phone_wrap" style="display: none; width: 100%;">
                 <input class="vcc-input" type="tel" name="vcc_phone" id="vcc_phone_field" placeholder="Phone Number"
+                  inputmode="tel" maxlength="20" pattern="^\+?[0-9\s().-]{7,20}$"
                   value="<?php echo isset($_POST['vcc_phone']) ? esc_attr(sanitize_text_field(wp_unslash($_POST['vcc_phone']))) : ''; ?>" />
               </div>
 
@@ -223,6 +256,7 @@ get_header('valuecast');
 
               <div id="vcc_company_wrap" style="width: 100%;">
                 <input class="vcc-input" type="text" name="vcc_company" id="vcc_company_field" placeholder="Company Name"
+                  maxlength="255"
                   value="<?php echo isset($_POST['vcc_company']) ? esc_attr(sanitize_text_field(wp_unslash($_POST['vcc_company']))) : ''; ?>" />
               </div>
 
@@ -247,7 +281,7 @@ get_header('valuecast');
 
             <!-- Right -->
             <div class="vcc-form-right">
-              <textarea class="vcc-textarea" name="vcc_message"
+              <textarea class="vcc-textarea" name="vcc_message" id="vcc_message_field" maxlength="255"
                 placeholder="Message"><?php echo isset($_POST['vcc_message']) ? esc_textarea(sanitize_textarea_field(wp_unslash($_POST['vcc_message']))) : ''; ?></textarea>
               <button class="vcc-submit-btn" type="submit" name="vcc_submit">
                 <span>SUBMIT</span>

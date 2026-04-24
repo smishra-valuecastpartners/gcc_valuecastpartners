@@ -20,7 +20,7 @@ get_header('valuecast');
             <!-- <p class="text-wrapper" style="color: #ffffff;">A Smarter, More Human Way to Grow Middle-Market Companies</p> -->
           </div>
         </div>
-        <img class="vector" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-17.svg" alt="" aria-hidden="true" />
+        <img class="vector" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-17.svg'); ?>" alt="" aria-hidden="true" />
       </section>
       <div class="line" id="approach-section">
         <div class="approach">
@@ -45,41 +45,41 @@ get_header('valuecast');
               <div class="frame-4">
                 <div class="group">
                   <div class="group-2">
-                    <img class="img" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-55.svg" alt="" />
+                    <img class="img" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-55.svg'); ?>" alt="" />
                     <div class="frame-5">
                       <div class="text-wrapper-2">Digital</div>
                       <div class="img-wrapper">
-                        <img class="img-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/laptop.svg" alt="" />
+                        <img class="img-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/laptop.svg'); ?>" alt="" />
                       </div>
                     </div>
                     <div class="frame-6">
                       <div class="text-wrapper-2">Marketing</div>
                       <div class="img-wrapper">
-                        <img class="img-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/megaphone.svg" alt="" />
+                        <img class="img-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/megaphone.svg'); ?>" alt="" />
                       </div>
                     </div>
                     <div class="frame-7">
                       <div class="text-wrapper-2">Creative</div>
                       <div class="img-wrapper">
-                        <img class="img-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/palette-1.svg" alt="" />
+                        <img class="img-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/palette-1.svg'); ?>" alt="" />
                       </div>
                     </div>
                     <div class="frame-8">
                       <div class="text-wrapper-2">Product</div>
                       <div class="img-wrapper">
-                        <img class="img-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/cube.svg" alt="" />
+                        <img class="img-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/cube.svg'); ?>" alt="" />
                       </div>
                     </div>
                     <div class="frame-9">
                       <div class="text-wrapper-2">Operations</div>
                       <div class="img-wrapper">
-                        <img class="img-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/gearsix.svg" alt="" />
+                        <img class="img-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/gearsix.svg'); ?>" alt="" />
                       </div>
                     </div>
                     <div class="frame-10">
                       <div class="text-wrapper-2">Sales</div>
                       <div class="img-wrapper">
-                        <img class="img-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/shoppingcartsimple.svg" alt="" />
+                        <img class="img-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/shoppingcartsimple.svg'); ?>" alt="" />
                       </div>
                     </div>
                   </div>
@@ -89,21 +89,21 @@ get_header('valuecast');
                     <div class="frame-12">
                       <div class="text-wrapper-3">Creative</div>
                       <div class="frame-13">
-                        <img class="img-3" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/palette.svg" alt="" />
+                        <img class="img-3" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/palette-1.svg'); ?>" alt="" />
                       </div>
                     </div>
                     <div class="frame-14">
                       <div class="text-wrapper-3">Product</div>
                       <div class="frame-13">
-                        <img class="img-3" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/cube-1.svg" alt="" />
+                        <img class="img-3" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/cube-1.svg'); ?>" alt="" />
                       </div>
                     </div>
                   </div>
-                  <img class="vector-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-54.svg" alt="" />
+                  <img class="vector-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-54.svg'); ?>" alt="" />
                 </div>
-                <img class="vector-3" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-56.svg" alt="" />
+                <img class="vector-3" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-56.svg'); ?>" alt="" />
                 <div class="warning-circle-wrapper">
-                  <img class="warning-circle" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/warningcircle.svg" alt="" />
+                  <img class="warning-circle" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/warningcircle.svg'); ?>" alt="" />
                 </div>
               </div>
               <div class="frame-15">
@@ -116,72 +116,72 @@ get_header('valuecast');
           <div class="component-2 card-panel" id="card-1" data-card="1">
             <div class="frame-3">
               <div class="frame-16">
-                <img class="group-4" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/group-1000011093.png" alt="" />
-                <img class="vector-4" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-31.svg" alt="" />
-                <img class="vector-5" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-34.svg" alt="" />
-                <img class="vector-6" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-32.svg" alt="" />
-                <img class="vector-7" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-33.svg" alt="" />
-                <img class="vector-8" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-35.svg" alt="" />
+                <img class="group-4" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/group-1000011093.png'); ?>" alt="" />
+                <img class="vector-4" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-31.svg'); ?>" alt="" />
+                <img class="vector-5" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-34.svg'); ?>" alt="" />
+                <img class="vector-6" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-32.svg'); ?>" alt="" />
+                <img class="vector-7" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-33.svg'); ?>" alt="" />
+                <img class="vector-8" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-35.svg'); ?>" alt="" />
                 <div class="frame-17">
                   <div class="frame-18">
-                    <img class="megaphone" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/megaphone.svg" alt="" />
+                    <img class="megaphone" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/megaphone_1.svg'); ?>" alt="" />
                   </div>
                   <div class="text-wrapper-5">Digital marketing specialists</div>
                 </div>
                 <div class="frame-19">
                   <div class="frame-18">
-                    <img class="palette" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/palette-1.svg" alt="" />
+                    <img class="palette" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/palette-1_1.svg'); ?>" alt="" />
                   </div>
                   <div class="text-wrapper-5">Creative teams</div>
                 </div>
                 <div class="frame-20">
                   <div class="frame-18">
-                    <img class="cube" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/cube.svg" alt="" />
+                    <img class="cube" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/cube-2.svg'); ?>" alt="" />
                   </div>
                   <div class="text-wrapper-5">India GCC talent resources</div>
                 </div>
                 <div class="frame-21">
                   <div class="frame-18">
-                    <img class="gear-six" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/gearsix.svg" alt="" />
+                    <img class="gear-six" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/gearsix_1.svg'); ?>" alt="" />
                   </div>
                   <div class="text-wrapper-5">AI analysts</div>
                 </div>
                 <div class="frame-22">
                   <div class="frame-18">
-                    <img class="shopping-cart-simple" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/shoppingcartsimple.svg" alt="" />
+                    <img class="shopping-cart-simple" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/shoppingcartsimple.svg'); ?>" alt="" />
                   </div>
                   <div class="text-wrapper-5">Web and e-commerce experts</div>
                 </div>
                 <div class="frame-23">
                   <div class="briefcase-metal-wrapper">
-                    <img class="briefcase-metal" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/briefcasemetal.svg" alt="" />
+                    <img class="briefcase-metal" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/briefcasemetal.svg'); ?>" alt="" />
                   </div>
                   <div class="portfolio-company">Portfolio<br />Company</div>
                 </div>
-                <img class="vector-9" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-56-1.svg" alt="" />
+                <img class="vector-9" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-56-1.svg'); ?>" alt="" />
               </div>
               <div class="frame-15">
                 <p class="text-wrapper-4">Integrate Into the Valuecast Ecosystem</p>
                 <p class="text-wrapper-6">Portfolio companies gain instant access to:</p>
                 <div class="frame-24">
                   <div class="point">
-                    <img class="megaphone-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/megaphone.svg" alt="" />
+                    <img class="megaphone-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/megaphone.svg'); ?>" alt="" />
                     <div class="text-wrapper-7">Digital marketing specialists</div>
                   </div>
                   <div class="point">
-                    <img class="pen-nib" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/pennib.svg" alt="" />
+                    <img class="pen-nib" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/pennib.svg'); ?>" alt="" />
                     <div class="text-wrapper-7">Creative teams</div>
                   </div>
                   <div class="point">
-                    <img class="shopping-bag" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/shoppingbag.svg" alt="" />
+                    <img class="shopping-bag" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/shoppingbag.svg'); ?>" alt="" />
                     <div class="text-wrapper-7">Web and e-commerce experts</div>
                   </div>
                   <div class="point">
-                    <img class="users-three" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/usersthree.svg" alt="" />
+                    <img class="users-three" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/usersthree.svg'); ?>" alt="" />
                     <div class="text-wrapper-7">India GCC talent resources</div>
                   </div>
                   <div class="point">
-                    <img class="head-circuit" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/headcircuit.svg" alt="" />
+                    <img class="head-circuit" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/headcircuit_1.svg'); ?>" alt="" />
                     <div class="text-wrapper-7">AI analysts</div>
                   </div>
                 </div>
@@ -193,14 +193,14 @@ get_header('valuecast');
           <div class="component-3 card-panel" id="card-2" data-card="2">
             <div class="frame-3">
               <div class="frame-25">
-                <img class="group-5" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/group-2147227838.png" alt="" />
+                <img class="group-5" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/group-2147227838.png'); ?>" alt="" />
                 <div class="frame-26">
                   <div class="div-wrapper"><div class="text-wrapper-9">Discipline</div></div>
-                  <img class="vector-10" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-59.svg" alt="" />
+                  <img class="vector-10" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-59.svg'); ?>" alt="" />
                   <div class="div-wrapper"><div class="text-wrapper-9">Repeatability</div></div>
-                  <img class="vector-10" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-59.svg" alt="" />
+                  <img class="vector-10" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-59.svg'); ?>" alt="" />
                   <div class="div-wrapper"><div class="text-wrapper-9">Hands-on construction</div></div>
-                  <img class="vector-10" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-59.svg" alt="" />
+                  <img class="vector-10" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-59.svg'); ?>" alt="" />
                   <div class="div-wrapper"><div class="text-wrapper-9">Experience building at scale</div></div>
                 </div>
               </div>
@@ -215,36 +215,36 @@ get_header('valuecast');
             <div class="frame-27">
               <div class="frame-25">
                 <div class="rectangle-2"></div>
-                <img class="group-6" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/group-2147227836.png" alt="" />
+                <img class="group-6" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/group-2147227836.png'); ?>" alt="" />
                 <div class="frame-28">
-                  <img class="group-7" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/group-2147227831.png" alt="" />
+                  <img class="group-7" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/group-2147227831.png'); ?>" alt="" />
                   <div class="group-8">
                     <div class="frame-29">
                       <div class="frame-30">
-                        <img class="trend-up" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/trendup.svg" alt="" />
+                        <img class="trend-up" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/trendup.svg'); ?>" alt="" />
                       </div>
                       <div class="text-wrapper-10">Optimization</div>
                     </div>
                     <div class="frame-31">
                       <div class="eyeglasses-wrapper">
-                        <img class="eyeglasses" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/eyeglasses.svg" alt="" />
+                        <img class="eyeglasses" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/eyeglasses.svg'); ?>" alt="" />
                       </div>
                       <div class="text-wrapper-11">Attribution</div>
                     </div>
                     <div class="frame-32">
                       <div class="gear-six-wrapper">
-                        <img class="gear-six-2" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/gearsix-2.svg" alt="" />
+                        <img class="gear-six-2" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/gearsix-2.svg'); ?>" alt="" />
                       </div>
                       <div class="text-wrapper-12">Automation</div>
                     </div>
                     <div class="frame-33">
                       <div class="frame-30">
-                        <img class="ruler" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/ruler.svg" alt="" />
+                        <img class="ruler" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/ruler.svg'); ?>" alt="" />
                       </div>
                       <div class="text-wrapper-10">Measurement</div>
                     </div>
                   </div>
-                  <img class="frame-34" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/frame-2147227832.svg" alt="" />
+                  <img class="frame-34" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/frame-2147227832.svg'); ?>" alt="" />
                 </div>
               </div>
               <div class="frame-15">
@@ -259,64 +259,64 @@ get_header('valuecast');
               <div class="frame-4">
                 <div class="group-9">
                   <div class="rectangle-3"></div>
-                  <img class="isolation-mode" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/isolation-mode.svg" alt="" />
+                  <img class="isolation-mode" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/isolation-mode.svg'); ?>" alt="" />
                   <div class="group-10">
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="vector-11" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-19.svg" alt="" />
-                    <img class="check-circle" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/checkcircle.svg" alt="" />
-                    <img class="check-circle" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/checkcircle.svg" alt="" />
-                    <img class="check-circle" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/checkcircle.svg" alt="" />
-                    <img class="check-circle" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/checkcircle.svg" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="vector-11" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-19.svg'); ?>" alt="" />
+                    <img class="check-circle" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/checkcircle.svg'); ?>" alt="" />
+                    <img class="check-circle" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/checkcircle.svg'); ?>" alt="" />
+                    <img class="check-circle" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/checkcircle.svg'); ?>" alt="" />
+                    <img class="check-circle" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/checkcircle.svg'); ?>" alt="" />
                   </div>
                   <div class="group-11">
-                    <img class="vector-12" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-39.svg" alt="" />
-                    <img class="vector-13" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-27.svg" alt="" />
-                    <img class="vector-13" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-27.svg" alt="" />
-                    <img class="vector-13" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-27.svg" alt="" />
+                    <img class="vector-12" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-39.svg'); ?>" alt="" />
+                    <img class="vector-13" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-27.svg'); ?>" alt="" />
+                    <img class="vector-13" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-27.svg'); ?>" alt="" />
+                    <img class="vector-13" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-27.svg'); ?>" alt="" />
                     <div class="rectangle-4"></div>
                     <div class="illustrations">
-                      <img class="vector-14" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-29.svg" alt="" />
+                      <img class="vector-14" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-29.svg'); ?>" alt="" />
                       <div class="ellipse"></div>
-                      <img class="vector-15" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector.svg" alt="" />
+                      <img class="vector-15" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector.svg'); ?>" alt="" />
                       <div class="ellipse-2"></div>
                       <div class="ellipse-3"></div>
-                      <img class="vector-15" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector.svg" alt="" />
+                      <img class="vector-15" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector.svg'); ?>" alt="" />
                       <div class="ellipse-4"></div>
                       <div class="ellipse-5"></div>
-                      <img class="vector-15" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector.svg" alt="" />
+                      <img class="vector-15" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector.svg'); ?>" alt="" />
                       <div class="ellipse-6"></div>
                       <div class="ellipse-7"></div>
-                      <img class="vector-15" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector.svg" alt="" />
+                      <img class="vector-15" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector.svg'); ?>" alt="" />
                       <div class="ellipse-8"></div>
                       <div class="ellipse-9"></div>
-                      <img class="vector-15" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector.svg" alt="" />
+                      <img class="vector-15" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector.svg'); ?>" alt="" />
                       <div class="ellipse-10"></div>
-                      <img class="vector-16" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-2.svg" alt="" />
-                      <img class="vector-16" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-2.svg" alt="" />
-                      <img class="vector-16" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-2.svg" alt="" />
-                      <img class="vector-16" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-2.svg" alt="" />
-                      <img class="vector-16" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-2.svg" alt="" />
-                      <img class="vector-16" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-2.svg" alt="" />
-                      <img class="vector-17" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-7.svg" alt="" />
-                      <img class="vector-18" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-10.svg" alt="" />
-                      <img class="vector-17" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-7.svg" alt="" />
-                      <img class="vector-17" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-7.svg" alt="" />
-                      <img class="vector-17" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-7.svg" alt="" />
-                      <img class="vector-17" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-7.svg" alt="" />
-                      <img class="vector-17" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-7.svg" alt="" />
-                      <img class="vector-19" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-6.svg" alt="" />
+                      <img class="vector-16" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-2.svg'); ?>" alt="" />
+                      <img class="vector-16" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-2.svg'); ?>" alt="" />
+                      <img class="vector-16" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-2.svg'); ?>" alt="" />
+                      <img class="vector-16" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-2.svg'); ?>" alt="" />
+                      <img class="vector-16" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-2.svg'); ?>" alt="" />
+                      <img class="vector-16" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-2.svg'); ?>" alt="" />
+                      <img class="vector-17" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-7.svg'); ?>" alt="" />
+                      <img class="vector-18" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-10.svg'); ?>" alt="" />
+                      <img class="vector-17" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-7.svg'); ?>" alt="" />
+                      <img class="vector-17" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-7.svg'); ?>" alt="" />
+                      <img class="vector-17" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-7.svg'); ?>" alt="" />
+                      <img class="vector-17" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-7.svg'); ?>" alt="" />
+                      <img class="vector-17" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-7.svg'); ?>" alt="" />
+                      <img class="vector-19" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-6.svg'); ?>" alt="" />
                       <div class="question-mark-wrapper">
-                        <img class="question-mark" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/questionmark.svg" alt="" />
+                        <img class="question-mark" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/questionmark.svg'); ?>" alt="" />
                       </div>
                     </div>
                   </div>
-                  <img class="group-12" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/group-1000011095.png" alt="" />
+                  <img class="group-12" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/group-1000011095.png'); ?>" alt="" />
                 </div>
               </div>
               <div class="frame-15">
@@ -349,12 +349,12 @@ get_header('valuecast');
           <button class="button-white" id="cta-btn" onclick="handleCTAClick()" aria-label="Schedule a free demo call">
             <p class="explore-more" id="cta-btn-text" style="margin: 0 0 0 0;">SCHEDULE A FREE DEMO CALL</p>
             <div class="arrow-right-wrapper">
-              <img class="arrow-right" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/arrowright.svg" alt="" aria-hidden="true" />
+              <img class="arrow-right" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/arrowright.svg'); ?>" alt="" aria-hidden="true" />
             </div>
           </button>
         </div>
-        <img class="vector-20" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-15.svg" alt="" aria-hidden="true" />
-        <img class="vector-21" src="https://c.animaapp.com/mnoo0bn8e55Msp/img/vector-25.svg" alt="" aria-hidden="true" />
+        <img class="vector-20" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-15.svg'); ?>" alt="" aria-hidden="true" />
+        <img class="vector-21" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-25.svg'); ?>" alt="" aria-hidden="true" />
       </section>
     </div>
     <script>

@@ -39,7 +39,7 @@
 .element-our-portfolio .hero {
   position: relative;
   width: 100%;
-  min-height: 420px;
+  min-height: 552px;
   height: auto;
   background-color: #000000;
   overflow: hidden;
@@ -1129,6 +1129,16 @@
 }
 
 .cs-modal__cta:hover { background-color: #0338c8; color: #ffffff; }
+
+/* =============================================
+   RESPONSIVE — LARGE SCREENS (> 1024px)
+   ============================================= */
+@media (min-width: 1025px) {
+  .element-our-portfolio .frame-8 { 
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 
 /* =============================================
    RESPONSIVE — TABLET (≤ 1024px)

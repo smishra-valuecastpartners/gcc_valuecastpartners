@@ -118,7 +118,7 @@
 }
 
 .vc-hero h1.building-the-future-container {
-  width: min(658px, 100%);
+  width: auto;
   position: relative;
   line-height: 1.1;
   color: #fff;
@@ -128,6 +128,7 @@
   font-weight: 400;
   letter-spacing: 0;
   font-family: 'Outfit', system-ui, sans-serif;
+  white-space: nowrap;
 }
 
 .vc-hero h1.building-the-future-container .vc-hero-title-main { font-weight: 700; }
@@ -244,7 +245,7 @@
 }
 
 @media (max-width: 768px) {
-  .vc-hero { min-height: 600px; height: 100svh; }
+  .vc-hero { min-height: 600px; height: 60svh; }
   .vc-hero .vc-hero-content { padding-top: 100px; gap: 16px; }
   .vc-hero h1.building-the-future-container { font-size: clamp(36px, 8vw, 52px); }
   .vc-hero h1.building-the-future-container .vc-hero-title-sub { font-size: clamp(28px, 6vw, 40px); }
@@ -1487,3 +1488,263 @@ img, video, iframe, embed, object { max-width: 100%; height: auto; }
     line-height: 1.4;
   }
 }
+
+/* =========================================================
+   FINAL OVERRIDE — DESKTOP FIX SYSTEM (DO NOT EDIT ABOVE CSS)
+   ========================================================= */
+
+/* ================= GLOBAL FIX ================= */
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* ================= MASTER CONTAINER FIX ================= */
+
+.vc-container {
+  width: 100% !important;
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* Large Desktop */
+@media (min-width: 1600px) {
+  .vc-container {
+    max-width: 1440px !important;
+  }
+}
+
+/* Ultra Wide */
+@media (min-width: 1920px) {
+  .vc-container {
+    max-width: 1600px !important;
+  }
+}
+
+/* ================= HERO FIX ================= */
+
+.vc-hero .vc-hero-content {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+.vc-hero h1.building-the-future-container {
+  max-width: 620px !important;
+}
+
+.vc-hero-sub {
+  max-width: 480px !important;
+}
+
+/* ================= MISSION FIX ================= */
+
+.vc-mission {
+  padding: 120px 0 !important;
+}
+
+.vc-mission .vc-container {
+  max-width: 900px !important;
+  text-align: center !important;
+}
+
+/* ================= FOCUS FIX ================= */
+
+.vc-focus > .vc-container {
+  max-width: 1320px !important;
+  padding: 120px 24px !important;
+}
+
+.vc-focus-layout {
+  display: grid !important;
+  grid-template-columns: 420px 1fr !important;
+  gap: 64px !important;
+}
+
+.vc-tabs {
+  width: 100% !important;
+  /* max-width: 420px !important;
+  min-width: 420px !important; */
+}
+
+.vc-tab {
+  justify-content: space-between !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+
+/* ================= WHY SECTION FIX ================= */
+
+.vc-why {
+  padding: 120px 0 !important;
+}
+
+.vc-why .vc-container {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+}
+
+/* Center logo perfectly */
+.frame-52 {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* Right side alignment */
+.group-12 {
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* ================= CTA FIX ================= */
+
+.vc-cta {
+  padding: 120px 24px !important;
+}
+
+/* ================= DESKTOP SCALING ================= */
+
+/* 1600px */
+@media (min-width: 1600px) {
+
+  .vc-focus-layout {
+    gap: 80px !important;
+  }
+
+  .vc-tab {
+    height: 110px !important;
+    font-size: 18px !important;
+  }
+
+  .vc-hero h1 {
+    font-size: 64px !important;
+  }
+}
+
+/* 1728px */
+@media (min-width: 1728px) {
+
+  .vc-focus-layout {
+    gap: 100px !important;
+  }
+
+  .vc-hero h1 {
+    font-size: 68px !important;
+  }
+}
+
+/* 1920px */
+@media (min-width: 1920px) {
+
+  .vc-container {
+    max-width: 1600px !important;
+  }
+
+  .vc-focus-layout {
+    grid-template-columns: 460px 1fr !important;
+  }
+
+  .vc-tab {
+    height: 120px !important;
+    padding: 0 32px !important;
+  }
+
+  .vc-hero h1 {
+    font-size: 72px !important;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1024px) {
+
+  .vc-focus-layout {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .vc-hero {
+    min-height: 300px !important;
+  }
+
+  .vc-hero-actions {
+    flex-direction: column !important;
+  }
+
+  .vc-mission p {
+    font-size: 20px !important;
+  }
+}
+
+/* ================= 1920x1080 HOMEPAGE DESKTOP TUNE ================= */
+@media (min-width: 1900px) and (max-width: 2200px) and (min-height: 1000px) {
+  .home .vc-container,
+  .front-page .vc-container {
+    max-width: 1440px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .home .vc-hero .vc-hero-content,
+  .front-page .vc-hero .vc-hero-content {
+    max-width: 1440px !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+
+  .home .vc-focus-layout,
+  .front-page .vc-focus-layout {
+    grid-template-columns: 430px 1fr !important;
+    gap: 72px !important;
+  }
+
+  .home .vc-why,
+  .front-page .vc-why {
+    height: 640px;
+    padding: 100px 0 80px !important;
+  }
+
+  .home #vc-globe-container,
+  .front-page #vc-globe-container {
+    left: -4%;
+    top: 52%;
+    width: 960px;
+    height: 960px;
+  }
+
+  .home .vc-why .vc-why-figma-overlay,
+  .front-page .vc-why .vc-why-figma-overlay {
+    left: 50%;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    width: min(1440px, 100%);
+    transform: translateX(-50%);
+  }
+
+  .home .vc-why .group-12,
+  .front-page .vc-why .group-12 {
+    left: 64.3% !important;
+    right: auto !important;
+  }
+
+  .home .vc-why .frame-52,
+  .front-page .vc-why .frame-52 {
+    top: 268px;
+  }
+}
+
+/* Keep right-side globe cards attached to connector arrows on homepage */
+.home .vc-why .group-12,
+.front-page .vc-why .group-12 {
+  left: 64.3% !important;
+  right: auto !important;
+}
+

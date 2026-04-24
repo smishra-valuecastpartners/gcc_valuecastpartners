@@ -207,7 +207,7 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   display: inline-flex;
   align-items: stretch;
   width: 168px;
-  height: 51px;
+  height: 41px;
   border-radius: 60px;
   overflow: hidden;
   text-decoration: none;
@@ -233,7 +233,7 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   color: #ffffff;
   white-space: nowrap;
   padding: 0 20px;
-  height: 51px;
+  height: 41px;
 }
 
 .vc-cta-white {
@@ -241,7 +241,7 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
     align-items: center;
     justify-content: center;
     width: 45px;   /* same as figma */
-    height: 51px;
+    height: 41px;
     background: #fff;
     border-radius: 0 60px 60px 0;
     overflow: hidden;
@@ -347,8 +347,8 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   .vc-nav-inner { padding: 10px 32px; }
   .vc-menu-list li a,
   #vc-menu-list-inner li a { padding: 7px 14px; font-size: 13px; }
-  .vc-nav-cta { width: 152px; height: 46px; }
-  .vc-cta-blue { padding: 0 18px; font-size: 13px; height: 46px; }
+  .vc-nav-cta { width: 152px; height: 37px; }
+  .vc-cta-blue { padding: 0 18px; font-size: 13px; height: 37px; }
   .vc-cta-white { width: 40px; min-width: 40px; }
   .vc-cta-white svg { width: 18px; height: 18px; }
 }
@@ -378,8 +378,8 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
     display: flex !important;
   }
 
-  .vc-nav-cta { width: 140px; height: 44px; }
-  .vc-cta-blue { padding: 0 14px; font-size: 13px; height: 44px; }
+  .vc-nav-cta { width: 140px; height: 35px; }
+  .vc-cta-blue { padding: 0 14px; font-size: 13px; height: 35px; }
   .vc-cta-white { width: 38px; min-width: 38px; }
   .vc-cta-white svg { width: 16px; height: 16px; }
 
@@ -842,4 +842,104 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
 @media (max-width: 480px) {
   .vc-contact-page .vc-nav-logo .vc-logo-light,
   .vc-contact-page .vc-nav-logo .vc-logo-dark { height: 28px; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MOBILE HEADER FIX — FIGMA MATCH
+   (NO DESKTOP IMPACT)
+   ══════════════════════════════════════════════════════════════ */
+ 
+@media (max-width: 991px) {
+ 
+  /* ─────────────────────────────────────────
+     1. LOGO → ICON ONLY (hide text part)
+     ───────────────────────────────────────── */
+  .vc-nav-logo {
+    max-width: 120px;   /* control visible area */
+    overflow: hidden;
+  }
+ 
+  .vc-nav-logo img {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+  }
+ 
+ 
+  /* ─────────────────────────────────────────
+     2. CTA → ONLY ROUND PHONE ICON
+     ───────────────────────────────────────── */
+  .vc-nav-cta {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  /* HIDE TEXT PART */
+  .vc-cta-blue {
+    display: none !important;
+  }
+ 
+  /* MAKE FULL ROUND ICON */
+  .vc-cta-white {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+  }
+ 
+  .vc-cta-white img {
+    width: 20px;
+    transform: none; /* FIX flipped icon */
+    transform: scaleX(-1);
+  }
+ 
+ 
+  /* ─────────────────────────────────────────
+     3. HAMBURGER → FIGMA STYLE
+     ───────────────────────────────────────── */
+  .vc-hamburger {
+    gap: 5px;
+    margin-left: 12px;
+  }
+ 
+  .vc-hamburger span {
+    width: 24px;
+    height: 2.8px;
+    border-radius: 2px;
+    background: #ffffff;
+  }
+ 
+}
+ 
+ 
+/* EXTRA SMALL DEVICES (perfect spacing like figma) */
+@media (max-width: 480px) {
+ 
+  .vc-nav-logo {
+    max-width: 110px;
+  }
+ 
+  .vc-nav-logo img {
+    height: 30px;
+  }
+ 
+  .vc-nav-cta {
+    width: 40px !important;
+    height: 40px !important;
+  }
+ 
+  .vc-cta-white img {
+    width: 18px;
+  }
+ 
+  .vc-hamburger span {
+    width: 22px;
+    height: 2.6px;
+  }
 }

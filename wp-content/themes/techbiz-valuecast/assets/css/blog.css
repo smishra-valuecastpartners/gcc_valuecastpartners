@@ -1862,6 +1862,12 @@
 }
 
 .vc-blog-page:not(.home):not(.front-page) #vc-navbar .vc-nav-cta,
+.vc-blog-detail #vc-navbar .vc-nav-cta {
+  border-radius: 50px !important;
+  padding: 0 !important;
+  height: 41px !important;
+  box-shadow: 0 4px 15px rgba(4, 70, 242, 0.3) !important;
+}
 
 .vc-blog-page:not(.home):not(.front-page) #vc-navbar .vc-nav-menu,
 .vc-blog-detail #vc-navbar .vc-nav-menu {
@@ -1869,6 +1875,21 @@
   padding: 0 !important;
   height: auto !important;
   box-shadow: none !important;
+}
+
+/* Responsive heights for Call Now button on blog pages */
+@media (max-width: 1024px) {
+  .vc-blog-page:not(.home):not(.front-page) #vc-navbar .vc-nav-cta,
+  .vc-blog-detail #vc-navbar .vc-nav-cta {
+    height: 37px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .vc-blog-page:not(.home):not(.front-page) #vc-navbar .vc-nav-cta,
+  .vc-blog-detail #vc-navbar .vc-nav-cta {
+    height: 35px !important;
+  }
 }
 
 .vc-blog-page:not(.home):not(.front-page) #vc-navbar .vc-menu-list,

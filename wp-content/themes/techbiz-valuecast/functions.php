@@ -1278,7 +1278,7 @@ function vc_ajax_filter_portfolio()
             }
             $html .= '<button class="button-white pc-case-study-btn" data-id="' . esc_attr($pid) . '">'
                    . '<span class="view-case-study">VIEW CASE STUDY</span>'
-                   . '<img class="img" src="https://c.animaapp.com/mneev3h6UBBWIw/img/frame-2147227740.svg" alt="" />'
+                     . '<img class="img" src="' . esc_url(get_stylesheet_directory_uri() . '/assets/images/home-page/frame-2147227740.svg') . '" alt="" />'
                    . '</button></div>';
         }
         wp_reset_postdata();
@@ -1620,20 +1620,37 @@ add_action('admin_post_vc_subscribe', 'valuecast_handle_subscribe_form');
    ================================================================ */
 function valuecast_new_css_system() {
 
-    $css = get_stylesheet_directory_uri() . '/assets/css/';
+    $css_uri = get_stylesheet_directory_uri() . '/assets/css/';
+    $css_dir = trailingslashit(get_stylesheet_directory()) . 'assets/css/';
 
-    // Core Design System
-    wp_enqueue_style('vc-base', $css . 'base.css', ['techbiz-child-style'], '1.0');
-    wp_enqueue_style('vc-layout', $css . 'layout.css', ['vc-base'], '1.0');
-    wp_enqueue_style('vc-components', $css . 'components.css', ['vc-layout'], '1.0');
+    $styles = array(
+        'vc-base'       => array('file' => 'base.css',       'deps' => array('techbiz-child-style')),
+        'vc-layout'     => array('file' => 'layout.css',     'deps' => array('vc-base')),
+        'vc-components' => array('file' => 'components.css', 'deps' => array('vc-layout')),
+        'vc-header'     => array('file' => 'header.css',     'deps' => array('vc-components')),
+        'vc-footer'     => array('file' => 'footer.css',     'deps' => array('vc-components')),
+        'vc-sections'   => array('file' => 'sections.css',   'deps' => array('vc-components')),
+        'vc-responsive' => array('file' => 'responsive.css', 'deps' => array('vc-sections')),
+    );
 
-    // Global Sections
-    wp_enqueue_style('vc-header', $css . 'header.css', ['vc-components'], '1.0');
-    wp_enqueue_style('vc-footer', $css . 'footer.css', ['vc-components'], '1.0');
-    wp_enqueue_style('vc-sections', $css . 'sections.css', ['vc-components'], '1.0');
+    $enqueued = array();
 
-    // Global Responsive (LAST LAYER)
-    wp_enqueue_style('vc-responsive', $css . 'responsive.css', ['vc-sections'], '1.0');
+    foreach ($styles as $handle => $config) {
+        $file_path = $css_dir . $config['file'];
+        if (!file_exists($file_path)) {
+            continue;
+        }
+
+        $deps = array();
+        foreach ($config['deps'] as $dep) {
+            if ($dep === 'techbiz-child-style' || isset($enqueued[$dep]) || wp_style_is($dep, 'registered') || wp_style_is($dep, 'enqueued')) {
+                $deps[] = $dep;
+            }
+        }
+
+        wp_enqueue_style($handle, $css_uri . $config['file'], $deps, '1.0');
+        $enqueued[$handle] = true;
+    }
 
 }
 add_action('wp_enqueue_scripts', 'valuecast_new_css_system', 200100);

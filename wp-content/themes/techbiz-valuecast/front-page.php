@@ -79,7 +79,7 @@ get_header('valuecast');
 </section>
 
 <div class="vc-home-strip-image" aria-hidden="true">
-  <img class="vc-home-strip-image__img" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/frame-2147227759.png" alt="" loading="lazy">
+  <img class="vc-home-strip-image__img" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/frame-2147227759.png' ) ); ?>" alt="" loading="lazy">
 </div>
 
 
@@ -225,7 +225,7 @@ get_header('valuecast');
 
       <div class="vc-why-copy-divider" aria-hidden="true">
         <span>WE CHANGE THAT</span>
-        <img src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-1-1.svg" alt="">
+        <img src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/vector-1-1.svg' ) ); ?>" alt="">
       </div>
 
       <article class="vc-why-copy-card vc-why-copy-card-solution">
@@ -259,95 +259,93 @@ get_header('valuecast');
   <div class="vc-why-figma-overlay" aria-hidden="true">
     <div class="frame-46">
       <div class="frame-47">
-        <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/warningcircle.svg" alt="">
+        <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/warningcircle.svg' ) ); ?>" alt="">
       </div>
       <div class="text-wrapper-25">Mid-Market Underserved</div>
     </div>
 
     <div class="frame-48">
       <div class="frame-49">
-        <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/warningcircle.svg" alt="">
+        <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/warningcircle.svg' ) ); ?>" alt="">
       </div>
       <div class="text-wrapper-25">Capital Access Gap</div>
     </div>
 
     <div class="frame-53">
             <div class="frame-49">
-              <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/warningcircle.svg" />
+              <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/warningcircle.svg' ) ); ?>" />
             </div>
             <div class="text-wrapper-25">Fragmented Advisory Services</div>
           </div>
 
     <div class="frame-50">
       <div class="frame-49">
-        <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/warningcircle.svg" alt="">
+        <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/warningcircle.svg' ) ); ?>" alt="">
       </div>
       <div class="text-wrapper-25">Legacy Financial Models</div>
     </div>
 
     <div class="frame-51">
       <div class="frame-49">
-        <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/warningcircle.svg" alt="">
+        <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/warningcircle.svg' ) ); ?>" alt="">
       </div>
       <div class="text-wrapper-25">Inefficient Capital Deployment</div>
     </div>
 
     <img class="frame-52" src="<?php echo esc_url( home_url( '/wp-content/uploads/2026/04/valueast-partners-svg-logo.svg' ) ); ?>" alt="ValueCast Partners">
 
-    <img class="vector-11" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-26.svg" alt="">
-    <img class="vector-12" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-32.svg" alt="">
-    <img class="vector-13" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-35.svg" alt="">
-    <img class="vector-14" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-29.svg" alt="">
-    <img class="vector-15" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-35.svg" alt="">
+    <img class="vector-11" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-26.svg' ) ); ?>" alt="">
+    <img class="vector-12" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-32.svg' ) ); ?>" alt="">
+    <img class="vector-13" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-35.svg' ) ); ?>" alt="">
+    <img class="vector-14" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-29.svg' ) ); ?>" alt="">
+    <img class="vector-15" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-36.svg' ) ); ?>" alt="">
 
     <div class="group-12">
       <div class="frame-56">
         <div class="frame-55">
-          <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/chartlineup.svg" alt="">
+          <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/chartlineup.svg' ) ); ?>" alt="">
         </div>
         <div class="text-wrapper-26">Integrated Growth Platform</div>
       </div>
       <div class="frame-54">
         <div class="frame-55">
-          <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/headcircuit-1.svg" alt="">
+          <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/headcircuit-1.svg' ) ); ?>" alt="">
         </div>
         <div class="text-wrapper-26">AI-Driven Scale</div>
       </div>
       <div class="frame-57">
         <div class="frame-55">
-          <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/usersthree.svg" alt="">
+          <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/usersthree.svg' ) ); ?>" alt="">
         </div>
         <div class="text-wrapper-26">Enterprise Tools Access</div>
       </div>
       <div class="frame-60">
         <div class="frame-55">
-          <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/shoppingcartsimple.svg" alt="">
+          <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/shoppingcartsimple.svg' ) ); ?>" alt="">
         </div>
         <div class="text-wrapper-26">Sustainable Mid-Market Growth</div>
       </div>
       <div class="frame-58">
         <div class="frame-55">
-          <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/gearsix-1.svg" alt="">
+          <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/gearsix-1.svg' ) ); ?>" alt="">
         </div>
         <div class="text-wrapper-26">Operator-Led Execution</div>
       </div>
       <div class="frame-59">
         <div class="frame-55">
-          <img class="img-5" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/piggybank.svg" alt="">
+          <img class="img-5" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/piggybank.svg' ) ); ?>" alt="">
         </div>
         <div class="text-wrapper-26">Unified Capital &amp; Capability</div>
       </div>
     </div>
 
-    <img class="vector-16" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-40.svg" alt="">
-    <img class="vector-17" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-40.svg" alt="">
-    <img class="vector-18" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-40.svg" alt="">
-    <img class="vector-19" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-40.svg" alt="">
-    <img class="vector-20" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-41.svg" alt="">
-    <img class="vector-21" src="https://c.animaapp.com/mnpwasf7DhHlpY/img/vector-43.svg" alt="">
+    <img class="vector-16" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-40.svg' ) ); ?>" alt="">
+    <img class="vector-17" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-40.svg' ) ); ?>" alt="">
+    <img class="vector-18" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-40.svg' ) ); ?>" alt="">
+    <img class="vector-19" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-40.svg' ) ); ?>" alt="">
+    <img class="vector-20" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-41.svg' ) ); ?>" alt="">
+    <img class="vector-21" src="<?php echo esc_url( home_url( '/wp-content/themes/techbiz-valuecast/assets/images/home-page/vector-43.svg' ) ); ?>" alt="">
   </div>
-
-
 </section>
 
 

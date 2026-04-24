@@ -528,7 +528,7 @@
 
 .vc-contact-page .vc-cta-inner {
   width: 100%;
-  max-width: 1240px;
+  /* max-width: 1240px; */
   gap: 44px;
 }
 
@@ -939,7 +939,20 @@
   color: #ffffff !important;
   border-radius: 50px !important;
   /* padding: 10px 22px !important; */
-  height: auto !important;
+  height: 41px !important;
+}
+
+/* Responsive heights matching menu button */
+@media (max-width: 1024px) {
+  .vc-contact-page #vc-navbar .vc-nav-cta {
+    height: 37px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .vc-contact-page #vc-navbar .vc-nav-cta {
+    height: 35px !important;
+  }
 }
 
 .vc-contact-page #vc-navbar .vc-btn-label {
