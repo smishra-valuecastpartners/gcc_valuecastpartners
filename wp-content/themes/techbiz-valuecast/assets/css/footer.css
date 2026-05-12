@@ -312,11 +312,11 @@
     width: 100%;
   }
  
-  /* LOGO CENTER */
+  /* LOGO LEFT */
   .vc-page .footer-logo {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
  
   .vc-page .footer-logo img {

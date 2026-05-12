@@ -55,12 +55,28 @@ $active_cat_image = '';
 $active_cat_description = '';
 $show_all_panel = !$active_cat;
 
+if (!function_exists('vc_cache_busted_image_url')) {
+  function vc_cache_busted_image_url($url, $post_id)
+  {
+    if (empty($url)) {
+      return '';
+    }
+
+    $stamp = (int) get_post_modified_time('U', true, $post_id);
+    if ($stamp > 0) {
+      return add_query_arg('v', $stamp, $url);
+    }
+
+    return $url;
+  }
+}
+
 if (!function_exists('vc_post_dynamic_image_url')) {
   function vc_post_dynamic_image_url($post_id, $size = 'large')
   {
     $featured = get_the_post_thumbnail_url($post_id, $size);
     if ($featured) {
-      return $featured;
+      return vc_cache_busted_image_url($featured, $post_id);
     }
 
     $attachment = get_posts(array(
@@ -75,13 +91,48 @@ if (!function_exists('vc_post_dynamic_image_url')) {
     if (!empty($attachment[0])) {
       $src = wp_get_attachment_image_url((int) $attachment[0], $size);
       if ($src) {
-        return $src;
+        return vc_cache_busted_image_url($src, $post_id);
       }
     }
 
     $content = get_post_field('post_content', $post_id);
     if ($content && preg_match('/<img[^>]+src=["\']([^"\']+)["\']/i', $content, $matches)) {
-      return $matches[1];
+      return vc_cache_busted_image_url($matches[1], $post_id);
+    }
+
+    return '';
+  }
+}
+
+if (!function_exists('vc_term_meta_image_url')) {
+  function vc_term_meta_image_url($term_id, $meta_key, $size = 'large')
+  {
+    $meta_value = get_term_meta($term_id, $meta_key, true);
+    if (empty($meta_value)) {
+      return '';
+    }
+
+    $value = maybe_unserialize($meta_value);
+
+    if (is_numeric($value)) {
+      return (string) wp_get_attachment_image_url((int) $value, $size);
+    }
+
+    if (is_array($value)) {
+      if (!empty($value['id']) && is_numeric($value['id'])) {
+        $src = wp_get_attachment_image_url((int) $value['id'], $size);
+        if ($src) {
+          return $src;
+        }
+      }
+      if (!empty($value['url']) && filter_var($value['url'], FILTER_VALIDATE_URL)) {
+        return (string) $value['url'];
+      }
+      return '';
+    }
+
+    if (is_string($value) && filter_var($value, FILTER_VALIDATE_URL)) {
+      return $value;
     }
 
     return '';
@@ -94,34 +145,33 @@ if ($active_cat) {
   if ($active_category && !is_wp_error($active_category)) {
     $active_cat_description = term_description($active_cat, 'category');
 
-    $thumb_id = (int) get_term_meta($active_cat, 'thumbnail_id', true);
-    if ($thumb_id) {
-      $active_cat_image = wp_get_attachment_image_url($thumb_id, 'large');
+    if (!$active_cat_image) {
+      $active_cat_image = vc_term_meta_image_url($active_cat, '_techbiz_term_avatar', 'large');
     }
 
     if (!$active_cat_image) {
-      $meta_image = get_term_meta($active_cat, 'category_image', true);
-      if (is_numeric($meta_image)) {
-        $active_cat_image = wp_get_attachment_image_url((int) $meta_image, 'large');
-      } elseif (!empty($meta_image) && filter_var($meta_image, FILTER_VALIDATE_URL)) {
-        $active_cat_image = $meta_image;
-      }
+      $active_cat_image = vc_term_meta_image_url($active_cat, 'category_image', 'large');
     }
 
     if (!$active_cat_image) {
-      $alt_meta_image = get_term_meta($active_cat, 'image', true);
-      if (is_numeric($alt_meta_image)) {
-        $active_cat_image = wp_get_attachment_image_url((int) $alt_meta_image, 'large');
-      } elseif (!empty($alt_meta_image) && filter_var($alt_meta_image, FILTER_VALIDATE_URL)) {
-        $active_cat_image = $alt_meta_image;
+      $active_cat_image = vc_term_meta_image_url($active_cat, 'image', 'large');
+    }
+
+    if (!$active_cat_image) {
+      $thumb_id = (int) get_term_meta($active_cat, 'thumbnail_id', true);
+      if ($thumb_id) {
+        $active_cat_image = wp_get_attachment_image_url($thumb_id, 'large');
       }
     }
 
+    // Fallback only when no explicit category image is assigned.
     if (!$active_cat_image) {
       $cat_posts = get_posts(array(
         'numberposts' => 1,
+        'post_type' => 'post',
+        'post_status' => 'publish',
         'cat' => $active_cat,
-        'orderby' => 'date',
+        'orderby' => 'modified',
         'order' => 'DESC',
       ));
       if (!empty($cat_posts)) {
@@ -135,13 +185,24 @@ if ($active_cat) {
   }
 }
 
-if ($show_all_panel) {
-  $active_cat_image = get_stylesheet_directory_uri() . '/assets/images/All-ai-resolution.png';
-} elseif ($active_category && !$active_cat_image) {
-  // Category found but no image — use the default banner so the aside panel renders correctly
-  $active_cat_image = get_stylesheet_directory_uri() . '/assets/images/All-ai-resolution.png';
-}
+if ($show_all_panel || ($active_category && !$active_cat_image)) {
+  $image_post_args = array(
+    'numberposts' => 1,
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'orderby' => 'modified',
+    'order' => 'DESC',
+  );
 
+  if ($active_cat) {
+    $image_post_args['cat'] = $active_cat;
+  }
+
+  $image_posts = get_posts($image_post_args);
+  if (!empty($image_posts)) {
+    $active_cat_image = vc_post_dynamic_image_url($image_posts[0]->ID, 'large');
+  }
+}
 /* ── Recent posts (sidebar / bottom grid) ── */
 $recent_posts = get_posts(array('numberposts' => 9, 'orderby' => 'date', 'order' => 'DESC'));
 
@@ -268,7 +329,7 @@ $blog_hero_image = get_option('blog_hero_image') ?: site_url('/wp-content/upload
             $excerpt    = get_the_excerpt();
         ?>
 
-        <?php if ($card_index === 0 && $thumb) : /* Featured large card */ ?>
+        <?php if ($card_index === 0 && ($thumb || $active_category || $show_all_panel)) : /* Featured large card */ ?>
           <article class="frame-11 vc-blog-card vc-blog-card--featured" role="listitem">
             <div class="frame-12">
               <?php if ($thumb) : ?>

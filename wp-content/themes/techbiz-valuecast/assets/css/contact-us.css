@@ -190,7 +190,7 @@
   gap: 36px;
   white-space: nowrap;
   width: max-content;
-  animation: vcc-ticker 75s linear infinite;
+  animation: vcc-ticker 160s linear infinite;
   padding-bottom: 16px;
 }
 
@@ -207,7 +207,7 @@
 .vcc-t-gray {
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  font-size: clamp(36px, 5vw, 72px);
+  font-size: clamp(36px, 5vw, 48px);
   color: #bcbfcc;
   line-height: 1;
   opacity: 0.9;
@@ -216,8 +216,8 @@
 
 .vcc-t-blue {
   font-family: 'Outfit', sans-serif;
-  font-weight: 200;
-  font-size: clamp(36px, 5vw, 72px);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 48px);
   color: #0446f2;
   line-height: 1;
   flex-shrink: 0;
@@ -717,6 +717,60 @@
    Header parity is controlled by the unified "HOME HEADER PARITY — CONTACT PAGE" block below. */
 
 /* ── RESPONSIVE ───────────────────────────────────────────────── */
+
+/* =============================================
+   1920x1080 DESKTOPS
+   ============================================= */
+@media (min-width: 1900px) and (max-width: 2200px) and (min-height: 1000px) {
+  .vcc-hero {
+    min-height: 620px;
+    padding: 140px 80px 120px 80px;
+  }
+
+  .vcc-hero-content {
+    max-width: 1100px;
+  }
+
+  .vcc-ticker-track {
+    gap: 48px;
+  }
+
+  .vcc-insights {
+    padding: 80px 100px 70px;
+    gap: 32px;
+  }
+
+  .vcc-insights-title {
+    max-width: 900px;
+  }
+
+  .vcc-form-section {
+    padding: 60px 80px 80px;
+  }
+
+  .vcc-form-card {
+    padding: 48px 60px;
+  }
+
+  .vcc-tabs {
+    gap: 16px;
+    padding: 0 60px;
+  }
+
+  /* CTA for Contact Page */
+  .vc-contact-page .vc-cta {
+    padding: 140px 120px;
+  }
+
+  .vc-contact-page .vc-cta-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+/* =============================================
+   TABLET & BELOW
+   ============================================= */
 @media (max-width: 1024px) {
   .vcc-hero-circles {
     display: none;
@@ -918,7 +972,7 @@
   font-weight: 500 !important;
   letter-spacing: 0.02em !important;
   line-height: 1.2 !important;
-  background-color: rgba(110, 106, 106, 0.1) !important;
+  background-color: transparent !important;
   color: #ffffff !important;
 }
 
@@ -970,4 +1024,648 @@
   margin: 0 !important;
   width: 16px !important;
   height: 16px !important;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ADDITIONAL MOBILE RESPONSIVE ENHANCEMENTS
+   ════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .vcc-hero-circles {
+    width: 300px;
+    height: 300px;
+  }
+
+  .vcc-hero-content {
+    gap: 18px;
+  }
+
+  .vcc-ticker-wrap {
+    padding: 20px 0 4px;
+  }
+
+  .vcc-insights-title {
+    font-size: clamp(24px, 4vw, 40px);
+  }
+
+  .vcc-insights-sub {
+    font-size: 14px;
+  }
+
+  .vcc-form-subtitle {
+    font-size: clamp(18px, 2.5vw, 28px);
+  }
+
+  .vcc-input,
+  .vcc-select,
+  .vcc-textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .vcc-input,
+  .vcc-select {
+    height: 48px;
+  }
+
+  .vcc-textarea {
+    height: 200px;
+    padding: 12px 14px;
+  }
+
+  .vcc-submit-btn {
+    height: 48px;
+    min-width: 110px;
+    padding: 0 24px;
+  }
+
+  .vcc-submit-btn span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .vcc-hero-circles {
+    width: 240px;
+    height: 240px;
+  }
+
+  .vcc-hero-title {
+    font-size: clamp(26px, 9vw, 36px);
+    line-height: 1.1;
+  }
+
+  .vcc-hero-sub {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .vcc-badge-label {
+    font-size: 12px;
+  }
+
+  .vcc-ticker-track {
+    gap: 16px;
+  }
+
+  .vcc-t-gray,
+  .vcc-t-blue {
+    font-size: 28px;
+  }
+
+  .vcc-insights-title {
+    font-size: clamp(22px, 5vw, 32px);
+  }
+
+  .vcc-insights-sub {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .vcc-form-subtitle {
+    font-size: clamp(16px, 3vw, 24px);
+    margin-bottom: 4px;
+  }
+
+  .vcc-form-body {
+    gap: 12px;
+  }
+
+  .vcc-form-left {
+    gap: 12px;
+  }
+
+  .vcc-form-right {
+    gap: 14px;
+  }
+
+  .vcc-input,
+  .vcc-select {
+    height: 44px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .vcc-textarea {
+    height: 160px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  .vcc-select {
+    padding-right: 32px;
+  }
+
+  .vcc-select-chevron {
+    right: 10px;
+  }
+
+  .vcc-submit-btn {
+    height: 44px;
+    min-width: 100px;
+    padding: 0 20px;
+    font-size: 13px;
+    border-radius: 24px;
+  }
+
+  .vcc-submit-btn span {
+    font-size: 13px;
+  }
+
+  .vc-contact-page .footer-container {
+    padding: 36px 20px 20px;
+  }
+
+  .vc-contact-page .footer-logo img {
+    max-height: 24px;
+    max-width: 140px;
+  }
+
+  .vc-contact-page .footer-nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .vc-contact-page .footer-nav ul li a {
+    font-size: 14px;
+  }
+
+  .vc-contact-page .footer-social {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .vcc-hero-circles {
+    width: 200px;
+    height: 200px;
+  }
+
+  .vcc-hero {
+    padding: 70px 14px 50px;
+    min-height: 340px;
+  }
+
+  .vcc-hero-content {
+    gap: 14px;
+  }
+
+  .vcc-hero-title {
+    font-size: clamp(22px, 10vw, 32px);
+  }
+
+  .vcc-hero-sub {
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .vcc-insights {
+    padding: 28px 14px 24px;
+    gap: 16px;
+  }
+
+  .vcc-insights-title {
+    font-size: clamp(20px, 6vw, 28px);
+    line-height: 1.15;
+  }
+
+  .vcc-insights-sub {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .vcc-ticker-wrap {
+    padding: 16px 0 8px;
+  }
+
+  .vcc-ticker-track {
+    gap: 12px;
+  }
+
+  .vcc-t-gray,
+  .vcc-t-blue {
+    font-size: 22px;
+  }
+
+  .vcc-form-section {
+    padding: 0 10px;
+  }
+
+  .vcc-tabs {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .vcc-tab {
+    flex: 1;
+    min-width: 80px;
+    padding: 10px 12px !important;
+    font-size: 12px;
+    border-radius: 8px !important;
+  }
+
+  .vcc-tab.vcc-tab--active {
+    padding: 12px 12px !important;
+    border-radius: 8px !important;
+  }
+
+  .vcc-form-card {
+    padding: 16px 12px 24px;
+    border-radius: 12px !important;
+    gap: 12px;
+  }
+
+  .vcc-form-subtitle {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+
+  .vcc-form-body {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vcc-form-left,
+  .vcc-form-right {
+    width: 100%;
+    flex: none;
+    gap: 10px;
+  }
+
+  .vcc-form-right {
+    align-items: stretch;
+  }
+
+  .vcc-input,
+  .vcc-select {
+    height: 40px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .vcc-input::placeholder {
+    font-size: 13px;
+  }
+
+  .vcc-textarea {
+    height: 140px;
+    padding: 8px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .vcc-textarea::placeholder {
+    font-size: 13px;
+  }
+
+  .vcc-submit-btn {
+    height: 40px;
+    min-width: 90px;
+    padding: 0 16px;
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .vcc-submit-btn span {
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+
+  .vc-contact-page .footer-container {
+    padding: 32px 16px 18px;
+  }
+
+  .vc-contact-page .footer-main {
+    gap: 24px;
+  }
+
+  .vc-contact-page .footer-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .vc-contact-page .footer-logo img {
+    max-height: 22px;
+    max-width: 120px;
+  }
+
+  .vc-contact-page .footer-right {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .vc-contact-page .footer-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .vc-contact-page .footer-nav ul li {
+    width: 100%;
+  }
+
+  .vc-contact-page .footer-nav ul li a {
+    font-size: 13px;
+  }
+
+  .vc-contact-page .footer-info {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .vc-contact-page .footer-contact {
+    gap: 12px;
+  }
+
+  .vc-contact-page .contact-item {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .vc-contact-page .contact-item svg,
+  .vc-contact-page .social-item svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .vc-contact-page .footer-social {
+    gap: 12px;
+    padding-left: 0;
+  }
+
+  .vc-contact-page .social-linkedin {
+    gap: 8px;
+  }
+
+  .vc-contact-page .social-linkedin span {
+    display: none;
+  }
+
+  .vc-contact-page .footer-divider {
+    margin: 20px 0;
+  }
+
+  .vc-contact-page .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .vc-contact-page .copyright {
+    font-size: 12px;
+    order: 2;
+  }
+
+  .vc-contact-page .footer-legal {
+    gap: 24px;
+    order: 1;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .vc-contact-page .footer-legal a {
+    font-size: 12px;
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   COMPREHENSIVE MOBILE BREAKPOINTS — CONTACT US PAGE
+   Breakpoints:
+     576px  Large phone landscape / small tablet
+     430px  iPhone 14 Plus / 15 Plus / Pro Max
+     390px  iPhone 14 / 15 / 14 Pro / 15 Pro
+     375px  iPhone SE 2&3, 12 mini, 13 mini
+     360px  Samsung Galaxy S-series / most Android
+     320px  iPhone 5 / SE 1st gen / very small screens
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── LARGE PHONE LANDSCAPE (≤ 576px) ────────────────────────── */
+@media (max-width: 576px) {
+  .vcc-hero {
+    padding: 64px 18px 44px;
+    min-height: 320px;
+  }
+  .vcc-hero-title {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+  .vcc-insights {
+    padding: 32px 18px 28px;
+  }
+  .vcc-form-card {
+    padding: 18px 14px 26px;
+  }
+}
+
+/* ── iPHONE 14 PLUS / 15 PLUS / PRO MAX (≤ 430px) ─────────────── */
+@media (max-width: 430px) {
+  .vcc-hero {
+    padding: 56px 14px 36px;
+  }
+  .vcc-hero-title {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+  .vcc-tab {
+    min-width: 70px;
+    padding: 9px 10px !important;
+    font-size: 11px;
+  }
+  .vcc-form-card {
+    padding: 16px 12px 20px;
+  }
+  .vcc-input,
+  .vcc-select,
+  .vcc-textarea {
+    font-size: 13px;
+  }
+
+  .vc-contact-page .vc-cta {
+    min-height: 300px;
+    padding: 72px 18px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .vc-contact-page .vc-cta-inner {
+    width: 100%;
+    max-width: 340px;
+    gap: 18px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vc-contact-page .vc-cta .vc-lbl {
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .vc-contact-page .vc-cta h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.18;
+    text-align: center;
+  }
+
+  .vc-contact-page .vc-cta .buttonwhite {
+    width: min(100%, 276px);
+    height: 48px;
+    margin: 0 auto;
+    padding: 4px 6px 4px 24px;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .vc-contact-page .vc-cta .explore-more {
+    font-size: 14px;
+    line-height: 1.15;
+    white-space: nowrap;
+  }
+
+  .vc-contact-page .vc-cta .arrowright-wrapper {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    padding: 8px;
+  }
+
+  .vc-contact-page .vc-cta .vector-icon.top-right,
+  .vc-contact-page .vc-cta .vector-icon.bottom-left {
+    height: 72px;
+  }
+}
+
+/* ── iPHONE 14 / 15 / 14 PRO / 15 PRO (≤ 390px) ──────────────── */
+@media (max-width: 390px) {
+  .vcc-hero {
+    padding: 52px 12px 32px;
+    min-height: 280px;
+  }
+  .vcc-hero-title {
+    font-size: clamp(22px, 6.5vw, 28px);
+  }
+  .vcc-insights-title {
+    font-size: clamp(18px, 5.5vw, 24px);
+  }
+  .vcc-form-card {
+    padding: 14px 11px 18px;
+    gap: 10px;
+  }
+  .vcc-submit-btn {
+    height: 38px;
+  }
+}
+
+/* ── iPHONE SE 2/3 / 12 MINI / 13 MINI (≤ 375px) ───────────── */
+@media (max-width: 375px) {
+  .vcc-hero {
+    padding: 48px 10px 28px;
+  }
+  .vcc-hero-title {
+    font-size: clamp(20px, 6vw, 26px);
+  }
+  .vcc-insights {
+    padding: 24px 10px 20px;
+    gap: 14px;
+  }
+  .vcc-tabs {
+    gap: 6px;
+  }
+  .vcc-tab {
+    min-width: 60px;
+    padding: 8px 9px !important;
+    font-size: 10px;
+  }
+  .vcc-form-card {
+    padding: 12px 10px 16px;
+  }
+}
+
+/* ── SAMSUNG GALAXY S / MOST ANDROID (≤ 360px) ──────────────── */
+@media (max-width: 360px) {
+  .vcc-hero {
+    padding: 44px 9px 24px;
+  }
+  .vcc-hero-title {
+    font-size: clamp(18px, 5.5vw, 24px);
+  }
+  .vcc-hero-sub {
+    font-size: 12px;
+  }
+  .vcc-insights-title {
+    font-size: clamp(16px, 5vw, 22px);
+  }
+  .vcc-form-card {
+    padding: 12px 9px 14px;
+    border-radius: 10px !important;
+  }
+  .vcc-input,
+  .vcc-select,
+  .vcc-textarea {
+    font-size: 12px;
+    height: 36px;
+    padding: 6px 8px;
+  }
+}
+
+/* ── iPHONE 5 / SE 1ST GEN / VERY SMALL (≤ 320px) ──────────── */
+@media (max-width: 320px) {
+  .vcc-hero {
+    padding: 40px 8px 20px;
+    min-height: 260px;
+  }
+  .vcc-hero-title {
+    font-size: clamp(16px, 5vw, 20px);
+  }
+  .vcc-hero-sub {
+    font-size: 11px;
+  }
+  .vcc-insights {
+    padding: 20px 8px 16px;
+    gap: 12px;
+  }
+  .vcc-insights-title {
+    font-size: clamp(14px, 4.5vw, 18px);
+  }
+  .vcc-insights-sub {
+    font-size: 11px;
+  }
+  .vcc-tab {
+    min-width: 50px;
+    padding: 7px 8px !important;
+    font-size: 9px;
+  }
+  .vcc-form-subtitle {
+    font-size: 14px;
+  }
+  .vcc-input,
+  .vcc-select,
+  .vcc-textarea {
+    font-size: 11px;
+    height: 34px;
+    padding: 5px 6px;
+  }
+  .vcc-form-card {
+    padding: 10px 8px 12px;
+  }
+  .vcc-submit-btn {
+    height: 36px;
+    padding: 0 12px;
+  }
+}
+
+.vc-cta .vector-icon.top-right{
+    filter: brightness(0) saturate(100%)
+            invert(97%) sepia(4%)
+            saturate(376%)
+            hue-rotate(182deg)
+            brightness(101%)
+            contrast(97%);
 }

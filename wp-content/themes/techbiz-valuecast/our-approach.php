@@ -22,21 +22,26 @@ get_header('valuecast');
         </div>
         <img class="vector" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/our-approach/vector-17.svg'); ?>" alt="" aria-hidden="true" />
       </section>
+      
       <div class="line" id="approach-section">
         <div class="approach">
-          <div class="our-approach">our approach</div>
-          <div class="our-approach-2">our approach</div>
-          <div class="our-approach">our approach</div>
-          <div class="our-approach-3">our approach</div>
-          <div class="our-approach-4">our approach</div>
-          <div class="our-approach-5">our approach</div>
-          <div class="our-approach" aria-hidden="true">our approach</div>
-          <div class="our-approach-2" aria-hidden="true">our approach</div>
-          <div class="our-approach" aria-hidden="true">our approach</div>
-          <div class="our-approach-3" aria-hidden="true">our approach</div>
-          <div class="our-approach-4" aria-hidden="true">our approach</div>
-          <div class="our-approach-5" aria-hidden="true">our approach</div>
-        </div>
+            <div class="our-approach">our approach</div>
+            <div class="our-approach-2">our approach</div>
+            <div class="our-approach">our approach</div>
+            <div class="our-approach-5">our approach</div>
+            <div class="our-approach" aria-hidden="true">our approach</div>
+             <div class="our-approach-2">our approach</div>
+            <div class="our-approach">our approach</div>
+            <div class="our-approach-3">our approach</div>
+           <!-- <div class="our-approach-4">our approach</div>
+            <div class="our-approach-5">our approach</div>
+            <div class="our-approach" aria-hidden="true">our approach</div>
+            <div class="our-approach-2" aria-hidden="true">our approach</div>
+            <div class="our-approach" aria-hidden="true">our approach</div>
+            <div class="our-approach-3" aria-hidden="true">our approach</div>
+            <div class="our-approach-4" aria-hidden="true">our approach</div>
+            <div class="our-approach-5" aria-hidden="true">our approach</div> -->
+            </div>
       </div>
       <div class="middle">
         <div class="insight-cards" id="insight-cards">
