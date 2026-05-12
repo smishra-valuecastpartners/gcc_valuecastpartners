@@ -67,7 +67,9 @@
   -webkit-backdrop-filter: blur(34px);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 50px;
-  padding: 5px 6px;
+  padding: 3px 6px;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 .vc-navbar.scrolled .vc-nav-glass {
@@ -206,8 +208,10 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
 .vc-nav-cta {
   display: inline-flex;
   align-items: stretch;
-  width: 168px;
-  height: 41px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 38px;
   border-radius: 60px;
   overflow: hidden;
   text-decoration: none;
@@ -224,7 +228,13 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  flex: 0 0 105px;
+  width: 105px;
+  min-width: 105px;
+  max-width: 105px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
   background: #0446F2;
   border-radius: 60px 0 0 60px;
   font-family: 'Inter', sans-serif;
@@ -232,16 +242,19 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   font-weight: 600;
   color: #ffffff;
   white-space: nowrap;
-  padding: 0 20px;
-  height: 41px;
+  padding: 0;
+  height: 38px;
 }
 
 .vc-cta-white {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 0 0 45px;
     width: 45px;   /* same as figma */
-    height: 41px;
+    min-width: 45px;
+    max-width: 45px;
+    height: 38px;
     background: #fff;
     border-radius: 0 60px 60px 0;
     overflow: hidden;
@@ -317,13 +330,17 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
 /* ══════════════════════════════════════════════════════════════
    INNER PAGE CONSISTENCY
    ══════════════════════════════════════════════════════════════ */
-.vcc-about-page .vc-navbar,
+.vcc-about-page .vc-navbar {
+  position: absolute;
+  background: transparent;
+}
+
 .vc-approach-page .vc-navbar,
 .vc-portfolio-page .vc-navbar,
 .vc-blog-page .vc-navbar,
 .vc-blog-detail .vc-navbar {
   position: absolute;
-  background: transparent;
+  background: #00051a;
 }
 
 .vcc-about-page .vc-navbar.scrolled,
@@ -347,9 +364,9 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
   .vc-nav-inner { padding: 10px 32px; }
   .vc-menu-list li a,
   #vc-menu-list-inner li a { padding: 7px 14px; font-size: 13px; }
-  .vc-nav-cta { width: 152px; height: 37px; }
-  .vc-cta-blue { padding: 0 18px; font-size: 13px; height: 37px; }
-  .vc-cta-white { width: 40px; min-width: 40px; }
+  .vc-nav-cta { width: 140px; min-width: 140px; max-width: 140px; height: 37px; }
+  .vc-cta-blue { flex-basis: 100px; width: 100px; min-width: 100px; max-width: 100px; padding: 0; font-size: 13px; height: 37px; }
+  .vc-cta-white { flex-basis: 40px; width: 40px; min-width: 40px; max-width: 40px; }
   .vc-cta-white svg { width: 18px; height: 18px; }
 }
 
@@ -378,9 +395,9 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
     display: flex !important;
   }
 
-  .vc-nav-cta { width: 140px; height: 35px; }
-  .vc-cta-blue { padding: 0 14px; font-size: 13px; height: 35px; }
-  .vc-cta-white { width: 38px; min-width: 38px; }
+  .vc-nav-cta { width: 132px; min-width: 132px; max-width: 132px; height: 35px; }
+  .vc-cta-blue { flex-basis: 94px; width: 94px; min-width: 94px; max-width: 94px; padding: 0; font-size: 13px; height: 35px; }
+  .vc-cta-white { flex-basis: 38px; width: 38px; min-width: 38px; max-width: 38px; }
   .vc-cta-white svg { width: 16px; height: 16px; }
 
   body.vc-menu-open {
@@ -693,9 +710,9 @@ body.single-post #vc-menu-list-inner li a[href*="/blog"] {
 @media (max-width: 480px) {
   .vc-nav-inner { padding: 10px 16px; }
   .vc-nav-logo img { height: 32px; }
-  .vc-nav-cta { width: 130px; height: 40px; }
-  .vc-cta-blue { padding: 0 12px; font-size: 12px; height: 40px; }
-  .vc-cta-white { width: 34px; min-width: 34px; }
+  .vc-nav-cta { width: 124px; min-width: 124px; max-width: 124px; height: 40px; }
+  .vc-cta-blue { flex-basis: 79px; width: 79px; min-width: 79px; max-width: 79px; padding: 0; font-size: 12px; height: 40px; }
+  .vc-cta-white { flex-basis: 45px; width: 45px; min-width: 45px; max-width: 45px; }
   .vc-cta-white svg { width: 14px; height: 14px; }
 
   .vc-mobile-overlay .vc-mobile-overlay-inner,

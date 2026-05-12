@@ -34,6 +34,68 @@
 }
 
 /* =============================================
+   HEADER — Blog-style attractive menu styling
+   ============================================= */
+.element-our-portfolio #vc-nav-menu .mega-menu-wrap,
+.element-our-portfolio #vc-nav-menu > div:not(.vc-menu-list) {
+  display: contents !important;
+}
+
+.element-our-portfolio #vc-nav-menu .mega-menu-wrap > ul {
+  display: flex !important;
+}
+
+.element-our-portfolio #vc-navbar .vc-menu-list > li > a,
+.element-our-portfolio #vc-nav-menu ul.vc-menu-list > li > a,
+.element-our-portfolio #vc-nav-menu .mega-menu-wrap > ul > li > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 8px 16px !important;
+  border-radius: 999px !important;
+  -webkit-border-radius: 999px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.element-our-portfolio #vc-navbar .vc-menu-list > li.current-menu-item > a,
+.element-our-portfolio #vc-navbar .vc-menu-list > li.current_page_item > a,
+.element-our-portfolio #vc-navbar .vc-menu-list > li.current_page_parent > a,
+.element-our-portfolio #vc-navbar .vc-menu-list > li > a[href*='/portfolio'] {
+  background-color: #0446f2 !important;
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+}
+
+.element-our-portfolio #vc-navbar .vc-nav-cta {
+  border-radius: 50px !important;
+  padding: 0 !important;
+  height: 41px !important;
+  box-shadow: 0 4px 15px rgba(4, 70, 242, 0.3) !important;
+}
+
+.element-our-portfolio #vc-navbar .vc-nav-menu {
+  border-radius: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  box-shadow: none !important;
+}
+
+.element-our-portfolio #vc-navbar .vc-menu-list,
+.element-our-portfolio #vc-nav-menu ul.vc-menu-list {
+  background: transparent !important;
+  border-radius: 0 !important;
+  gap: 4px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* =============================================
    HERO
    ============================================= */
 .element-our-portfolio .hero {
@@ -72,7 +134,7 @@
   height: auto;
   align-items: flex-start;
   gap: 40px;
-  padding: 110px 40px 80px;
+  padding: 92px 48px 84px 48px;
   position: relative;
   top: auto;
   left: auto;
@@ -163,7 +225,7 @@
   gap: 40px;
   white-space: nowrap;
   will-change: transform;
-  animation: vc-marquee-slow 28s linear infinite;
+  animation: vc-marquee-slow 60s linear infinite;
 }
 
 /* All portfolio marquee words — outlined Outfit, same as blog & approach */
@@ -176,7 +238,7 @@
   flex-shrink: 0;
   font-family: "Outfit", Helvetica, sans-serif;
   font-weight: 400;
-  font-size: clamp(40px, 5vw, 76px);
+  font-size: clamp(40px, 5vw, 48px);
   letter-spacing: 0;
   line-height: 1;
   white-space: nowrap;
@@ -192,8 +254,8 @@
   width: fit-content;
   flex-shrink: 0;
   font-family: "Outfit", Helvetica, sans-serif;
-  font-weight: 200;
-  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 48px);
   letter-spacing: 0;
   line-height: 1;
   white-space: nowrap;
@@ -221,7 +283,7 @@
   min-height: auto;
   align-items: flex-start;
   background-color: #ffffff;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* ── Industries Sidebar ── */
@@ -543,7 +605,8 @@
 }
 
 .element-our-portfolio .label {
-  width: 1092px;
+  width: 100%;
+  max-width: 1092px;
   height: auto;
 }
 
@@ -560,6 +623,9 @@
   letter-spacing: 0;
   line-height: 1.4;
   font-style: normal;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .element-our-portfolio .text-wrapper-9 {
@@ -568,7 +634,8 @@
   color: #000000;
   font-size: clamp(24px, 3vw, 40px);
   line-height: 1.2;
-  white-space: nowrap;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .element-our-portfolio .frame-19 {
@@ -867,6 +934,7 @@
 .vc-pf-cta {
   position: relative;
   width: 100%;
+  padding: 100px 48px;
   background-color: #0446f2;
   overflow: hidden;
 }
@@ -880,6 +948,7 @@
   z-index: 1;
   width: 100%;
   max-width: 1240px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -1131,6 +1200,72 @@
 .cs-modal__cta:hover { background-color: #0338c8; color: #ffffff; }
 
 /* =============================================
+   RESPONSIVE — 1920 × 1080 DESKTOPS
+   ============================================= */
+@media (min-width: 1900px) and (max-width: 2200px) and (min-height: 1000px) {
+  .element-our-portfolio {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Hero — taller, more dramatic at full HD */
+  .element-our-portfolio .hero {
+    min-height: 620px;
+  }
+
+  .element-our-portfolio .frame-wrapper {
+    padding: 140px 80px 120px 80px;
+    gap: 48px;
+  }
+
+  /* Middle section — let it breathe */
+  .element-our-portfolio .middle {
+    padding: 20px 0 40px;
+  }
+
+  /* Industries sidebar — widen proportionally */
+  .element-our-portfolio .group-wrapper {
+    width: 520px;
+  }
+
+  .element-our-portfolio .group {
+    left: 64px;
+    width: calc(100% - 80px);
+    top: 72px;
+  }
+
+  /* Cards header & list — more padding for wide layout */
+  .element-our-portfolio .frame-6 {
+    padding: 60px 60px 24px;
+  }
+
+  .element-our-portfolio .frame-8 {
+    padding: 0 60px 40px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Case studies outer wrapper */
+  .element-our-portfolio .frame-16 {
+    padding: 40px 80px 60px;
+  }
+
+  .element-our-portfolio .frame-17 {
+    padding: 80px;
+    gap: 52px;
+  }
+
+  /* CTA section — more vertical breathing room */
+  .vc-pf-cta {
+    padding: 140px 120px;
+  }
+
+  .vc-pf-cta .frame-44 {
+    gap: 52px;
+  }
+}
+
+/* =============================================
    RESPONSIVE — LARGE SCREENS (> 1024px)
    ============================================= */
 @media (min-width: 1025px) {
@@ -1144,19 +1279,25 @@
    RESPONSIVE — TABLET (≤ 1024px)
    ============================================= */
 @media (max-width: 1024px) {
-  .element-our-portfolio .frame-3 { flex-direction: column; min-height: auto; }
+  /* Keep side-by-side layout like desktop — only adjust sizes */
+  .element-our-portfolio .frame-3 { 
+    flex-direction: row; 
+    min-height: auto; 
+  }
 
   .element-our-portfolio .group-wrapper {
-    width: 100%;
+    width: 260px;
+    min-width: 200px;
     min-height: auto;
-    padding-bottom: 40px;
+    flex-shrink: 0;
+    background-color: #F7F7F7;
   }
 
   .element-our-portfolio .group {
     position: relative;
     top: 0;
     left: 0;
-    padding: 40px;
+    padding: 28px 16px;
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -1166,11 +1307,20 @@
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 300px;
+    min-height: auto;
+    background-color: #e6eeff;
+    border-radius: 16px;
+    border: 1px solid #d9d9d9;
   }
 
-  .element-our-portfolio .rectangle-3,
-  .element-our-portfolio .rectangle-4 { display: none; }
+  .element-our-portfolio .rectangle-3 { 
+    left: 0;
+    width: 5px;
+  }
+
+  .element-our-portfolio .rectangle-4 { 
+    width: calc(100% - 5px);
+  }
 
   .element-our-portfolio .div-wrapper {
     position: relative;
@@ -1183,8 +1333,9 @@
 
   .element-our-portfolio .frame-4 {
     height: auto;
-    gap: 4px;
+    gap: 0;
     margin-top: 8px;
+    padding-top: 8px;
   }
 
   .element-our-portfolio .text-wrapper-2 {
@@ -1192,86 +1343,710 @@
     top: auto;
     left: auto;
     display: block;
-    padding: 24px 0 8px 0;
+    padding: 20px 0 8px 0;
+    font-size: 15px;
+    white-space: normal;
   }
 
-  .element-our-portfolio .frame-5 { width: 100%; min-height: auto; }
-  .element-our-portfolio .frame-6 { padding: 32px 24px 16px; }
-  .element-our-portfolio .frame-8 { padding: 0 24px 40px; }
+  .element-our-portfolio .text-wrapper-3,
+  .element-our-portfolio .text-wrapper-4 {
+    padding: 14px 12px;
+    font-size: 13px;
+    height: auto;
+    min-height: 56px;
+    white-space: normal;
+    word-wrap: break-word;
+  }
 
-  .element-our-portfolio .frame-16 { padding: 0 24px 80px; }
-  .element-our-portfolio .frame-17 { padding: 40px; }
+  .element-our-portfolio .frame-5 { 
+    flex: 1;
+    min-width: 0;
+    min-height: auto; 
+  }
+
+  .element-our-portfolio .frame-6 { padding: 28px 20px 14px; }
+  .element-our-portfolio .frame-8 { padding: 0 20px 40px; }
+
+  .element-our-portfolio .frame-16 { padding: 0 20px 60px; }
+  .element-our-portfolio .frame-17 { padding: 36px 28px; }
   .element-our-portfolio .frame-20 { flex-direction: column; }
 
   .vc-pf-cta { padding: 80px 40px; }
 }
 
 /* =============================================
-   RESPONSIVE — MOBILE (≤ 640px)
+   RESPONSIVE — IPAD AIR (820px)
    ============================================= */
-@media (max-width: 640px) {
-  .element-our-portfolio .hero { min-height: 360px; }
-  .element-our-portfolio .frame-wrapper { padding: 80px 20px 60px; gap: 24px; }
-  .element-our-portfolio .p { font-size: 32px; }
-  .element-our-portfolio .line { height: 100px; }
-  .element-our-portfolio .middle { padding-top: 40px; gap: 20px; }
+@media (max-width: 860px) and (min-width: 769px) {
+  .element-our-portfolio .frame-3 {
+    flex-direction: row;
+    gap: 0;
+  }
 
-  .element-our-portfolio .frame-6 { padding: 24px 16px 12px; }
-  .element-our-portfolio .frame-8 { padding: 0 16px 32px; gap: 16px; }
+  .element-our-portfolio .group-wrapper {
+    width: 220px;
+    min-width: 180px;
+    flex-shrink: 0;
+    background-color: #F7F7F7;
+  }
+
+  .element-our-portfolio .group {
+    padding: 20px 12px;
+  }
+
+  .element-our-portfolio .text-wrapper-2 {
+    font-size: 13px;
+    padding: 16px 0 8px 0;
+    white-space: normal;
+  }
+
+  .element-our-portfolio .text-wrapper-3,
+  .element-our-portfolio .text-wrapper-4 {
+    padding: 12px 10px;
+    font-size: 12px;
+    height: auto;
+    min-height: 52px;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.3;
+  }
+
+  .element-our-portfolio .frame-5 {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .element-our-portfolio .frame-6 { 
+    padding: 20px 16px 12px; 
+  }
+
+  .element-our-portfolio .text-wrapper-5 {
+    font-size: 15px;
+  }
+
+  .element-our-portfolio .frame-8 { 
+    padding: 0 16px 32px;
+    gap: 14px;
+  }
+
+  .element-our-portfolio .frame-16 { 
+    padding: 0 16px 48px;
+  }
+
+  .element-our-portfolio .frame-17 { 
+    padding: 32px 20px;
+  }
+
+  .element-our-portfolio .frame-20 { 
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Portfolio card dynamic items */
+  .element-our-portfolio .portfolio-card-item {
+    width: 260px;
+    height: auto;
+    min-height: auto;
+  }
+
+  .element-our-portfolio .pc-image {
+    height: 180px;
+    object-position: center top;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (≤ 768px)
+   ============================================= */
+@media (max-width: 768px) {
+  /* Keep desktop aesthetic with mobile-friendly spacing */
+  
+  .element-our-portfolio .hero { 
+    min-height: 400px; 
+  }
+
+  .element-our-portfolio .vector {
+    bottom: 0;
+    width: min(420px, 55vw);
+  }
+  
+  .element-our-portfolio .frame { 
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.5;
+  }
+  
+  .element-our-portfolio .frame-wrapper { 
+    padding: 60px 24px 50px; 
+    gap: 28px; 
+    max-width: 100%;
+  }
+  
+  .element-our-portfolio .p { 
+    font-size: clamp(28px, 6vw, 52px);
+    line-height: 1.2;
+  }
+  
+  .element-our-portfolio .text-wrapper { 
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .element-our-portfolio .div {
+    gap: 10px;
+  }
+
+  .element-our-portfolio .frame-2 {
+    padding-top: 26px;
+  }
+
+  .element-our-portfolio .frame-parent {
+    padding-top: 16px;
+  }
+
+  
+  
+
+  .element-our-portfolio .line { 
+    height: 80px;
+    padding: 10px 0;
+  }
+
+  /* ── Industries Sidebar - Keep visible but responsive ── */
+  .element-our-portfolio .frame-3 { 
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .element-our-portfolio .group-wrapper {
+    width: 30%;
+    min-width: auto;
+    min-height: auto;
+    background-color: #F7F7F7;
+    flex-shrink: 0;
+  }
+
+  .element-our-portfolio .group {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+    height: auto;
+  }
+
+  .element-our-portfolio .rectangle-2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+  }
+
+  .element-our-portfolio .rectangle-3,
+  .element-our-portfolio .rectangle-4 { 
+    display: none; 
+  }
+
+  .element-our-portfolio .text-wrapper-2 {
+    padding: 0 0 16px 0;
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: 500;
+    color: #0446f2;
+  }
+
+  .element-our-portfolio .div-wrapper {
+    margin-top: 0;
+  }
+
+  .element-our-portfolio .frame-4 {
+    padding-top: 0;
+    gap: 0;
+  }
+
+  .element-our-portfolio .text-wrapper-3,
+  .element-our-portfolio .text-wrapper-4 {
+    padding: 12px 0;
+    height: auto;
+    font-size: 13px;
+    border-bottom: 1px solid #e6eeff;
+    align-items: center;
+    white-space: normal;
+    font-weight: 500;
+  }
+
+  /* ── Portfolio Cards Panel ── */
+  .element-our-portfolio .frame-5 {
+    flex: 1;
+    width: 70%;
+  }
+
+  .element-our-portfolio .frame-6 { 
+    padding: 24px 24px 20px; 
+  }
+
+  .element-our-portfolio .text-wrapper-5 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #37373799;
+  }
+
+  .element-our-portfolio .frame-8 { 
+    padding: 0 24px 20px;
+    gap: 16px;
+  }
 
   .element-our-portfolio .frame-9,
   .element-our-portfolio .frame-13,
-  .element-our-portfolio .frame-15 { width: 280px; min-height: 480px; }
+  .element-our-portfolio .frame-15 { 
+    width: 300px;
+    min-height: 520px;
+    flex-shrink: 0;
+  }
 
-  .element-our-portfolio .frame-16 { padding: 0 16px 60px; }
-  .element-our-portfolio .frame-17 { padding: 28px 20px; border-radius: 16px; }
-  .element-our-portfolio .text-wrapper-9 { font-size: 22px; }
-  .element-our-portfolio .cs-intro-text { font-size: 15px; }
+  .element-our-portfolio .mask-group,
+  .element-our-portfolio .rectangle-6 {
+    height: 200px;
+  }
+
+  .element-our-portfolio .text-wrapper-7 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #373737;
+  }
+
+  /* ── Case Studies Section ── */
+  .element-our-portfolio .frame-16 { 
+    padding: 20px 24px 40px;
+    width: 100%;
+  }
+
+  .element-our-portfolio .frame-17 { 
+    background-color: #f5f5f5;
+    padding: 40px 24px;
+    border-radius: 20px;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .element-our-portfolio .text-wrapper-8 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 1px;
+  }
+
+  .element-our-portfolio .label {
+    width: 100%;
+  }
+
+  .element-our-portfolio .label .text-wrapper {
+    font-size: clamp(24px, 5vw, 38px);
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.3;
+  }
+
+  .element-our-portfolio .text-wrapper-9 { 
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 400;
+    color: #000000;
+  }
+
+  .element-our-portfolio .frame-19 {
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .element-our-portfolio .cs-intro-text { 
+    font-size: 16px;
+    font-weight: 500;
+    color: #6C6C6C;
+    line-height: 1.6;
+  }
+
+  .element-our-portfolio .frame-20 { 
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .element-our-portfolio .frame-21,
+  .element-our-portfolio .frame-40 {
+    flex: 1;
+    min-width: 240px;
+    min-height: auto;
+  }
+
   .element-our-portfolio .frame-22,
-  .element-our-portfolio .frame-38 { height: 220px; }
-  .element-our-portfolio .frame-41,
-  .element-our-portfolio .frame-40 > .cs-thumb-image { height: 220px; }
-  .element-our-portfolio .cs-step-title { font-size: 20px; }
-  .element-our-portfolio .cs-step-text { font-size: 15px; }
+  .element-our-portfolio .frame-38 { 
+    height: 200px;
+  }
 
-  .vc-pf-cta { padding: 80px 20px; }
-  .vc-pf-cta .text-wrapper-13 { font-size: 28px; }
-  .vc-pf-cta .cta-btn { padding: 12px 20px; }
-  .vc-pf-cta .explore-more { font-size: 13px; }
+  .element-our-portfolio .frame-41,
+  .element-our-portfolio .frame-40 > .cs-thumb-image { 
+    height: 200px;
+  }
+
+  .element-our-portfolio .cs-step-title { 
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.3;
+  }
+
+  .element-our-portfolio .cs-step-text { 
+    font-size: 15px;
+    font-weight: 500;
+    color: #6C6C6C;
+  }
+
+  .element-our-portfolio .frame-17 .button-white-3 {
+    height: 50px;
+    padding: 4px 24px;
+  }
+
+  .element-our-portfolio .frame-17 .explore-more {
+    font-size: 16px;
+    color: #0446f2;
+  }
+
+  /* ── CTA Section ── */
+  .vc-pf-cta { 
+    padding: 60px 24px; 
+  }
+
+  .vc-pf-cta .frame-44 {
+    gap: 32px;
+  }
+
+  .vc-pf-cta .text-wrapper-13 { 
+    font-size: clamp(28px, 5vw, 48px);
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .vc-pf-cta .cta-btn { 
+    padding: 12px 32px;
+    height: 50px;
+  }
+
+  .vc-pf-cta .explore-more { 
+    font-size: 16px;
+    color: #0446f2;
+    font-weight: 500;
+  }
+
+  .vc-pf-cta .arrow-right-wrapper {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 @media (max-width: 480px) {
-  .element-our-portfolio .hero { min-height: 320px; }
-  .element-our-portfolio .frame-wrapper { padding: 72px 16px 48px; }
-  .element-our-portfolio .p { font-size: clamp(26px, 7vw, 32px); }
-  .element-our-portfolio .text-wrapper { font-size: 12px; }
-  .element-our-portfolio .group-wrapper {
-    width: 100%;
-    min-width: 0;
-    min-height: auto;
+  /* Match desktop design with small phone optimization */
+
+  .element-our-portfolio .hero { 
+    min-height: 350px;
   }
+
+  .element-our-portfolio .vector {
+    bottom: 0;
+    width: min(300px, 60vw);
+    right: 0;
+  }
+
+  .element-our-portfolio .frame {
+    background-color: rgba(255, 255, 255, 0.08);
+    opacity: 0.4;
+  }
+
+  .element-our-portfolio .frame-wrapper { 
+    padding: 50px 16px 40px;
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .element-our-portfolio .p { 
+    font-size: clamp(24px, 6vw, 44px);
+    line-height: 1.2;
+  }
+
+  .element-our-portfolio .text-wrapper { 
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+
+  .element-our-portfolio .frame-2 {
+    gap: 6px;
+  }
+
+  .element-our-portfolio .line { 
+    height: 70px;
+    padding: 8px 0;
+  }
+
+  /* ── Industries Sidebar - Keep visible ── */
+  .element-our-portfolio .frame-3 {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .element-our-portfolio .group-wrapper {
+    width: 35%;
+    min-width: auto;
+    min-height: auto;
+    background-color: #F7F7F7;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
   .element-our-portfolio .group {
-    padding: 28px 16px;
+    padding: 16px 12px;
     top: 0;
     left: 0;
     width: 100%;
     max-width: 100%;
     height: auto;
   }
+
   .element-our-portfolio .rectangle-2 {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 220px;
+    min-height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
   }
-  .element-our-portfolio .line { height: 80px; }
+
+  .element-our-portfolio .text-wrapper-2 {
+    padding: 0 0 12px 0;
+    font-size: 12px;
+    white-space: nowrap;
+    font-weight: 500;
+    color: #0446f2;
+  }
+
+  .element-our-portfolio .div-wrapper {
+    margin-top: 0;
+  }
+
+  .element-our-portfolio .frame-4 {
+    padding-top: 0;
+    gap: 0;
+  }
+
+  .element-our-portfolio .text-wrapper-3,
+  .element-our-portfolio .text-wrapper-4 {
+    padding: 10px 0;
+    height: auto;
+    font-size: 12px;
+    border-bottom: 1px solid #e6eeff;
+    align-items: center;
+    white-space: normal;
+    font-weight: 500;
+  }
+
+  /* ── Portfolio Cards Panel ── */
+  .element-our-portfolio .frame-5 {
+    width: 65%;
+  }
+
+  .element-our-portfolio .frame-6 { 
+    padding: 16px 12px 12px;
+  }
+
+  .element-our-portfolio .text-wrapper-5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #37373799;
+  }
+
+  .element-our-portfolio .frame-8 { 
+    padding: 0 12px 16px;
+    gap: 12px;
+  }
+
   .element-our-portfolio .frame-9,
   .element-our-portfolio .frame-13,
-  .element-our-portfolio .frame-15 { width: 100%; min-width: 240px; }
-  .element-our-portfolio .frame-17 { padding: 20px 14px; border-radius: 12px; }
-  .element-our-portfolio .text-wrapper-9 { font-size: 18px; }
-  .vc-pf-cta { padding: 60px 16px; }
-  .vc-pf-cta .text-wrapper-13 { font-size: 22px; }
+  .element-our-portfolio .frame-15 { 
+    width: 240px;
+    min-height: 480px;
+    flex-shrink: 0;
+    padding: 20px;
+  }
+
+  .element-our-portfolio .mask-group,
+  .element-our-portfolio .rectangle-6 {
+    height: 180px;
+  }
+
+  .element-our-portfolio .text-wrapper-7 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #373737;
+  }
+
+  /* ── Case Studies Section ── */
+  .element-our-portfolio .frame-16 { 
+    padding: 20px 12px 32px;
+    width: 100%;
+  }
+
+  .element-our-portfolio .frame-17 { 
+    background-color: #f5f5f5;
+    padding: 28px 16px;
+    border-radius: 16px;
+    gap: 24px;
+  }
+
+  .element-our-portfolio .text-wrapper-8 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    letter-spacing: 0.8px;
+  }
+
+  .element-our-portfolio .label {
+    width: 100%;
+  }
+
+  .element-our-portfolio .label .text-wrapper {
+    font-size: clamp(20px, 4.5vw, 32px);
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.3;
+  }
+
+  .element-our-portfolio .text-wrapper-9 { 
+    font-size: clamp(18px, 4vw, 28px);
+    font-weight: 400;
+    color: #000000;
+  }
+
+  .element-our-portfolio .frame-18 {
+    gap: 12px;
+  }
+
+  .element-our-portfolio .frame-19 {
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .element-our-portfolio .cs-intro-text { 
+    font-size: 14px;
+    font-weight: 500;
+    color: #6C6C6C;
+    line-height: 1.6;
+  }
+
+  .element-our-portfolio .frame-20 { 
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .element-our-portfolio .frame-21,
+  .element-our-portfolio .frame-40 {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+  }
+
+  .element-our-portfolio .frame-22,
+  .element-our-portfolio .frame-38 { 
+    height: 180px;
+  }
+
+  .element-our-portfolio .frame-41,
+  .element-our-portfolio .frame-40 > .cs-thumb-image { 
+    height: 180px;
+  }
+
+  .element-our-portfolio .cs-step-title { 
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.3;
+  }
+
+  .element-our-portfolio .frame-37 {
+    width: 100%;
+  }
+
+  .element-our-portfolio .cs-step-text { 
+    font-size: 14px;
+    font-weight: 500;
+    color: #6C6C6C;
+  }
+
+  .element-our-portfolio .frame-17 .button-white-3 {
+    height: 48px;
+    padding: 4px 20px;
+  }
+
+  .element-our-portfolio .frame-17 .explore-more {
+    font-size: 14px;
+    color: #0446f2;
+    font-weight: 500;
+  }
+
+  /* ── CTA Section ── */
+  .vc-pf-cta { 
+    padding: 40px 16px;
+  }
+
+  .vc-pf-cta .frame-44 {
+    gap: 24px;
+  }
+
+  .vc-pf-cta .text-wrapper-13 { 
+    font-size: clamp(22px, 5vw, 40px);
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .vc-pf-cta .frame-44 > .div {
+    gap: 10px;
+  }
+
+  .vc-pf-cta .cta-btn { 
+    padding: 12px 24px;
+    height: 46px;
+  }
+
+  .vc-pf-cta .explore-more { 
+    font-size: 14px;
+    color: #0446f2;
+    font-weight: 500;
+  }
+
+  .vc-pf-cta .arrow-right-wrapper {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cs-modal__box {
+    width: 95vw;
+    max-width: 100%;
+  }
+
+  .cs-modal__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #00051a;
+  }
+
+  .cs-modal__body {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
 /* =============================================
@@ -1477,6 +2252,94 @@
 @keyframes pf-spin { to { transform: rotate(360deg); } }
 
 /* =============================================
+   PORTFOLIO CARDS — MOBILE RESPONSIVE
+   ============================================= */
+@media (max-width: 768px) {
+  .element-our-portfolio .portfolio-card-item {
+    width: 280px;
+    min-height: auto;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .element-our-portfolio .pc-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .element-our-portfolio .pc-image--placeholder {
+    height: 180px;
+  }
+
+  .element-our-portfolio .pc-subtitle {
+    font-size: 17px;
+    min-height: auto;
+    -webkit-line-clamp: 3;
+  }
+
+  .element-our-portfolio .pc-industry-description {
+    font-size: 12px;
+    line-height: 1.4;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .element-our-portfolio .portfolio-card-item {
+    width: 240px;
+    min-height: auto;
+    height: auto;
+    padding: 16px;
+    flex-shrink: 0;
+  }
+
+  .element-our-portfolio .pc-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .element-our-portfolio .pc-image--placeholder {
+    height: 160px;
+  }
+
+  .element-our-portfolio .pc-subtitle {
+    font-size: 15px;
+    min-height: auto;
+    -webkit-line-clamp: 3;
+  }
+
+  .element-our-portfolio .pc-title {
+    font-size: 13px;
+  }
+
+  .element-our-portfolio .pc-location {
+    font-size: 13px;
+  }
+
+  .element-our-portfolio .pc-industry-description {
+    font-size: 12px;
+    line-height: 1.4;
+    min-height: auto;
+  }
+
+  .element-our-portfolio .pc-case-study-btn {
+    width: 100%;
+    height: 36px;
+    padding: 4px 8px 4px 16px;
+  }
+}
+
+/* =============================================
    MODAL STATS BADGES
    ============================================= */
 .cs-modal__stats {
@@ -1588,4 +2451,58 @@
   to {
     transform: translateX(-50%);
   }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   COMPREHENSIVE MOBILE BREAKPOINTS — PORTFOLIO PAGE
+   Breakpoints:
+     576px  Large phone landscape / small tablet
+     480px  Standard mobile portrait
+     430px  iPhone 14 Plus / 15 Plus / Pro Max
+     390px  iPhone 14 / 15 / 14 Pro / 15 Pro
+     375px  iPhone SE 2&3, 12 mini, 13 mini
+     360px  Samsung Galaxy S-series / most Android
+     320px  iPhone 5 / SE 1st gen / very small screens
+   ════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .vc-portfolio-page .hero-section { padding: 60px 16px 40px; }
+  .vc-portfolio-page .portfolio-grid { gap: 12px; }
+  .vc-portfolio-page .portfolio-item { min-height: 250px; }
+}
+
+@media (max-width: 480px) {
+  .vc-portfolio-page .hero-section { padding: 48px 14px 32px; }
+  .vc-portfolio-page .portfolio-grid { gap: 10px; padding: 0 12px; }
+  .vc-portfolio-page .portfolio-item { min-height: 220px; font-size: 14px; }
+}
+
+@media (max-width: 430px) {
+  .vc-portfolio-page .hero-section { padding: 44px 12px 28px; }
+  .vc-portfolio-page .portfolio-grid { gap: 9px; padding: 0 10px; }
+  .vc-portfolio-page .portfolio-item { min-height: 200px; font-size: 12px; }
+}
+
+@media (max-width: 390px) {
+  .vc-portfolio-page .hero-section { padding: 40px 10px 24px; min-height: 260px; }
+  .vc-portfolio-page .portfolio-grid { gap: 8px; padding: 0 8px; }
+  .vc-portfolio-page .portfolio-item { min-height: 180px; }
+}
+
+@media (max-width: 375px) {
+  .vc-portfolio-page .hero-section { padding: 36px 8px 20px; }
+  .vc-portfolio-page .portfolio-grid { gap: 8px; padding: 0 6px; }
+  .vc-portfolio-page .portfolio-item { min-height: 160px; font-size: 11px; }
+}
+
+@media (max-width: 360px) {
+  .vc-portfolio-page .hero-section { padding: 32px 6px 16px; }
+  .vc-portfolio-page .portfolio-grid { gap: 6px; padding: 0 4px; }
+  .vc-portfolio-page .portfolio-item { min-height: 150px; }
+}
+
+@media (max-width: 320px) {
+  .vc-portfolio-page .hero-section { padding: 28px 4px 12px; min-height: 240px; }
+  .vc-portfolio-page .portfolio-grid { gap: 6px; padding: 0 2px; }
+  .vc-portfolio-page .portfolio-item { min-height: 140px; font-size: 10px; }
 }

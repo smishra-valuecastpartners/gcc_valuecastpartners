@@ -10,7 +10,7 @@ if (!defined('ABSPATH'))
 // Fetch Customizer settings to keep CTA dynamic
 $cta_hl = get_theme_mod('vc_cta_headline', 'Explore Your Options');
 $cta_btn = get_theme_mod('vc_cta_btn_text', 'Schedule a Free Demo Call');
-$cta_url = get_theme_mod('vc_cta_btn_url', '#contact');
+$cta_url = 'tel:+919899189848';
 $about_contact_url = home_url('/contact-us/#contact');
 
 get_header('valuecast');
@@ -206,10 +206,12 @@ get_header('valuecast');
                 <div class="driving-innovation-and" style="color:#000;">Driving Innovation and<br>Excellence for
                     Sustainable<br>Corporate Success Worldwide</div>
                 <div class="get-to-know-us-child"></div>
-                <div class="vision" style="color:#000;">Vision</div>
-                <div class="to-build-the" style="color:#000;">To build the world’s most trusted ecosystem for
-                    middle-market growth, where companies thrive profitably, technology amplifies human creativity, and
-                    value compounds across the network.</div>
+                <div class="vision-card">
+                    <div class="vision" style="color:#000;">Vision</div>
+                    <div class="to-build-the" style="color:#000;">To build the world's most trusted ecosystem for
+                        middle-market growth, where companies thrive profitably, technology amplifies human creativity, and
+                        value compounds across the network.</div>
+                </div>
                 <div class="group-div">
                     <div class="group-child"></div>
                     <div class="mission">Mission</div>

@@ -72,8 +72,11 @@ get_header('valuecast');
   <div class="vc-hero-fade"></div>
     <!-- Figma: bottom-left decorative arrow -->
   <div class="vc-hero-arrow" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" width="429" height="125" viewBox="0 0 429 125" fill="none">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="429" height="125" viewBox="0 0 429 125" fill="none">
       <path d="M308.212 5.27982e-06L-224 2.85435e-05L-224 125L308.212 125L429 62.5L308.212 5.27982e-06Z" fill="white"/>
+    </svg> -->
+    <svg width="429" height="99" viewBox="0 0 429 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M308.212 5.27982e-06L-224 2.85435e-05L-224 125L429 125L308.212 5.27982e-06Z" fill="white"/>
     </svg>
   </div>
 </section>

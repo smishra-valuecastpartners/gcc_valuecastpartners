@@ -18,8 +18,9 @@ $email = get_theme_mod('vc_contact_email', 'sales@valuecast.com');
 $phone = get_theme_mod('vc_contact_phone', '123-456-7890');
 $cta_hl = get_theme_mod('vc_cta_headline', 'Explore Your Options');
 $cta_btn = get_theme_mod('vc_cta_btn_text', 'Schedule a Free Demo Call');
-$cta_url = get_theme_mod('vc_cta_btn_url', '#contact');
 $phone_clean = preg_replace('/[^0-9+]/', '', $phone);
+// Change CTA button URL to trigger phone call (same as header "Call Now" button)
+$cta_url = 'tel:' . esc_attr($phone_clean);
 
 // ── Exact same custom header as front-page.php ───────────────────
 get_header('valuecast');
